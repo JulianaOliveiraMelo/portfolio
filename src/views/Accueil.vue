@@ -14,7 +14,6 @@
 					></span
 				>.
 			</p>
-
 			<p>4 jours entreprise / 1 jour école - 24 mois</p>
 			<div class="buttons-box">
 				<StyleButton text="Mes réalizations" link="realisations" />

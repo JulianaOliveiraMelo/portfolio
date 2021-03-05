@@ -21,7 +21,6 @@ body {
 	background-color: #13202e;
 	max-height: 100vh;
 }
-
 #app {
 	font-family: 'RocknRoll One', Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -30,11 +29,9 @@ body {
 	color: #5083b6;
 	font-size: 18px;
 }
-
 #nav {
 	padding: 30px;
 }
-
 #nav a {
 	font-weight: bold;
 	color: #798fa5;
@@ -53,7 +50,6 @@ body {
 	&:hover:after {
 		transform: scaleX(1);
 	}
-
 	&.router-link-exact-active {
 		color: #42b983;
 		&::after {
@@ -61,6 +57,4 @@ body {
 		}
 	}
 }
-
-// #nav a
 </style>
