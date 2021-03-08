@@ -1,13 +1,15 @@
 <template>
 	<div class="formation-box">
 		<div class="image-box">
-			<img :src="require('../../public/logos/' + src)" alt="" />
+			<img :src="src" alt="" />
 		</div>
 		<div class="info-box">
 			<a :href="link" target="blank"
 				><h3>{{ name }}</h3></a
 			>
-			<p>{{ text }}</p>
+			<ul>
+				<li v-for="tasks in description" :key="tasks">{{ tasks }}</li>
+			</ul>
 			<span
 				><a :href="linkString" target="blank">{{ linkText }}</a></span
 			>
@@ -21,7 +23,7 @@ export default {
 	props: {
 		src: String,
 		name: String,
-		text: String,
+		description: Array,
 		link: String,
 		linkText: String,
 		linkString: String,
@@ -32,12 +34,12 @@ export default {
 <style lang="scss" scoped>
 .formation-box {
 	padding: 20px 0;
-	margin: 20px;
+	margin: 20px 0;
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	column-gap: 20px;
-	border: 5px dashed pink;
+	border: 5px dashed #5083b619;
 	//vertical-align: middle;
 }
 .image-box {
@@ -46,13 +48,14 @@ export default {
 	padding-left: 20px;
 	display: inline-block;
 	& img {
+		//max-width: 30%;
 		max-height: 70px;
 	}
 }
 .info-box {
 	padding: 20px 20px 20px 0;
 }
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 440px) {
 	.formation-box {
 		flex-direction: column;
 	}

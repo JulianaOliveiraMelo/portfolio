@@ -1,7 +1,8 @@
 <template>
 	<div class="outsider">
 		<Title msg="Mes réalisations" />
-		<div class="container-box" v-for="w in work" :key="w.id">
+		<h5>De la plus récente à la plus ancienne</h5>
+		<div class="container-box" v-for="w in work.slice().reverse()" :key="w.id">
 			<div class="container">
 				<div class="image-box">
 					<a :href="w.image.link" v-if="w.image" target="blank">
@@ -60,14 +61,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.outsider {
-	max-width: 960px;
-	padding: 20px;
-	margin: auto;
-	text-align: center;
-	padding-bottom: 10%;
-}
-
 .container-box::after {
 	content: '';
 	display: block;

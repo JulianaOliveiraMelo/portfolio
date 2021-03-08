@@ -9,9 +9,67 @@ export const bus = new Vue({
 	vuetify,
 
 	data: {
+		training: [
+			{
+				id: 1,
+				name: 'Kahan Academy',
+				src: 'kahanAcademyLogo.png',
+				description: ['Découverte des bases de HTML, CSS, JavaScript'],
+				link: 'https://www.freecodecamp.org/',
+				linkText: 'Voir les projets réalisées au sein de Khan Academy',
+				linkString:
+					'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
+			},
+			{
+				id: 2,
+				name: 'FreeCodeCamp',
+				src: 'freeCodeCampLogo.png',
+				description: ['Découverte des bases de HTML, CSS, JavaScript'],
+				link: 'https://fr.khanacademy.org/',
+				linkText: 'Voir les projets réalisées au sein de freeCodeCamp',
+				linkString: 'https://www.freecodecamp.org/julianadeale',
+			},
+			{
+				id: 3,
+				name: "O'clock",
+				src: 'o-ClockLogo.png',
+				description: [
+					'Découverte des bases de HTML, CSS, JavaScript',
+					'Apprendre à se servir de Node.js et Express.js',
+					'Apprendere la syntaxe SQL',
+					'Apprendre les bases de Git',
+					'Faire une API',
+					'Des projets en Solo et en PairPrograming',
+				],
+				link: 'https://fr.khanacademy.org/',
+				linkText: "Voir les projets réalisées au sein de O'Clock - gitHub",
+				linkString:
+					'https://github.com/JulianaOliveiraMelo/parcours-formation-o-clock',
+			},
+			{
+				id: 4,
+				name: 'Dyma',
+				src: 'dymaLogo.png',
+				description: ['Découverte des bases de HTML, CSS, JavaScript'],
+				link: 'https://fr.khanacademy.org/',
+				linkText: 'Voir les projets réalisées au sein de khan Academy',
+				linkString:
+					'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
+			},
+			{
+				id: 5,
+				name: 'Openclassrooms',
+				src: 'kahanAcademyLogo.png',
+				description: ['Découverte des bases de HTML, CSS, JavaScript'],
+				link: 'https://fr.khanacademy.org/',
+				linkText: 'Voir les projets réalisées au sein de khan Academy',
+				linkString:
+					'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
+			},
+		],
 		work: [
 			{
-				id: 0,
+				id: 1,
 				name: 'Divers projets chez Kahan Academy',
 				school: {
 					name: 'Kahan Academy',
@@ -32,7 +90,7 @@ export const bus = new Vue({
 				text: 'Objectif: Apprendre les bases du HTML, CSS et JavaScript.',
 			},
 			{
-				id: 1,
+				id: 2,
 				name: 'Build a Tribute Page',
 				school: {
 					name: 'freeCodeCamp',
@@ -51,7 +109,7 @@ export const bus = new Vue({
 					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="blank">https://codepen.io/freeCodeCamp/full/zNqgVx.</a> Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
-				id: 2,
+				id: 3,
 				name: 'Build a Survey Form',
 				school: {
 					name: 'freeCodeCamp',
@@ -70,7 +128,7 @@ export const bus = new Vue({
 					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/VPaoNP" target="blank">https://codepen.io/freeCodeCamp/full/VPaoNP</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
-				id: 3,
+				id: 4,
 				name: 'Build a Product Landing Page',
 				school: {
 					name: 'freeCodeCamp',
@@ -89,7 +147,7 @@ export const bus = new Vue({
 					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/RKRbwL" target="blank">https://codepen.io/freeCodeCamp/full/RKRbwL</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
-				id: 4,
+				id: 5,
 				name: 'Build a Technical Documentation Page',
 				school: {
 					name: 'freeCodeCamp',

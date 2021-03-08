@@ -36,6 +36,10 @@ a {
 footer {
 	margin-top: auto;
 }
+li {
+	list-style-type: circle;
+	list-style-position: inside;
+}
 .box {
 	display: flex;
 	flex-flow: row;
@@ -96,5 +100,15 @@ footer {
 		align-items: center;
 		width: 100%;
 		justify-content: space-around;
+	}
+}
+.outsider {
+	max-width: 960px;
+	padding: 20px;
+	margin: auto;
+	text-align: center;
+	padding-bottom: 10%;
+	h5 {
+		text-align: left;
 	}
 }
