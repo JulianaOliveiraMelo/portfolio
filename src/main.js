@@ -12,16 +12,19 @@ export const bus = new Vue({
 		work: [
 			{
 				id: 1,
-				name: 'Mon titre',
+				name: 'Build a Tribute Page',
 				school: {
-					name: "O'Clock",
-					link:
-						'https://oclock.io/?utm_campaing=nouvelle&gclid=Cj0KCQiAs5eCBhCBARIsAEhk4r5VyLcXsay0CaCkRt_-p47fyTKgG-l7rkkqWgb6uG5Hw557RRE_BqcaAnnUEALw_wcB',
+					name: 'freeCodeCamp',
+					link: 'https://www.freecodecamp.org',
 				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
+				icons: {
+					1: 'icons8-html-filetype-50.png',
+					2: 'icons8-css-filetype-50.png',
+				},
 				image: {
-					source: 'pexels-marta-branco-1194713.png',
+					source: 'buildATributePage-freeCodeCamp.png',
 					description: 'le text alt va ici',
+					link: 'https://codepen.io/Julianadeale/full/XwrQXG',
 				},
 				text:
 					'Cras feugiat turpis eget mauris lacinia, et bibendum urna commodo. Phasellus risus velit, tincidunt ut risus et, efficitur dictum felis. Sed quis felis vel est dignissim tincidunt.',
@@ -29,10 +32,6 @@ export const bus = new Vue({
 			{
 				id: 2,
 				name: 'Mon titre 2',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',

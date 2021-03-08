@@ -4,10 +4,11 @@
 		<div class="container-box" v-for="w in work" :key="w.id">
 			<div class="container">
 				<div class="image-box">
-					<ImageBox
-						:backgroundImage="require('/public/images/' + w.image.source)"
-						:imageDescription="w.image.description"
-					/>
+					<a :href="w.image.link">
+						<ImageBox
+							:backgroundImage="require('/public/images/' + w.image.source)"
+							:imageDescription="w.image.description"
+					/></a>
 				</div>
 				<div class="icons-box">
 					<div v-for="i in w.icons" :key="i">
@@ -19,7 +20,7 @@
 						<h3>{{ w.name }}</h3>
 						<p>{{ w.text }}</p>
 					</div>
-					<aside>
+					<aside v-if="w.school">
 						<a :href="w.school.link" target="blank">{{ w.school.name }}</a>
 					</aside>
 				</div>
@@ -76,6 +77,9 @@ export default {
 
 .image-box {
 	display: block;
+	a::after {
+		display: none;
+	}
 }
 .icons-box {
 	margin: auto 0;
@@ -95,23 +99,21 @@ export default {
 }
 .content-box {
 	padding-left: 20px;
-	//min-height: 100%;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
-	//align-items: flex-start;
 	div {
 		text-align: left;
 	}
 	aside {
 		display: flex;
 		height: 100%;
-		//flex-direction: row;
 		justify-content: flex-end;
-		//align-content: flex-end;
-		//align-self: flex-end;
 		align-items: flex-end;
+		a {
+			color: #42b9833f;
+		}
 	}
 }
 </style>

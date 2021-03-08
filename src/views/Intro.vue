@@ -1,24 +1,23 @@
 <template>
 	<div class="box">
 		<div class="left">
-			<Title msg="Un peut de Moi" />
+			<Title msg="Lorem ipsum, dolor" />
 			<p>
-				D'origine portugaise, à l'âge d'un an et demi, je suis parti vivre avec
-				mes parents à Macau en Chine. J'ai fait mes premièeres années d'études
-				et amitiées.
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. A perferendis
+				harum eum autem, dicta quod omnis, deserunt ex sapiente facilis, ullam
+				quos eligendi sed. Aut atque magni magnam modi nostrum.
 			</p>
 			<p>
-				Ce n'est que à l'âge de 13 ans que je suis repartie vivre au Portugal
-				pour finir mes études et devenir modeliste à temps plêin.
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat,
+				exercitationem commodi delectus ad eum doloribus itaque sapiente,
+				veritatis excepturi, nihil temporibus deserunt ipsam culpa
+				necessitatibus. Quibusdam at nemo nesciunt recusandae!
 			</p>
 			<p>
-				Pour des soucis financier et le décés de mon pêre, je suis parti
-				travailler en France pour venir aux besoins de ma famille. Ne pas parler
-				français ne mas pas en aucans cas empecher de trouver mon premier
-				travaille dans le térritoire français en tant que saisionnièere dans une
-				usine de fruits. Meme si le travaille semblait insignifiant je me sui
-				investi à font et donner de mon meilleur. J'ai appris a parler Français
-				ce que ma permis de trouver un autre travaille pour combler
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat
+				dignissimos culpa velit sapiente voluptatibus, ab eveniet officiis,
+				accusamus ea rerum consequatur ipsam consectetur. Molestiae porro
+				numquam, fugiat obcaecati aperiam eveniet.
 			</p>
 
 			<div class="button-box">
