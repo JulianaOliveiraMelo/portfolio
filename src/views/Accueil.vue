@@ -15,7 +15,7 @@
 				>.
 			</p>
 			<p>4 jours entreprise / 1 jour école - 24 mois</p>
-			<div class="buttons-box">
+			<div class="button-box">
 				<StyleButton text="Mes réalizations" link="realisations" />
 				<StyleButton text="Contact" link="contact" />
 			</div>
@@ -44,15 +44,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.buttons-box {
-	max-width: 100%;
-	display: flex;
-	flex-direction: row;
-	flex-wrap: nowrap;
-	align-content: space-between;
-	margin-top: 10%;
-}
-
 @media screen and (max-width: 800px) {
 	.box {
 		flex-wrap: wrap;
@@ -63,6 +54,7 @@ export default {
 		background-position: center;
 	}
 }
+
 .right {
 	background-image: url('../../src/assets/femme en travaille.png');
 }
