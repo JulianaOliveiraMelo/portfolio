@@ -11,6 +11,27 @@ export const bus = new Vue({
 	data: {
 		work: [
 			{
+				id: 0,
+				name: 'Divers projets chez Kahan Academy',
+				school: {
+					name: 'Kahan Academy',
+					link:
+						'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
+				},
+				icons: {
+					1: 'icons8-html-filetype-50.png',
+					2: 'icons8-css-filetype-50.png',
+					3: 'icons8-javascript-50.png',
+				},
+				image: {
+					source: 'globalProjectsKhanAcademy.png',
+					description: 'global Projects from Kahan Academy screenshot',
+					link:
+						'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
+				},
+				text: 'Objectif: Apprendre les bases du HTML, CSS et JavaScript.',
+			},
+			{
 				id: 1,
 				name: 'Build a Tribute Page',
 				school: {

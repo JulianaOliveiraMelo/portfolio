@@ -6,22 +6,24 @@
 		<h3>O'clock</h3>
 		<h3>FreeCodeCamp</h3>
 
-		<a href="https://fr.khanacademy.org/"><h3>Khan Academy</h3></a>
-		<p>Decouverte des bases de HTML, CSS, JavaScript</p>
-		<span
-			><a
-				href="https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects"
-				>Voir les projets réalisées au sein de khana cademy</a
-			></span
-		>
+		<FormationsBox
+			src="kahanAcademyLogo.png"
+			name="Khan Academy"
+			text="Découverte des bases de HTML, CSS, JavaScript"
+			link="https://fr.khanacademy.org/"
+			linkString="https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects"
+			linkText="Voir les projets réalisées au sein de khan Academy"
+		/>
 	</div>
 </template>
 
 <script>
+import FormationsBox from '../components/formationsBox.vue';
 import Title from '../components/title.vue';
 export default {
 	components: {
 		Title,
+		FormationsBox,
 	},
 };
 </script>
