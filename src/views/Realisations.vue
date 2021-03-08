@@ -15,8 +15,13 @@
 					</div>
 				</div>
 				<div class="content-box">
-					<h3>{{ w.name }}</h3>
-					<p>{{ w.text }}</p>
+					<div>
+						<h3>{{ w.name }}</h3>
+						<p>{{ w.text }}</p>
+					</div>
+					<aside>
+						<a :href="w.school.link" target="blank">{{ w.school.name }}</a>
+					</aside>
 				</div>
 			</div>
 		</div>
@@ -68,13 +73,6 @@ export default {
 		grid-template-columns: 1fr;
 	}
 }
-.theme--light.v-divider {
-	margin: auto;
-	border-block-color: hotpink;
-}
-.v-divider--inset:not(.v-divider--vertical) {
-	max-width: calc(100% - 30%);
-}
 
 .image-box {
 	display: block;
@@ -84,15 +82,36 @@ export default {
 	border-right: 1px solid rgba(255, 255, 255, 0.049);
 	max-height: 70%;
 	height: 100%;
+	display: flex;
+	flex-direction: column;
 	& .icons-image {
 		max-width: 32px;
 	}
+	@media screen and (max-width: 700px) {
+		flex-direction: row;
+		margin: auto;
+		border-right: 0px;
+	}
 }
 .content-box {
-	//grid-column: 3;
 	padding-left: 20px;
-	//min-width: 70%;
-	height: 100%;
-	text-align: left;
+	//min-height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	//align-items: flex-start;
+	div {
+		text-align: left;
+	}
+	aside {
+		display: flex;
+		height: 100%;
+		//flex-direction: row;
+		justify-content: flex-end;
+		//align-content: flex-end;
+		//align-self: flex-end;
+		align-items: flex-end;
+	}
 }
 </style>

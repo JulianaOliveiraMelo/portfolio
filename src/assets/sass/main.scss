@@ -1,22 +1,21 @@
-.link-style {
+a {
+	font-size: 16px;
 	display: inline-block;
-
-	> a {
-		text-decoration: none;
-		color: #42b983;
-		&::after {
-			content: '';
-			display: block;
-			padding-bottom: 5px;
-			border-bottom: solid 3px #42b983;
-			transform: scaleX(0);
-			transition: transform 250ms ease-in-out;
-		}
-		&:hover:after {
-			transform: scaleX(1);
-		}
+	text-decoration: none;
+	color: #42b983;
+	&::after {
+		content: '';
+		display: block;
+		padding-bottom: 5px;
+		border-bottom: solid 3px #42b983;
+		transform: scaleX(0);
+		transition: transform 250ms ease-in-out;
+	}
+	&:hover:after {
+		transform: scaleX(1);
 	}
 }
+
 .box {
 	display: flex;
 	flex-flow: row;
@@ -58,7 +57,8 @@ p {
 }
 
 @media screen and (max-width: 350px) {
-	p {
+	p,
+	a {
 		font-size: 12px;
 	}
 }

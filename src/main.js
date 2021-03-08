@@ -13,7 +13,11 @@ export const bus = new Vue({
 			{
 				id: 1,
 				name: 'Mon titre',
-				schoolName: "O'Clock",
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?utm_campaing=nouvelle&gclid=Cj0KCQiAs5eCBhCBARIsAEhk4r5VyLcXsay0CaCkRt_-p47fyTKgG-l7rkkqWgb6uG5Hw557RRE_BqcaAnnUEALw_wcB',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -25,7 +29,10 @@ export const bus = new Vue({
 			{
 				id: 2,
 				name: 'Mon titre 2',
-				schoolName: 'Dyma',
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -36,7 +43,10 @@ export const bus = new Vue({
 			{
 				id: 3,
 				name: 'Mon titre',
-				schoolName: "O'Clock",
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -48,7 +58,10 @@ export const bus = new Vue({
 			{
 				id: 4,
 				name: 'Mon titre 2',
-				schoolName: 'Dyma',
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -59,7 +72,10 @@ export const bus = new Vue({
 			{
 				id: 5,
 				name: 'Mon titre 2',
-				schoolName: 'Dyma',
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -70,7 +86,10 @@ export const bus = new Vue({
 			{
 				id: 6,
 				name: 'Mon titre',
-				schoolName: "O'Clock",
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -82,7 +101,10 @@ export const bus = new Vue({
 			{
 				id: 7,
 				name: 'Mon titre 2',
-				schoolName: 'Dyma',
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -93,7 +115,10 @@ export const bus = new Vue({
 			{
 				id: 8,
 				name: 'Mon titre',
-				schoolName: "O'Clock",
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -105,7 +130,10 @@ export const bus = new Vue({
 			{
 				id: 9,
 				name: 'Mon titre 2',
-				schoolName: 'Dyma',
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
@@ -116,7 +144,10 @@ export const bus = new Vue({
 			{
 				id: 10,
 				name: 'Mon titre 2',
-				schoolName: 'Dyma',
+				school: {
+					name: "O'Clock",
+					link: 'www.oclock.fr',
+				},
 				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
 				image: {
 					source: 'pexels-marta-branco-1194713.png',
