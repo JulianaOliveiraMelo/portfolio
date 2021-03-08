@@ -4,11 +4,19 @@
 		<div class="container-box" v-for="w in work" :key="w.id">
 			<div class="container">
 				<div class="image-box">
-					<a :href="w.image.link">
+					<a :href="w.image.link" v-if="w.image" target="blank">
 						<ImageBox
 							:backgroundImage="require('/public/images/' + w.image.source)"
 							:imageDescription="w.image.description"
 					/></a>
+					<div v-else>
+						<ImageBox
+							:backgroundImage="
+								require('/public/images/pexels-marta-branco-1194713.png')
+							"
+							imageDescription="default image"
+						/>
+					</div>
 				</div>
 				<div class="icons-box">
 					<div v-for="i in w.icons" :key="i">
@@ -17,8 +25,10 @@
 				</div>
 				<div class="content-box">
 					<div>
-						<h3>{{ w.name }}</h3>
-						<p>{{ w.text }}</p>
+						<a :href="w.image.link" target="blank"
+							><h3>{{ w.name }}</h3></a
+						>
+						<p v-html="w.text"></p>
 					</div>
 					<aside v-if="w.school">
 						<a :href="w.school.link" target="blank">{{ w.school.name }}</a>
@@ -55,6 +65,7 @@ export default {
 	padding: 20px;
 	margin: auto;
 	text-align: center;
+	padding-bottom: 10%;
 }
 
 .container-box::after {

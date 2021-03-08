@@ -9,7 +9,11 @@
 			<router-link to="/competences">Compétences</router-link> |
 			<router-link to="/contact">Contact</router-link>
 		</div>
-		<router-view />
+		<div class="view-box">
+			<router-view />
+		</div>
+
+		<footer>Footer</footer>
 	</div>
 </template>
 
@@ -19,7 +23,6 @@ body {
 	margin: 0;
 	padding: 0;
 	background-color: #13202e;
-	max-height: 100vh;
 }
 #app {
 	font-family: 'RocknRoll One', Avenir, Helvetica, Arial, sans-serif;
@@ -28,6 +31,10 @@ body {
 	text-align: center;
 	color: #5083b6;
 	font-size: 18px;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	min-height: 100%;
 }
 #nav {
 	padding: 30px;
@@ -56,5 +63,8 @@ body {
 			transform: scaleX(0);
 		}
 	}
+}
+.view-box {
+	min-height: 100%;
 }
 </style>

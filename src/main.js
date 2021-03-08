@@ -15,7 +15,7 @@ export const bus = new Vue({
 				name: 'Build a Tribute Page',
 				school: {
 					name: 'freeCodeCamp',
-					link: 'https://www.freecodecamp.org',
+					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
 					1: 'icons8-html-filetype-50.png',
@@ -23,136 +23,68 @@ export const bus = new Vue({
 				},
 				image: {
 					source: 'buildATributePage-freeCodeCamp.png',
-					description: 'le text alt va ici',
+					description: 'Build a Tribute Page screenshot',
 					link: 'https://codepen.io/Julianadeale/full/XwrQXG',
 				},
 				text:
-					'Cras feugiat turpis eget mauris lacinia, et bibendum urna commodo. Phasellus risus velit, tincidunt ut risus et, efficitur dictum felis. Sed quis felis vel est dignissim tincidunt.',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="blank">https://codepen.io/freeCodeCamp/full/zNqgVx.</a> Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
 				id: 2,
-				name: 'Mon titre 2',
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
+				name: 'Build a Survey Form',
+				school: {
+					name: 'freeCodeCamp',
+					link: 'https://www.freecodecamp.org/julianadeale',
 				},
-				text: 'un travaille realisée tout seul',
+				icons: {
+					1: 'icons8-html-filetype-50.png',
+					2: 'icons8-css-filetype-50.png',
+				},
+				image: {
+					source: 'buildASurveyForm-freeCodeCamp.png',
+					description: 'Build a Survey Form screenshot',
+					link: 'https://codepen.io/Julianadeale/full/arvOWe',
+				},
+				text:
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/VPaoNP" target="blank">https://codepen.io/freeCodeCamp/full/VPaoNP</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
 				id: 3,
-				name: 'Mon titre',
+				name: 'Build a Product Landing Page',
 				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
+					name: 'freeCodeCamp',
+					link: 'https://www.freecodecamp.org/julianadeale',
 				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
+				icons: {
+					1: 'icons8-html-filetype-50.png',
+					2: 'icons8-css-filetype-50.png',
+				},
 				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
+					source: 'buildAProductLandingPage-freeCodeCamp.png',
+					description: 'Build a Product Landing Page screenshot',
+					link: 'https://codepen.io/Julianadeale/full/zQvvJw',
 				},
 				text:
-					'Cras feugiat turpis eget mauris lacinia, et bibendum urna commodo. Phasellus risus velit, tincidunt ut risus et, efficitur dictum felis. Sed quis felis vel est dignissim tincidunt.',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/RKRbwL" target="blank">https://codepen.io/freeCodeCamp/full/RKRbwL</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
 				id: 4,
-				name: 'Mon titre 2',
+				name: 'Build a Technical Documentation Page',
 				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
+					name: 'freeCodeCamp',
+					link: 'https://www.freecodecamp.org/julianadeale',
 				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
+				icons: {
+					1: 'icons8-html-filetype-50.png',
+					2: 'icons8-css-filetype-50.png',
+				},
 				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
-				},
-				text: 'un travaille realisée tout seul',
-			},
-			{
-				id: 5,
-				name: 'Mon titre 2',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
-				},
-				text: 'un travaille realisée tout seul',
-			},
-			{
-				id: 6,
-				name: 'Mon titre',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
+					source: 'buildATechnicalDocumentationPage-freeCodeCamp.png',
+					description: 'Build a Technical Documentation Page screenshot',
+					link: 'https://codepen.io/Julianadeale/full/byevBr',
 				},
 				text:
-					'Cras feugiat turpis eget mauris lacinia, et bibendum urna commodo. Phasellus risus velit, tincidunt ut risus et, efficitur dictum felis. Sed quis felis vel est dignissim tincidunt.',
-			},
-			{
-				id: 7,
-				name: 'Mon titre 2',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
-				},
-				text: 'un travaille realisée tout seul',
-			},
-			{
-				id: 8,
-				name: 'Mon titre',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
-				},
-				text:
-					'Cras feugiat turpis eget mauris lacinia, et bibendum urna commodo. Phasellus risus velit, tincidunt ut risus et, efficitur dictum felis. Sed quis felis vel est dignissim tincidunt.',
-			},
-			{
-				id: 9,
-				name: 'Mon titre 2',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
-				},
-				text: 'un travaille realisée tout seul',
-			},
-			{
-				id: 10,
-				name: 'Mon titre 2',
-				school: {
-					name: "O'Clock",
-					link: 'www.oclock.fr',
-				},
-				icons: { 1: 'icons8-sass-48.png', 2: 'icons8-vue-js-48.png' },
-				image: {
-					source: 'pexels-marta-branco-1194713.png',
-					description: 'le text alt va ici',
-				},
-				text: 'un travaille realisée tout seul',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/NdrKKL">https://codepen.io/freeCodeCamp/full/NdrKKL</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 		],
 	},

@@ -15,9 +15,6 @@ export default {
 		backgroundImage: String,
 		imageDescription: String,
 	},
-	created() {
-		console.log(this.backgroundImage);
-	},
 };
 </script>
 <style lang="scss" scoped>
