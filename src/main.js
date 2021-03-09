@@ -45,12 +45,21 @@ export const bus = new Vue({
 				linkText: "Voir les projets réalisées au sein de O'Clock - gitHub",
 				linkString:
 					'https://github.com/JulianaOliveiraMelo/parcours-formation-o-clock',
+				diplomes: [
+					{
+						name: "Attestation O'Clock",
+						link: 'o-Clock-attestationDeSuiviDeFormation.pdf',
+					},
+				],
 			},
 			{
 				id: 4,
 				name: 'Dyma',
 				src: 'dymaLogo.png',
-				description: ['Découverte des bases de HTML, CSS, JavaScript'],
+				description: [
+					'Découverte des bases de JavaScript',
+					'Découverte de Vue.js : le nouveau Framework orienté',
+				],
 				link: 'https://fr.khanacademy.org/',
 				linkText: 'Voir les projets réalisées au sein de khan Academy',
 				linkString:
@@ -59,7 +68,7 @@ export const bus = new Vue({
 			{
 				id: 5,
 				name: 'Openclassrooms',
-				src: 'kahanAcademyLogo.png',
+				src: 'openClassRoomsLogo.png',
 				description: ['Découverte des bases de HTML, CSS, JavaScript'],
 				link: 'https://fr.khanacademy.org/',
 				linkText: 'Voir les projets réalisées au sein de khan Academy',

@@ -12,6 +12,7 @@
 			:link="f.link"
 			:linkText="f.linkText"
 			:linkString="f.linkString"
+			:diplomes="f.diplomes"
 		/>
 	</div>
 </template>

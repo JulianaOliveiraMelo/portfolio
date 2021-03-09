@@ -1,18 +1,25 @@
 <template>
 	<div class="formation-box">
-		<div class="image-box">
-			<img :src="src" alt="" />
+		<div class="container">
+			<div class="image-box">
+				<img :src="src" alt="" />
+			</div>
+			<div class="info-box">
+				<a :href="link" target="blank"
+					><h3>{{ name }}</h3></a
+				>
+				<ul>
+					<li v-for="tasks in description" :key="tasks">{{ tasks }}</li>
+				</ul>
+				<span
+					><a :href="linkString" target="blank">{{ linkText }}</a></span
+				>
+			</div>
 		</div>
-		<div class="info-box">
-			<a :href="link" target="blank"
-				><h3>{{ name }}</h3></a
-			>
+		<div v-if="diplomes" class="diplomes">
 			<ul>
-				<li v-for="tasks in description" :key="tasks">{{ tasks }}</li>
+				<li v-for="d in diplomes" :key="d.name"></li>
 			</ul>
-			<span
-				><a :href="linkString" target="blank">{{ linkText }}</a></span
-			>
 		</div>
 	</div>
 </template>
@@ -27,6 +34,12 @@ export default {
 		link: String,
 		linkText: String,
 		linkString: String,
+		diplomes: Array,
+	},
+	methods: {
+		getfile(link) {
+			window.download(link);
+		},
 	},
 };
 </script>
@@ -36,11 +49,16 @@ export default {
 	padding: 20px 0;
 	margin: 20px 0;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 5px dashed #5083b619;
+	//vertical-align: middle;
+}
+.container {
+	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	column-gap: 20px;
-	border: 5px dashed #5083b619;
-	//vertical-align: middle;
 }
 .image-box {
 	margin: auto 0;
@@ -55,8 +73,12 @@ export default {
 .info-box {
 	padding: 20px 20px 20px 0;
 }
-@media screen and (max-width: 440px) {
-	.formation-box {
+.diplomes {
+	max-width: 80%;
+	border-top: 5px dashed red;
+}
+@media screen and (max-width: 700px) {
+	.container {
 		flex-direction: column;
 	}
 	.info-box {
