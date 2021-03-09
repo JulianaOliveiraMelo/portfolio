@@ -48,7 +48,7 @@ export const bus = new Vue({
 				diplomes: [
 					{
 						name: "Attestation O'Clock",
-						link: 'o-Clock-attestationDeSuiviDeFormation.pdf',
+						link: 'oclock-1.jpg',
 					},
 				],
 			},

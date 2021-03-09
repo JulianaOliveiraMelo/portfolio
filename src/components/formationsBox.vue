@@ -2,7 +2,7 @@
 	<div class="formation-box">
 		<div class="container">
 			<div class="image-box">
-				<img :src="src" alt="" />
+				<img :src="source" alt="" />
 			</div>
 			<div class="info-box">
 				<a :href="link" target="blank"
@@ -18,7 +18,13 @@
 		</div>
 		<div v-if="diplomes" class="diplomes">
 			<ul>
-				<li v-for="d in diplomes" :key="d.name"></li>
+				<li v-for="d in diplomes" :key="d.name" class="overlay">
+					<a
+						:href="require('../../public/diplomes/oclock.pdf').default"
+						target="_blank"
+						>{{ d.link }}</a
+					>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -28,7 +34,7 @@
 export default {
 	name: 'formationsBox',
 	props: {
-		src: String,
+		source: String,
 		name: String,
 		description: Array,
 		link: String,
@@ -36,9 +42,16 @@ export default {
 		linkString: String,
 		diplomes: Array,
 	},
-	methods: {
-		getfile(link) {
-			window.download(link);
+	data: () => ({
+		overlay: false,
+	}),
+
+	watch: {
+		overlay(val) {
+			val &&
+				setTimeout(() => {
+					this.overlay = false;
+				}, 2000);
 		},
 	},
 };
@@ -76,6 +89,10 @@ export default {
 .diplomes {
 	max-width: 80%;
 	border-top: 5px dashed red;
+}
+.overlay img {
+	max-width: 90vw;
+	max-height: 90vh;
 }
 @media screen and (max-width: 700px) {
 	.container {

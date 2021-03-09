@@ -7,7 +7,7 @@
 			v-for="f in training.slice().reverse()"
 			:key="f.id"
 			:name="f.name"
-			:src="require('../../public/logos/' + f.src)"
+			:source="require('../../public/logos/' + f.src)"
 			:description="f.description"
 			:link="f.link"
 			:linkText="f.linkText"
