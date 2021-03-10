@@ -224,8 +224,8 @@ export const bus = new Vue({
 					'CSS-icon': 'icons8-css-filetype-50.png',
 				},
 				image: {
-					source: 'recettePancaques-oClock.png',
-					description: 'Build a Technical Documentation Page screenshot',
+					source: 'recettePancakes-oClock.png',
+					description: 'Recette de Pancakes',
 					link: 'https://challenge-recette-pancakes-oclock.vercel.app/',
 				},
 				text:
@@ -233,27 +233,167 @@ export const bus = new Vue({
 			},
 			{
 				id: 7,
+				name: 'Hero Corp',
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+				},
+				image: {
+					source: 'heroCorp-oClock.png',
+					description: 'Hero Corp',
+					link: 'https://challenge-box-model.vercel.app/',
+				},
+				text:
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
 				id: 8,
+				name: 'OFig Figurines et statuettes',
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+				},
+				image: {
+					source: 'oFig-oClock.png',
+					description: 'OFig Figurines et statuettes',
+					link: 'https://challenge-layout.vercel.app/',
+				},
+				text:
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
 				id: 9,
+				name: "O'Clock Students News",
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+				},
+				image: {
+					source: 'oClockStudentsNews-oClock.png',
+					description: "O'Clock Students News",
+					link: 'https://challenge-forms.vercel.app/html',
+				},
+				text:
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Pair Programming</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
 				id: 10,
+				name: "Les 12 Travaux D'Hercule",
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+				},
+				image: {
+					source: 'lesDouzeTravauxDHercule-oClock.png',
+					description: "Les 12 Travaux D'Hercule",
+					link: 'https://challenge-solo-html-css.vercel.app/html',
+				},
+				text:
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
 				id: 11,
+				name: 'Jeu de la Fourchette',
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+					'JavaScript-icon': 'icons8-javascript-50.png',
+				},
+				image: {
+					source: 'jeuDeLaFourchette-oClock.png',
+					description: 'Jeu de la Fourchette',
+					link: 'https://challenge-fourchette.vercel.app/html',
+				},
+				text:
+					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
 				id: 12,
+				name: 'Dice Roller',
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+					'JavaScript-icon': 'icons8-javascript-50.png',
+				},
+				image: {
+					source: 'diceRoller-oClock.png',
+					description: 'Dice Roller',
+					link: 'https://challenge-dice-roller.vercel.app/html',
+				},
+				text:
+					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe, pour coder un jeux.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
 				id: 13,
+				name: 'Invader',
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+					'JavaScript-icon': 'icons8-javascript-50.png',
+				},
+				image: {
+					source: 'invader-oClock.png',
+					description: 'Invader',
+					link: 'https://challenge-invader.vercel.app/html/invader.html',
+				},
+				text:
+					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe, pour coder un jeux.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
 				id: 14,
+				name: 'Zelda',
+				school: {
+					name: "O'Clock",
+					link:
+						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
+				},
+				icons: {
+					'HTML-icon': 'icons8-html-filetype-50.png',
+					'CSS-icon': 'icons8-css-filetype-50.png',
+					'JavaScript-icon': 'icons8-javascript-50.png',
+				},
+				image: {
+					source: 'zelda-oClock.png',
+					description: 'Zelda',
+					link: 'https://challenge-zelda.vercel.app/',
+				},
+				text:
+					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe, pour coder un jeux.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
 				// Dyma
@@ -307,6 +447,7 @@ export const bus = new Vue({
 				icons: {
 					'HTML-icon': 'icons8-html-filetype-50.png',
 					'CSS-icon': 'icons8-css-filetype-50.png',
+					'SCSS-icon': 'icons8-sass-144.png',
 				},
 				image: {
 					source: 'profileCard-FrontEndMentor.png',
@@ -326,6 +467,7 @@ export const bus = new Vue({
 				icons: {
 					'HTML-icon': 'icons8-html-filetype-50.png',
 					'CSS-icon': 'icons8-css-filetype-50.png',
+					'SCSS-icon': 'icons8-sass-144.png',
 				},
 				image: {
 					source: 'FAQAccordionCard-FrontEndMentor.png',
@@ -334,6 +476,22 @@ export const bus = new Vue({
 				},
 				text:
 					'<p>Objectif: Construire le composant de la "FAQ carte accordéon" et le rendre aussi proche que possible de la conception sans utiliser JavaScript</p>',
+			},
+			{
+				//JNOV
+				id: 19, // la maison de l'ail
+			},
+			{
+				//JNOV
+				id: 20, // les Lacs D'Armagnac
+			},
+			{
+				//JNOV
+				id: 21, // Cabinet d'ortodonthie
+			},
+			{
+				//JNOV
+				id: 22, // Hôtel le Continental
 			},
 		],
 	},
