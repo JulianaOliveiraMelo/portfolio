@@ -3,7 +3,7 @@
 		<Title msg="Mes réalisations" />
 		<h5>De la plus récente à la plus ancienne</h5>
 		<div class="container-box" v-for="w in work.slice().reverse()" :key="w.id">
-			<div class="container">
+			<div class="container" v-if="w.name">
 				<div class="image-box">
 					<a :href="w.image.link" v-if="w.image" target="blank">
 						<ImageBox
@@ -20,8 +20,12 @@
 					</div>
 				</div>
 				<div class="icons-box">
-					<div v-for="i in w.icons" :key="i">
-						<img class="icons-image" :src="require('/public/icons/' + i)" />
+					<div v-for="(i, key) in w.icons" :key="i">
+						<img
+							class="icons-image"
+							:src="require('/public/icons/' + i)"
+							:alt="key"
+						/>
 					</div>
 				</div>
 				<div class="content-box">
@@ -32,7 +36,9 @@
 						<p v-html="w.text"></p>
 					</div>
 					<aside v-if="w.school">
-						<a :href="w.school.link" target="blank">{{ w.school.name }}</a>
+						<a class="hoverLink" :href="w.school.link" target="blank">{{
+							w.school.name
+						}}</a>
 					</aside>
 				</div>
 			</div>
@@ -123,9 +129,6 @@ export default {
 		height: 100%;
 		justify-content: flex-end;
 		align-items: flex-end;
-		a {
-			color: #42b9833f;
-		}
 	}
 	@media screen and (max-width: 700px) {
 		padding: 0;
