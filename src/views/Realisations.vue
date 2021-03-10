@@ -61,19 +61,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.container-box::after {
-	content: '';
-	display: block;
-	margin: auto;
-	border-bottom: 1.5px solid hotpink;
-	max-width: 50%;
-}
+// .container-box::after {
+// 	content: '';
+// 	display: block;
+// 	margin: auto;
+// 	border-bottom: 1.5px solid hotpink;
+// 	max-width: 50%;
+// }
 .container {
 	display: grid;
 	grid-template-columns: 2.5fr 0.5fr 5fr;
 	margin: 45px auto 25px;
 	width: 100%;
 	grid-auto-columns: minmax(100px, auto);
+	border: 5px dashed #5083b619;
+	padding: 20px;
 	@media screen and(max-width: 700px) {
 		grid-template-columns: 1fr;
 	}
