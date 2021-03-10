@@ -115,7 +115,7 @@ export const bus = new Vue({
 					link: 'https://codepen.io/Julianadeale/full/XwrQXG',
 				},
 				text:
-					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="blank">https://codepen.io/freeCodeCamp/full/zNqgVx.</a> Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="blank">celle-ci</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
 				id: 3,
@@ -134,7 +134,7 @@ export const bus = new Vue({
 					link: 'https://codepen.io/Julianadeale/full/arvOWe',
 				},
 				text:
-					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/VPaoNP" target="blank">https://codepen.io/freeCodeCamp/full/VPaoNP</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/VPaoNP" target="blank">celle-ci</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
 				id: 4,
@@ -153,7 +153,7 @@ export const bus = new Vue({
 					link: 'https://codepen.io/Julianadeale/full/zQvvJw',
 				},
 				text:
-					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/RKRbwL" target="blank">https://codepen.io/freeCodeCamp/full/RKRbwL</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/RKRbwL" target="blank">celle-ci</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 			{
 				id: 5,
@@ -172,7 +172,7 @@ export const bus = new Vue({
 					link: 'https://codepen.io/Julianadeale/full/byevBr',
 				},
 				text:
-					'Objectif: créer une application CodePen.io fonctionnellement similaire à celle-ci: <a href="https://codepen.io/freeCodeCamp/full/NdrKKL">https://codepen.io/freeCodeCamp/full/NdrKKL</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
+					'Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/NdrKKL">celle-ci</a>. Répondre aux user stories et faire réussir tous les tests. Donnez mon propre style personnel. Responsive Web Design',
 			},
 		],
 	},

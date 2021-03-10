@@ -61,13 +61,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .container-box::after {
-// 	content: '';
-// 	display: block;
-// 	margin: auto;
-// 	border-bottom: 1.5px solid hotpink;
-// 	max-width: 50%;
-// }
+.coutsider {
+	@media screen and (max-width: 700px) {
+		width: 100%;
+	}
+}
 .container {
 	display: grid;
 	grid-template-columns: 2.5fr 0.5fr 5fr;
@@ -77,21 +75,28 @@ export default {
 	border: 5px dashed #5083b619;
 	padding: 20px;
 	@media screen and(max-width: 700px) {
+		display: block;
+		width: 100%;
 		grid-template-columns: 1fr;
+		padding: 10px;
 	}
 }
 
 .image-box {
 	display: block;
+	padding: 10px;
 	a::after {
 		display: none;
+	}
+	@media screen and (max-width: 700px) {
+		padding: 0;
 	}
 }
 .icons-box {
 	margin: auto 0;
 	border-right: 1px solid rgba(255, 255, 255, 0.049);
-	max-height: 70%;
 	height: 100%;
+	max-height: 70%;
 	display: flex;
 	flex-direction: column;
 	& .icons-image {
@@ -101,6 +106,7 @@ export default {
 		flex-direction: row;
 		margin: auto;
 		border-right: 0px;
+		padding: 20px;
 	}
 }
 .content-box {
@@ -120,6 +126,9 @@ export default {
 		a {
 			color: #42b9833f;
 		}
+	}
+	@media screen and (max-width: 700px) {
+		padding: 0;
 	}
 }
 </style>
