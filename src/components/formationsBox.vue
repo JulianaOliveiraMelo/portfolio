@@ -18,18 +18,25 @@
 						/>{{ tasks }}
 					</li>
 				</ul>
-				<span
-					><a :href="linkString" target="blank">{{ linkText }}</a></span
-				>
 			</div>
 		</div>
+		<span v-if="linkText"
+			><a :href="linkString" target="blank">{{ linkText }}</a></span
+		>
+		<template v-else>
+			<span v-for="(o, key) in objective" :key="key"
+				>Objectif: {{ o.text }} :
+				<a :href="o.cours" target="_blank">voir le parcours</a></span
+			>
+		</template>
 		<div v-if="diplomes" class="diplomes">
 			<ul>
 				<li v-for="d in diplomes" :key="d.name" class="overlay">
+					{{ d.name }} :
 					<a
 						:href="require('../../public/diplomes/' + d.link).default"
 						target="_blank"
-						>{{ d.name }}</a
+						>voir pdf</a
 					>
 				</li>
 			</ul>
@@ -45,21 +52,10 @@ export default {
 		name: String,
 		description: Array,
 		link: String,
+		objective: Array,
 		linkText: String,
 		linkString: String,
 		diplomes: Array,
-	},
-	data: () => ({
-		overlay: false,
-	}),
-
-	watch: {
-		overlay(val) {
-			val &&
-				setTimeout(() => {
-					this.overlay = false;
-				}, 2000);
-		},
 	},
 };
 </script>
@@ -67,7 +63,7 @@ export default {
 <style lang="scss" scoped>
 .formation-box {
 	padding: 20px 0;
-	margin: 20px 0;
+	margin: 45px auto 25px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -77,9 +73,9 @@ export default {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;
-	column-gap: 20px;
+	column-gap: 40px;
 	width: 100%;
-	padding: 20px;
+	padding: 0 20px;
 }
 .logo-box {
 	margin: auto 0;
@@ -138,9 +134,10 @@ export default {
 	padding: 20px 20px 0;
 	border-top: 5px dashed #5083b619;
 }
-.overlay img {
-	max-width: 90vw;
-	max-height: 90vh;
+.overlay {
+	width: 100%;
+	text-align: left;
+	list-style-type: none;
 }
 @media screen and (max-width: 700px) {
 	.container {
@@ -158,6 +155,9 @@ export default {
 	.logo-box {
 		padding: 0;
 		margin: auto;
+	}
+	.overlay {
+		text-align: center;
 	}
 }
 </style>

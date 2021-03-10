@@ -40,9 +40,10 @@ export default {
 		position: absolute;
 		width: 20%;
 		height: 20%;
-		border: 2px solid hotpink;
+		border: 5px dashed rgb(255, 105, 180);
 		transition: all 0.6s ease;
 		border-radius: 2px;
+		opacity: 0.3;
 	}
 	&::after {
 		bottom: 0;
@@ -60,6 +61,7 @@ export default {
 	&:hover:before {
 		width: 100%;
 		height: 100%;
+		opacity: 1;
 	}
 }
 </style>

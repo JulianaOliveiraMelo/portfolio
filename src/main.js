@@ -26,7 +26,7 @@ export const bus = new Vue({
 				src: 'freeCodeCampLogo.png',
 				description: ['Découverte des bases de HTML, CSS, JavaScript'],
 				link: 'https://fr.khanacademy.org/',
-				linkText: 'Voir les certifications au sein de freeCodeCamp',
+				linkText: 'Voir les acquis au sein de freeCodeCamp',
 				linkString: 'https://www.freecodecamp.org/julianadeale',
 			},
 			{
@@ -86,7 +86,13 @@ export const bus = new Vue({
 					'Approfondir Swift avec la Programation Orientée Objet',
 				],
 				link: 'https://fr.khanacademy.org/',
-				linkText: 'Voir les projets réalisées au sein de khan Academy',
+				objective: [
+					{
+						text: "Devenir développeuse d'applications iOS",
+						cours:
+							'https://openclassrooms.com/fr/paths/69-developpeur-dapplication-ios',
+					},
+				],
 				linkString:
 					'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
 				diplomes: [
@@ -398,7 +404,7 @@ export const bus = new Vue({
 			{
 				// Dyma
 				id: 15,
-				name: 'Le jeu di Simon',
+				name: 'Le jeu du Simon',
 				school: {
 					name: 'Dyma',
 					link: 'https://dyma.fr/developer/5f81b6b44b3326259b4e48dc',
