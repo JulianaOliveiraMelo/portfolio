@@ -2,7 +2,23 @@
 	<div class="outsider">
 		<Title msg="Mes réalisations" />
 		<h5>De la plus récente à la plus ancienne</h5>
-		<div class="container-box" v-for="w in work.slice().reverse()" :key="w.id">
+
+		<template>
+			<div data-app>
+				<v-row align="start">
+					<v-col cols="12" sm="6">
+						<v-select
+							class="selectOptionStyle"
+							dark
+							v-model="search"
+							label="Filtrer par :"
+							:items="items"
+						></v-select>
+					</v-col>
+				</v-row>
+			</div>
+		</template>
+		<div class="container-box" v-for="w in computed_items" :key="w.id">
 			<div class="container" v-if="w.name">
 				<div class="image-box">
 					<a :href="w.image.link" v-if="w.image" target="blank">
@@ -22,6 +38,7 @@
 				<div class="icons-box">
 					<div v-for="(i, key) in w.icons" :key="i">
 						<img
+							@click="changeSearchFilter(key)"
 							class="icons-image"
 							:src="require('/public/icons/' + i)"
 							:alt="key"
@@ -52,16 +69,47 @@ import Title from '../components/title';
 import ImageBox from '../components/ImageBox';
 export default {
 	name: 'realisations',
-	data() {
-		return {
-			work: {},
-			width: '100%',
-		};
-	},
+	data: () => ({
+		items: [
+			'O`Clock',
+			'Dyma',
+			'Khan Academy',
+			'freeCodeCamp',
+			'FrontEnd Mentor',
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'Sass',
+			'Vue.js',
+			'tout',
+		],
+		work: null,
+		width: '100%',
+		search: 'tout',
+		school: [],
+	}),
 	components: { Title, ImageBox },
 
 	created() {
 		this.work = bus.work;
+	},
+	methods: {
+		changeSearchFilter(searchName) {
+			this.search = searchName;
+		},
+	},
+	computed: {
+		computed_items: function() {
+			if (this.search === 'tout') {
+				return this.work;
+			} else {
+				return this.work.filter(element => {
+					for (let i in element.tag) {
+						if (element.tag[i] == this.search) return true;
+					}
+				});
+			}
+		},
 	},
 };
 </script>
@@ -110,9 +158,21 @@ export default {
 	}
 	@media screen and (max-width: 700px) {
 		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		margin: auto;
+		margin-top: 65px;
 		border-right: 0px;
 		padding: 20px;
+	}
+	@media screen and (max-width: 600px) {
+		margin-top: 40px;
+	}
+	@media screen and (max-width: 400px) {
+		margin-top: 25px;
+	}
+	@media screen and (max-width: 300px) {
+		margin-top: 15px;
 	}
 }
 .content-box {
@@ -133,5 +193,12 @@ export default {
 	@media screen and (max-width: 700px) {
 		padding: 0;
 	}
+}
+.v-menu__contentl,
+.v-list,
+.v-list-item,
+.v-list-item__content,
+.v-list-item__title {
+	text-align: left;
 }
 </style>

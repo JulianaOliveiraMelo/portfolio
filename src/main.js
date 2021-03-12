@@ -22,7 +22,7 @@ export const bus = new Vue({
 			},
 			{
 				id: 2,
-				name: 'FreeCodeCamp',
+				name: 'freeCodeCamp',
 				src: 'freeCodeCampLogo.png',
 				description: ['Découverte des bases de HTML, CSS, JavaScript'],
 				link: 'https://fr.khanacademy.org/',
@@ -118,7 +118,8 @@ export const bus = new Vue({
 		work: [
 			{
 				//khanAcademy
-				id: 1,
+				id: 0,
+				tag: ['Khan Academy', 'HTML', 'CSS', 'JavaScript'],
 				name: 'Divers projets chez Kahan Academy',
 				school: {
 					name: 'Kahan Academy',
@@ -126,9 +127,9 @@ export const bus = new Vue({
 						'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'JavaScript-icon': 'icons8-javascript-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					JavaScript: 'icons8-javascript-50.png',
 				},
 				image: {
 					source: 'globalProjectsKhanAcademy.png',
@@ -141,15 +142,16 @@ export const bus = new Vue({
 			},
 			{
 				//freeCodeCamp
-				id: 2,
+				id: 1,
+				tag: ['freeCodeCamp', 'HTML', 'CSS'],
 				name: 'Build a Tribute Page',
 				school: {
 					name: 'freeCodeCamp',
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'buildATributePage-freeCodeCamp.png',
@@ -160,15 +162,16 @@ export const bus = new Vue({
 					'<p>Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="blank">celle-ci</a>.</p><p>Répondre aux user stories et faire réussir tous les tests.</p><p>Donnez mon propre style personnel.</p><p>Responsive Web Design.</p>',
 			},
 			{
-				id: 3,
+				id: 2,
 				name: 'Build a Survey Form',
+				tag: ['freeCodeCamp', 'HTML', 'CSS'],
 				school: {
 					name: 'freeCodeCamp',
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'buildASurveyForm-freeCodeCamp.png',
@@ -179,15 +182,16 @@ export const bus = new Vue({
 					'<p>Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/VPaoNP" target="blank">celle-ci</a>.</p><p>Répondre aux user stories et faire réussir tous les tests.</p><p>Donnez mon propre style personnel.</p><p>Responsive Web Design.</p>',
 			},
 			{
-				id: 4,
+				id: 3,
+				tag: ['freeCodeCamp', 'HTML', 'CSS'],
 				name: 'Build a Product Landing Page',
 				school: {
 					name: 'freeCodeCamp',
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'buildAProductLandingPage-freeCodeCamp.png',
@@ -198,15 +202,16 @@ export const bus = new Vue({
 					'<p>Objectif: créer une application CodePen.io fonctionnellement similaire à <a href="https://codepen.io/freeCodeCamp/full/RKRbwL" target="blank">celle-ci</a>.</p><p>Répondre aux user stories et faire réussir tous les tests.</p><p>Donnez mon propre style personnel.</p><p>Responsive Web Design.</p>',
 			},
 			{
-				id: 5,
+				id: 4,
+				tag: ['freeCodeCamp', 'HTML', 'CSS'],
 				name: 'Build a Technical Documentation Page',
 				school: {
 					name: 'freeCodeCamp',
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'buildATechnicalDocumentationPage-freeCodeCamp.png',
@@ -218,7 +223,8 @@ export const bus = new Vue({
 			},
 			{
 				//oclock
-				id: 6,
+				id: 5,
+				tag: ['O`Clock', 'HTML', 'CSS'],
 				name: 'Recette de Pancakes',
 				school: {
 					name: "O'Clock",
@@ -226,8 +232,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'recettePancakes-oClock.png',
@@ -238,7 +244,8 @@ export const bus = new Vue({
 					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
-				id: 7,
+				id: 6,
+				tag: ['O`Clock', 'HTML', 'CSS'],
 				name: 'Hero Corp',
 				school: {
 					name: "O'Clock",
@@ -246,8 +253,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'heroCorp-oClock.png',
@@ -258,7 +265,8 @@ export const bus = new Vue({
 					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
-				id: 8,
+				id: 7,
+				tag: ['O`Clock', 'HTML', 'CSS'],
 				name: 'OFig Figurines et statuettes',
 				school: {
 					name: "O'Clock",
@@ -266,8 +274,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'oFig-oClock.png',
@@ -278,7 +286,8 @@ export const bus = new Vue({
 					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
-				id: 9,
+				id: 8,
+				tag: ['O`Clock', 'HTML', 'CSS'],
 				name: "O'Clock Students News",
 				school: {
 					name: "O'Clock",
@@ -286,8 +295,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'oClockStudentsNews-oClock.png',
@@ -298,7 +307,8 @@ export const bus = new Vue({
 					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Pair Programming</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
-				id: 10,
+				id: 9,
+				tag: ['O`Clock', 'HTML', 'CSS'],
 				name: "Les 12 Travaux D'Hercule",
 				school: {
 					name: "O'Clock",
@@ -306,8 +316,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
 				},
 				image: {
 					source: 'lesDouzeTravauxDHercule-oClock.png',
@@ -318,7 +328,8 @@ export const bus = new Vue({
 					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
 			},
 			{
-				id: 11,
+				id: 10,
+				tag: ['O`Clock', 'HTML', 'CSS', 'JavaScript'],
 				name: 'Jeu de la Fourchette',
 				school: {
 					name: "O'Clock",
@@ -326,9 +337,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'JavaScript-icon': 'icons8-javascript-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					JavaScript: 'icons8-javascript-50.png',
 				},
 				image: {
 					source: 'jeuDeLaFourchette-oClock.png',
@@ -339,7 +350,8 @@ export const bus = new Vue({
 					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
-				id: 12,
+				id: 11,
+				tag: ['O`Clock', 'HTML', 'CSS', 'JavaScript'],
 				name: 'Dice Roller',
 				school: {
 					name: "O'Clock",
@@ -347,9 +359,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'JavaScript-icon': 'icons8-javascript-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					JavaScript: 'icons8-javascript-50.png',
 				},
 				image: {
 					source: 'diceRoller-oClock.png',
@@ -360,7 +372,8 @@ export const bus = new Vue({
 					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe, pour coder un jeux.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
-				id: 13,
+				id: 12,
+				tag: ['O`Clock', 'HTML', 'CSS', 'JavaScript'],
 				name: 'Invader',
 				school: {
 					name: "O'Clock",
@@ -368,9 +381,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'JavaScript-icon': 'icons8-javascript-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					JavaScript: 'icons8-javascript-50.png',
 				},
 				image: {
 					source: 'invader-oClock.png',
@@ -381,7 +394,8 @@ export const bus = new Vue({
 					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe, pour coder un jeux.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
-				id: 14,
+				id: 13,
+				tag: ['O`Clock', 'HTML', 'CSS', 'JavaScript'],
 				name: 'Zelda',
 				school: {
 					name: "O'Clock",
@@ -389,9 +403,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'JavaScript-icon': 'icons8-javascript-50.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					JavaScript: 'icons8-javascript-50.png',
 				},
 				image: {
 					source: 'zelda-oClock.png',
@@ -403,16 +417,17 @@ export const bus = new Vue({
 			},
 			{
 				// Dyma
-				id: 15,
+				id: 14,
+				tag: ['Dyma', 'HTML', 'CSS', 'Vue.js'],
 				name: 'Le jeu du Simon',
 				school: {
 					name: 'Dyma',
 					link: 'https://dyma.fr/developer/5f81b6b44b3326259b4e48dc',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'Vue.JS-icon': 'icons8-vue-js-48.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					'Vue.js': 'icons8-vue-js-48.png',
 				},
 				image: {
 					source: 'leJeuDuSimon-Dyma.png',
@@ -423,16 +438,17 @@ export const bus = new Vue({
 					'<p>Objectif: Réaliser le "Jeu du Simon" avec Vue.Js, en se servant de ce que j\'ai appris.</p>',
 			},
 			{
-				id: 16,
+				id: 15,
+				tag: ['Dyma', 'HTML', 'CSS', 'Vue.js'],
 				name: 'Faire une simple boutique',
 				school: {
 					name: 'Dyma',
 					link: 'https://dyma.fr/developer/5f81b6b44b3326259b4e48dc',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'Vue.JS-icon': 'icons8-vue-js-48.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					'Vue.js': 'icons8-vue-js-48.png',
 				},
 				image: {
 					source: 'buildASimpleStore-Dyma.png',
@@ -444,16 +460,17 @@ export const bus = new Vue({
 			},
 			{
 				// FrontEnd Mentor
-				id: 17,
+				id: 16,
+				tag: ['FrontEnd Mentor', 'HTML', 'CSS', 'Sass'],
 				name: 'Profile Card Component',
 				school: {
 					name: 'FrontEnd Mentor',
 					link: 'https://www.frontendmentor.io/profile/JulianaOliveiraMelo',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'SCSS-icon': 'icons8-sass-144.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					Sass: 'icons8-sass-144.png',
 				},
 				image: {
 					source: 'profileCard-FrontEndMentor.png',
@@ -464,16 +481,17 @@ export const bus = new Vue({
 					'<p>Objectif: Construire le composant de la carte de profil et le rendre aussi proche que possible de la conception sans utiliser JavaScript</p>',
 			},
 			{
-				id: 18,
+				id: 17,
+				tag: ['FrontEnd Mentor', 'HTML', 'CSS', 'Sass'],
 				name: 'FAQ accordion Card',
 				school: {
 					name: 'FrontEnd Mentor',
 					link: 'https://www.frontendmentor.io/profile/JulianaOliveiraMelo',
 				},
 				icons: {
-					'HTML-icon': 'icons8-html-filetype-50.png',
-					'CSS-icon': 'icons8-css-filetype-50.png',
-					'SCSS-icon': 'icons8-sass-144.png',
+					HTML: 'icons8-html-filetype-50.png',
+					CSS: 'icons8-css-filetype-50.png',
+					Sass: 'icons8-sass-144.png',
 				},
 				image: {
 					source: 'FAQAccordionCard-FrontEndMentor.png',
@@ -485,19 +503,19 @@ export const bus = new Vue({
 			},
 			{
 				//JNOV
-				id: 19, // la maison de l'ail
+				id: 18, // la maison de l'ail
 			},
 			{
 				//JNOV
-				id: 20, // les Lacs D'Armagnac
+				id: 19, // les Lacs D'Armagnac
 			},
 			{
 				//JNOV
-				id: 21, // Cabinet d'ortodonthie
+				id: 20, // Cabinet d'ortodonthie
 			},
 			{
 				//JNOV
-				id: 22, // Hôtel le Continental
+				id: 21, // Hôtel le Continental
 			},
 		],
 	},

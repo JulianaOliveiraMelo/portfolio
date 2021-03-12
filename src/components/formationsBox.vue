@@ -20,11 +20,13 @@
 				</ul>
 			</div>
 		</div>
-		<span v-if="linkText"
-			><a :href="linkString" target="blank">{{ linkText }}</a></span
-		>
+		<template v-if="linkText">
+			<span class="formation-info"
+				><a :href="linkString" target="blank">{{ linkText }}</a></span
+			>
+		</template>
 		<template v-else>
-			<span v-for="(o, key) in objective" :key="key"
+			<span class="formation-info" v-for="(o, key) in objective" :key="key"
 				>Objectif: {{ o.text }} :
 				<a :href="o.cours" target="_blank">voir le parcours</a></span
 			>
@@ -94,7 +96,7 @@ export default {
 	width: 100%;
 	text-align: left;
 	ul {
-		padding: 20px;
+		//padding: 20px;
 		li {
 			list-style-type: none;
 
@@ -126,7 +128,9 @@ export default {
 .title {
 	text-align: right;
 }
-
+.formation-info {
+	padding: 30px 10px 0;
+}
 .diplomes {
 	width: 80%;
 	max-width: 80%;
@@ -145,7 +149,7 @@ export default {
 		padding-bottom: 0;
 	}
 	.info-box {
-		padding: 20px;
+		//padding: 20px;
 		width: 100%;
 		text-align: center;
 		.title {
