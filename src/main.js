@@ -9,6 +9,49 @@ export const bus = new Vue({
 	vuetify,
 
 	data: {
+		skills: [
+			{
+				skillName: 'Html',
+				skillIcon: 'icons8-html-5-50.png',
+			},
+			{ skillName: 'Css', skillIcon: 'icons8-css3-50.png' },
+			{
+				skillName: 'JavaScript',
+				skillIcon: 'icons8-javascript-v2-50.png',
+			},
+			{
+				skillName: 'Vue.js',
+				skillIcon: 'icons8-vue-js-48.png',
+			},
+			{
+				skillName: 'Sass',
+				skillIcon: 'icons8-sass-48.png',
+			},
+			{
+				skillName: 'Swift',
+				skillIcon: 'icons8-swift-50.png',
+			},
+			{
+				skillName: 'iOS',
+				skillIcon: 'icons8-ios-logo-50.png',
+			},
+			{
+				skillName: 'Wordpress',
+				skillIcon: 'icons8-wordpress-50.png',
+			},
+			{
+				skillName: 'gitHub',
+				skillIcon: 'octocat.png',
+			},
+			{
+				skillName: 'npm',
+				skillIcon: 'icons8-npm-50.png',
+			},
+			{
+				skillName: 'Node.js',
+				skillIcon: 'icons8-nodejs-50.png',
+			},
+		],
 		training: [
 			{
 				id: 1,
@@ -470,7 +513,7 @@ export const bus = new Vue({
 				icons: {
 					HTML: 'icons8-html-filetype-50.png',
 					CSS: 'icons8-css-filetype-50.png',
-					Sass: 'icons8-sass-144.png',
+					Sass: 'icons8-sass-48.png',
 				},
 				image: {
 					source: 'profileCard-FrontEndMentor.png',
@@ -491,7 +534,7 @@ export const bus = new Vue({
 				icons: {
 					HTML: 'icons8-html-filetype-50.png',
 					CSS: 'icons8-css-filetype-50.png',
-					Sass: 'icons8-sass-144.png',
+					Sass: 'icons8-sass-48.png',
 				},
 				image: {
 					source: 'FAQAccordionCard-FrontEndMentor.png',

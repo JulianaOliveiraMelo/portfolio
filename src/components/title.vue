@@ -36,4 +36,9 @@ h3 {
 		font-size: 2.06rem;
 	}
 }
+@media screen and (max-width: 240px) {
+	h1 {
+		font-size: 1.5rem;
+	}
+}
 </style>
