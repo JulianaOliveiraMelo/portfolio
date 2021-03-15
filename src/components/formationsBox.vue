@@ -96,7 +96,6 @@ export default {
 	width: 100%;
 	text-align: left;
 	ul {
-		//padding: 20px;
 		li {
 			list-style-type: none;
 
@@ -114,6 +113,8 @@ export default {
 			}
 		}
 		img {
+			margin-bottom: -5px;
+
 			max-width: 20px;
 			margin-right: 10px;
 		}
