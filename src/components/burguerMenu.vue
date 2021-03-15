@@ -4,21 +4,29 @@
 			<img :src="require('/public/icons/burguerIcon.png')" alt="" />
 		</div>
 		<div v-show="showLink" class="menu">
-			<router-link to="/" @click.native="showHide">Accueil</router-link>
-			<router-link to="/intro" @click.native="showHide">Intro</router-link>
-			<router-link to="/realisations" @click.native="showHide"
-				>Réalisations</router-link
-			>
-			<router-link to="/formations" @click.native="showHide"
-				>Formations</router-link
-			>
-			<router-link to="/experience" @click.native="showHide"
-				>Experience</router-link
-			>
-			<router-link to="/competences" @click.native="showHide"
-				>Competences</router-link
-			>
-			<router-link to="/contact" @click.native="showHide">Contact</router-link>
+			<div class="icon" @click="showHide">
+				<img :src="require('/public/icons/closeIcon.png')" alt="" />
+			</div>
+
+			<div class="links">
+				<router-link to="/" @click.native="showHide">Accueil</router-link>
+				<router-link to="/intro" @click.native="showHide">Intro</router-link>
+				<router-link to="/realisations" @click.native="showHide"
+					>Réalisations</router-link
+				>
+				<router-link to="/formations" @click.native="showHide"
+					>Formations</router-link
+				>
+				<router-link to="/experience" @click.native="showHide"
+					>Experience</router-link
+				>
+				<router-link to="/competences" @click.native="showHide"
+					>Competences</router-link
+				>
+				<router-link to="/contact" @click.native="showHide"
+					>Contact</router-link
+				>
+			</div>
 		</div>
 	</div>
 </template>
@@ -48,13 +56,22 @@ export default {
 }
 .menu {
 	position: fixed;
-	top: 50%;
-	margin-top: -50%;
+	top: 0;
 	display: flex;
 	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end;
 	width: 100%;
 	height: 100%;
-	background-color: #031321;
+	background-color: #031321e5;
+	margin: auto;
+	z-index: 100;
+}
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	margin: auto;
 }
 </style>
