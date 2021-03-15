@@ -47,7 +47,7 @@ export default {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
 	justify-items: center;
-
+	row-gap: 20px;
 	margin: 45px auto 25px;
 	border: 5px dashed #5083b619;
 	padding: 20px;
@@ -71,11 +71,15 @@ export default {
 	align-items: center;
 	max-width: 45px;
 	height: auto;
+	img {
+		width: 50px;
+		height: 50px;
+	}
 	@media screen and(max-width: 300px) {
 		img {
 			//width: 100%;
 			min-width: 70px;
-			min-height: auto;
+			height: auto;
 			//margin: auto;
 		}
 	}
