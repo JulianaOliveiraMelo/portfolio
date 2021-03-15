@@ -1,6 +1,6 @@
 <template>
 	<div class="formation-box">
-		<div class="container">
+		<div class="school-objectives">
 			<div class="logo-box">
 				<a :href="link" target="_blank"><img :src="source" :alt="name"/></a>
 			</div>
@@ -71,7 +71,7 @@ export default {
 	align-items: center;
 	border: 5px dashed #5083b619;
 }
-.container {
+.school-objectives {
 	display: flex;
 	justify-content: space-evenly;
 	flex-direction: row;

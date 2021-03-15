@@ -22,7 +22,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #13202e;
+	background-color: #031321;
 }
 #app {
 	font-family: 'RocknRoll One', Avenir, Helvetica, Arial, sans-serif;
