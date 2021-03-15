@@ -9,6 +9,29 @@ export const bus = new Vue({
 	vuetify,
 
 	data: {
+		contact: {
+			phone: {
+				icon: 'icons8-ringing-phone-50.png',
+				text: '06.79.28.60.30',
+				link: 'tel:0679286030',
+			},
+			mail: {
+				icon: 'icons8-send-email-50.png',
+				text: 'mail',
+				link: 'mailto:julianameo@gmail.com',
+			},
+			twitter: {
+				icon: 'icons8-twitter-50.png',
+				text: 'Twitter',
+				link: 'https://twitter.com/JuaOlaMeo',
+			},
+			linkedin: {
+				icon: 'icons8-linkedin-50.png',
+				text: 'Linkedin',
+				link: 'https://www.linkedin.com/in/julianaoliveiramelo/',
+			},
+		},
+
 		skills: [
 			{
 				skillName: 'Html',
