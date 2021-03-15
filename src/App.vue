@@ -1,5 +1,6 @@
 <template>
 	<div id="app">
+		<Burguer />
 		<div id="nav">
 			<router-link to="/">Accueil</router-link> |
 			<router-link to="/intro">Intro</router-link> |
@@ -16,7 +17,14 @@
 		<footer>Footer</footer>
 	</div>
 </template>
-
+<script>
+import Burguer from '@/components/burguerMenu.vue';
+export default {
+	components: {
+		Burguer,
+	},
+};
+</script>
 <style lang="scss">
 html,
 body {
@@ -38,6 +46,9 @@ body {
 }
 #nav {
 	padding: 30px;
+	@media screen and (max-width: 745px) {
+		display: none;
+	}
 }
 #nav a {
 	font-weight: bold;

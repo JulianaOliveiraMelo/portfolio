@@ -83,12 +83,14 @@ export default {
 .objectives {
 	display: flex;
 	flex-direction: column;
-	align-content: flex-start;
 	text-align: left;
-	> a {
+	height: 100%;
+	justify-content: flex-start;
+	align-items: flex-end;
+	a {
 		text-align: right;
 	}
-	> ul {
+	ul {
 		margin: auto;
 		> li {
 			text-align: left;
@@ -125,6 +127,12 @@ export default {
 		margin-top: 20px;
 		max-height: 350px;
 		overflow: auto;
+	}
+	@media screen and (max-width: 780px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 530px) {
+		grid-template-columns: 1fr;
 	}
 	.info-site {
 		display: flex;
