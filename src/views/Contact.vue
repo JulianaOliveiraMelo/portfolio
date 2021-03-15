@@ -8,7 +8,7 @@
 						:src="require('../../public/icons/' + c.icon)"
 						:alt="c.text + ' icon'"
 					/>
-					<p>{{ c.text }}</p>
+					<p class="hoverLink">{{ c.text }}</p>
 				</a>
 				<div class="content" v-else>
 					<img
@@ -39,12 +39,10 @@ export default {
 	},
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .contact {
 	padding: 20px 0;
 	margin: 45px auto 25px;
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 	border: 5px dashed #5083b619;
 	display: grid;
@@ -62,5 +60,28 @@ export default {
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
+	a:hover:after {
+		transform: scale(0);
+	}
+	p {
+		display: table;
+		margin: auto;
+		&::after {
+			content: '';
+			display: block;
+			padding-bottom: 5px;
+			border-bottom: solid 3px #42b983;
+			transform: scaleX(0);
+			transition: all 250ms ease-in-out;
+		}
+	}
+	&:hover {
+		p {
+			opacity: 1;
+			&::after {
+				transform: scale(1);
+			}
+		}
+	}
 }
 </style>

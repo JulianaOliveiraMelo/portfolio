@@ -149,7 +149,6 @@ export default {
 		padding-bottom: 0;
 	}
 	.info-box {
-		//padding: 20px;
 		width: 100%;
 		text-align: center;
 		.title {
