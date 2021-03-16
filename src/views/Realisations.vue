@@ -72,6 +72,8 @@ export default {
 	name: 'realisations',
 	data: () => ({
 		items: [
+			'+ ancien',
+			'+ recent',
 			'O`Clock',
 			'Dyma',
 			'Khan Academy',
@@ -82,8 +84,6 @@ export default {
 			'JavaScript',
 			'Sass',
 			'Vue.js',
-			'plus ancien',
-			'plus recent',
 		],
 		work: null,
 		width: '100%',
@@ -109,10 +109,10 @@ export default {
 		computed_items: function() {
 			if (this.search === 'tout') {
 				return this.work;
-			} else if (this.search === 'plus ancien') {
+			} else if (this.search === '+ ancien') {
 				let array = this.work;
 				return array.sort((a, b) => a.id - b.id);
-			} else if (this.search === 'plus recent') {
+			} else if (this.search === '+ recent') {
 				let array = this.work;
 				return array.sort((a, b) => b.id - a.id);
 			} else {

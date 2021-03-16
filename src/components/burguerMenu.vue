@@ -42,7 +42,6 @@ export default {
 	computed: {},
 	methods: {
 		showHide() {
-			
 			console.log(this.showLink);
 			this.showBurguer = !this.showBurguer;
 			this.showLink = !this.showLink;
@@ -61,6 +60,9 @@ export default {
 	right: 0;
 	top: 0;
 	margin: 10px;
+	img {
+		max-width: 40px;
+	}
 }
 .menu {
 	position: fixed;
@@ -81,5 +83,22 @@ export default {
 	justify-content: center;
 	align-items: center;
 	margin: auto;
+	a {
+		font-weight: bold;
+		color: #42b983;
+		text-decoration: none;
+		padding-bottom: 5px;
+		display: inline-block;
+		margin: 0;
+		&.router-link-exact-active {
+			color: orange;
+			&::after {
+				transform: scaleX(0);
+			}
+		}
+	}
+}
+.icon {
+	margin: 10px;
 }
 </style>
