@@ -39,8 +39,11 @@ export default {
 			showLink: false,
 		};
 	},
+	computed: {},
 	methods: {
 		showHide() {
+			
+			console.log(this.showLink);
 			this.showBurguer = !this.showBurguer;
 			this.showLink = !this.showLink;
 		},
@@ -48,6 +51,11 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.burguerMenu {
+	@media screen and(min-width:740px) {
+		display: none;
+	}
+}
 .burguer {
 	position: fixed;
 	right: 0;

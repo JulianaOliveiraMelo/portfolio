@@ -1,23 +1,24 @@
 <template>
 	<div class="outsider">
 		<Title msg="Mes réalisations" />
-		<h5>De la plus récente à la plus ancienne</h5>
-
-		<template>
-			<div data-app>
-				<v-row align="start">
-					<v-col cols="12" sm="6">
-						<v-select
-							class="selectOptionStyle"
-							dark
-							v-model="search"
-							label="Filtrer par :"
-							:items="items"
-						></v-select>
-					</v-col>
-				</v-row>
+		<div class="optionals" key="optionals">
+			<div class="optional-box" @click="showHide()">
+				<div class="label">Filtrer par :</div>
+				<div class="chosen">{{ search }}</div>
 			</div>
-		</template>
+			<transition-group name="slide-down">
+				<div class="selections" v-show="selectItems" key="selections">
+					<div
+						@click="changeSearchFilter(i)"
+						v-for="i in items"
+						:key="i"
+						class="select"
+					>
+						{{ i }}
+					</div>
+				</div>
+			</transition-group>
+		</div>
 		<div class="container-box" v-for="w in computed_items" :key="w.id">
 			<div class="container" v-if="w.name">
 				<div class="image-box">
@@ -81,12 +82,14 @@ export default {
 			'JavaScript',
 			'Sass',
 			'Vue.js',
-			'tout',
+			'plus ancien',
+			'plus recent',
 		],
 		work: null,
 		width: '100%',
 		search: 'tout',
 		school: [],
+		selectItems: false,
 	}),
 	components: { Title, ImageBox },
 
@@ -94,14 +97,24 @@ export default {
 		this.work = bus.work;
 	},
 	methods: {
+		showHide() {
+			this.selectItems = !this.selectItems;
+		},
 		changeSearchFilter(searchName) {
 			this.search = searchName;
+			this.selectItems = !this.selectItems;
 		},
 	},
 	computed: {
 		computed_items: function() {
 			if (this.search === 'tout') {
 				return this.work;
+			} else if (this.search === 'plus ancien') {
+				let array = this.work;
+				return array.sort((a, b) => a.id - b.id);
+			} else if (this.search === 'plus recent') {
+				let array = this.work;
+				return array.sort((a, b) => b.id - a.id);
 			} else {
 				return this.work.filter(element => {
 					for (let i in element.tag) {
@@ -155,6 +168,7 @@ export default {
 	flex-direction: column;
 	& .icons-image {
 		max-width: 32px;
+		cursor: pointer;
 	}
 	@media screen and (max-width: 700px) {
 		flex-direction: row;
@@ -194,11 +208,65 @@ export default {
 		padding: 0;
 	}
 }
-.v-menu__contentl,
-.v-list,
-.v-list-item,
-.v-list-item__content,
-.v-list-item__title {
-	text-align: left;
+.optionals {
+	margin-top: 20px;
+	border: 5px dashed rgba(255, 166, 0, 0.164);
+	padding: 10px 30px;
+	cursor: pointer;
+	.optional-box {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		.label {
+			color: orange;
+			min-width: 110px;
+		}
+		.chosen {
+			width: 100%;
+			text-align: center;
+			opacity: 0.5;
+		}
+		@media screen and (max-width: 320px) {
+			flex-direction: column;
+		}
+	}
+	.selections {
+		text-align: center;
+		color: orange;
+		padding: 30px;
+		width: 100%;
+		cursor: pointer;
+		.select {
+			padding: 2px 0 0;
+			opacity: 0.5;
+			max-width: 300px;
+			margin: auto;
+			&:hover {
+				background-color: #00000019;
+				opacity: 1;
+			}
+		}
+	}
+	@media screen and(max-width: 700px) {
+		padding: 10px;
+	}
+}
+
+.slide-down-enter-active,
+.slide-down-leave-active {
+	transition: max-height 1s linear;
+}
+
+.slide-down-enter-to,
+.slide-down-leave {
+	overflow: hidden;
+	max-height: 1000px;
+}
+
+.slide-down-enter,
+.slide-down-leave-to {
+	overflow: hidden;
+	max-height: 0;
 }
 </style>

@@ -193,9 +193,9 @@ export const bus = new Vue({
 						'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
-					JavaScript: 'icons8-javascript-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
+					JavaScript: 'icons8-javascript-v2-50.png',
 				},
 				image: {
 					source: 'globalProjectsKhanAcademy.png',
@@ -216,8 +216,8 @@ export const bus = new Vue({
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'buildATributePage-freeCodeCamp.png',
@@ -236,8 +236,8 @@ export const bus = new Vue({
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'buildASurveyForm-freeCodeCamp.png',
@@ -256,8 +256,8 @@ export const bus = new Vue({
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'buildAProductLandingPage-freeCodeCamp.png',
@@ -276,8 +276,8 @@ export const bus = new Vue({
 					link: 'https://www.freecodecamp.org/julianadeale',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'buildATechnicalDocumentationPage-freeCodeCamp.png',
@@ -298,8 +298,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'recettePancakes-oClock.png',
@@ -319,8 +319,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'heroCorp-oClock.png',
@@ -340,8 +340,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'oFig-oClock.png',
@@ -361,8 +361,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'oClockStudentsNews-oClock.png',
@@ -382,8 +382,8 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 				},
 				image: {
 					source: 'lesDouzeTravauxDHercule-oClock.png',
@@ -403,9 +403,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
-					JavaScript: 'icons8-javascript-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
+					JavaScript: 'icons8-javascript-v2-50.png',
 				},
 				image: {
 					source: 'jeuDeLaFourchette-oClock.png',
@@ -425,9 +425,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
-					JavaScript: 'icons8-javascript-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
+					JavaScript: 'icons8-javascript-v2-50.png',
 				},
 				image: {
 					source: 'diceRoller-oClock.png',
@@ -447,9 +447,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
-					JavaScript: 'icons8-javascript-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
+					JavaScript: 'icons8-javascript-v2-50.png',
 				},
 				image: {
 					source: 'invader-oClock.png',
@@ -469,9 +469,9 @@ export const bus = new Vue({
 						'https://oclock.io/?gclid=Cj0KCQiA-aGCBhCwARIsAHDl5x9wva7tHz8pmFDmBLnQmuzVnYecZtGBpjDTC85ENy0o0gh-KQOVmL8aAtF6EALw_wcB',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
-					JavaScript: 'icons8-javascript-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
+					JavaScript: 'icons8-javascript-v2-50.png',
 				},
 				image: {
 					source: 'zelda-oClock.png',
@@ -491,8 +491,8 @@ export const bus = new Vue({
 					link: 'https://dyma.fr/developer/5f81b6b44b3326259b4e48dc',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 					'Vue.js': 'icons8-vue-js-48.png',
 				},
 				image: {
@@ -512,8 +512,8 @@ export const bus = new Vue({
 					link: 'https://dyma.fr/developer/5f81b6b44b3326259b4e48dc',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 					'Vue.js': 'icons8-vue-js-48.png',
 				},
 				image: {
@@ -534,8 +534,8 @@ export const bus = new Vue({
 					link: 'https://www.frontendmentor.io/profile/JulianaOliveiraMelo',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 					Sass: 'icons8-sass-48.png',
 				},
 				image: {
@@ -555,8 +555,8 @@ export const bus = new Vue({
 					link: 'https://www.frontendmentor.io/profile/JulianaOliveiraMelo',
 				},
 				icons: {
-					HTML: 'icons8-html-filetype-50.png',
-					CSS: 'icons8-css-filetype-50.png',
+					HTML: 'icons8-html-5-50.png',
+					CSS: 'icons8-css3-50.png',
 					Sass: 'icons8-sass-48.png',
 				},
 				image: {

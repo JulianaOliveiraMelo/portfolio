@@ -1,6 +1,8 @@
 <template>
 	<div id="app">
-		<Burguer />
+		<div class="burguerMenu">
+			<Burguer />
+		</div>
 		<div id="nav">
 			<router-link to="/">Accueil</router-link> |
 			<router-link to="/intro">Intro</router-link> |
@@ -77,5 +79,11 @@ body {
 }
 .view-box {
 	min-height: 100%;
+}
+.burguerMenu {
+	display: none;
+	@media screen and (max-width: 745px) {
+		display: block;
+	}
 }
 </style>
