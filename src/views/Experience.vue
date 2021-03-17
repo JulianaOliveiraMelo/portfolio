@@ -22,7 +22,14 @@
 					}}</a>
 					<ul>
 						<li>
-							Lieux: <span class="white">{{ e.businessCountry }}</span>
+							Lieux : <span class="white">{{ e.businessCountry }}</span>
+						</li>
+						<li v-if="e.contract">
+							Contrat : <span class="white">{{ e.contract }}</span>
+						</li>
+						<li>
+							Durée :
+							<span class="white">{{ e.startDate }} | {{ e.endDate }}</span>
 						</li>
 						<li v-for="text in e.objective" :key="text">
 							<img
@@ -97,6 +104,10 @@ export default {
 	@media screen and (max-width: 500px) {
 		grid-template-columns: 1fr;
 	}
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .objectives {
@@ -167,10 +178,17 @@ export default {
 		flex-direction: column;
 		min-height: 80px;
 		justify-content: space-between;
+		display: inline-block;
 		span {
 			text-align: right;
 			display: block;
 			font-size: 14px;
+		}
+		a {
+			display: inline;
+			p {
+				display: inline;
+			}
 		}
 	}
 
