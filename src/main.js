@@ -759,13 +759,13 @@ export const bus = new Vue({
 				businessLink: '',
 				businessLogo: 'autoEntrepreneur.png',
 				businessCountry: 'Fleurance - Gers - France',
-				startDate: 'Avrirl 2012',
+				startDate: 'Avril 2012',
 				endDate: 'Février 2017',
 				objective: [
-					"Achat de divers lots pour l'été et pour l'hiver",
-					'Revendre sur les marchés et foires de France',
-					'Relation Client/Vendeur',
-					'Boutique dans un camping ⭐⭐⭐⭐',
+					'Achat de divers lots été / hiver',
+					'Revente sur marchés et foires de France',
+					'Relation Client',
+					'Magasin dans un camping ⭐⭐⭐⭐',
 				],
 			},
 			{
