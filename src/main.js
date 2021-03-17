@@ -9,6 +9,22 @@ export const bus = new Vue({
 	vuetify,
 
 	data: {
+		tags: [
+			'+ ancien',
+			'+ recent',
+			'O`Clock',
+			'Dyma',
+			'Khan Academy',
+			'freeCodeCamp',
+			'FrontEnd Mentor',
+			'HTML',
+			'CSS',
+			'JavaScript',
+			'Sass',
+			'Vue.js',
+			"J'NOV",
+			'Wordpress',
+		],
 		contact: {
 			phone: {
 				icon: 'icons8-ringing-phone-50.png',
@@ -32,49 +48,80 @@ export const bus = new Vue({
 			},
 		},
 
-		skills: [
-			{
-				skillName: 'Html',
-				skillIcon: 'icons8-html-5-50.png',
-			},
-			{ skillName: 'Css', skillIcon: 'icons8-css3-50.png' },
-			{
-				skillName: 'JavaScript',
-				skillIcon: 'icons8-javascript-v2-50.png',
-			},
-			{
-				skillName: 'Vue.js',
-				skillIcon: 'icons8-vue-js-48.png',
-			},
-			{
-				skillName: 'Sass',
-				skillIcon: 'icons8-sass-48.png',
-			},
-			{
-				skillName: 'Swift',
-				skillIcon: 'icons8-swift-50.png',
-			},
-			{
-				skillName: 'iOS',
-				skillIcon: 'icons8-ios-logo-50.png',
-			},
-			{
-				skillName: 'Wordpress',
-				skillIcon: 'icons8-wordpress-50.png',
-			},
-			{
-				skillName: 'gitHub',
-				skillIcon: 'octocat.png',
-			},
-			{
-				skillName: 'npm',
-				skillIcon: 'icons8-npm-50.png',
-			},
-			{
-				skillName: 'Node.js',
-				skillIcon: 'icons8-nodejs-50.png',
-			},
-		],
+		skills: {
+			tech: [
+				{
+					skillName: 'Html',
+					skillIcon: 'icons8-html-5-50.png',
+				},
+				{
+					skillName: 'Css',
+					skillIcon: 'icons8-css3-50.png',
+				},
+				{
+					skillName: 'JavaScript',
+					skillIcon: 'icons8-javascript-v2-50.png',
+				},
+				{
+					skillName: 'Vue.js',
+					skillIcon: 'icons8-vue-js-48.png',
+				},
+				{
+					skillName: 'Sass',
+					skillIcon: 'icons8-sass-48.png',
+				},
+				{
+					skillName: 'Swift',
+					skillIcon: 'icons8-swift-50.png',
+				},
+				{
+					skillName: 'iOS',
+					skillIcon: 'icons8-ios-logo-50.png',
+				},
+				{
+					skillName: 'Wordpress',
+					skillIcon: 'icons8-wordpress-50.png',
+				},
+				{
+					skillName: 'gitHub',
+					skillIcon: 'octocat.png',
+				},
+				{
+					skillName: 'npm',
+					skillIcon: 'icons8-npm-50.png',
+				},
+				{
+					skillName: 'Node.js',
+					skillIcon: 'icons8-nodejs-50.png',
+				},
+			],
+			langs: [
+				{
+					languageName: 'Français',
+					niveaux: '90',
+					skills: {
+						parlé: '90',
+						écris: '80',
+					},
+				},
+				{
+					languageName: 'Anglais',
+					niveaux: '80',
+					skills: {
+						parlé: '80',
+						écris: '80',
+					},
+				},
+				{
+					languageName: 'Portugais',
+					niveaux: '90',
+					skills: {
+						parlé: '90',
+						écris: '90',
+					},
+				},
+			],
+		},
 		training: [
 			{
 				id: 1,
@@ -482,8 +529,87 @@ export const bus = new Vue({
 					'<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe, pour coder un jeux.</p><ul><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><p>Projet Solo</p>',
 			},
 			{
-				// Dyma
+				//JNOV
 				id: 14,
+				tag: ["J'NOV", 'Wordpress'],
+				name: "La Maison de L'Ail",
+				school: {
+					name: "J'NOV",
+					link: 'https://www.jnov.fr/',
+				},
+				icons: {
+					Wordpress: 'icons8-wordpress-50.png',
+				},
+				image: {
+					source: 'laMaisonDeLAil-simple-JNOV.png',
+					description: "image du site La Maison de L'Ail",
+					link: 'https://www.maison-de-lail.com/',
+				},
+				text:
+					"<p>Site e-commerce.</p><p>Vente de l'ail en vrac et tressé ainsi que des produits régionaux</p>",
+			},
+			{
+				//JNOV
+				id: 15,
+				tag: ["J'NOV", 'Wordpress'],
+				name: "Les Lacs d'Armagnac",
+				school: {
+					name: "J'NOV",
+					link: 'https://www.jnov.fr/',
+				},
+				icons: {
+					Wordpress: 'icons8-wordpress-50.png',
+				},
+				image: {
+					source: 'lesLacsDArmagnac-simple-JNOV.png',
+					description: "image du site Les Lacs d'Armagnac",
+					link: 'https://www.leslacs-darmagnac.com/',
+				},
+				text: "<p>Site vitrine d'un camping ⭐⭐⭐⭐</p>",
+			},
+			{
+				//JNOV
+				id: 16,
+				tag: ["J'NOV", 'Wordpress'],
+				name: "Cabinet d'Orthodontie du Dr. Adeline Lardat-Barré",
+				school: {
+					name: "J'NOV",
+					link: 'https://www.jnov.fr/',
+				},
+				icons: {
+					Wordpress: 'icons8-wordpress-50.png',
+				},
+				image: {
+					source: 'cabinetOrthodontie-simple-JNOV.png',
+					description:
+						"image du site Cabinet d'Orthodontie du Dr. Adeline Lardat-Barré",
+					link: 'https://www.orthodontie-gers.fr/',
+				},
+				text: "<p>Site vitrine d'un cabinet d'orthodontie</p>",
+			},
+			{
+				//JNOV
+				id: 17,
+				tag: ["J'NOV", 'Wordpress'],
+				name: 'Hôtel Restaurant Le Continental ⭐⭐⭐',
+				school: {
+					name: "J'NOV",
+					link: 'https://www.jnov.fr/',
+				},
+				icons: {
+					Wordpress: 'icons8-wordpress-50.png',
+				},
+				image: {
+					source: 'hotelLeContinental-simple-JNOV.png',
+					description: 'image du site Hôtel Restaurant Le Continental ⭐⭐⭐',
+					link: 'https://www.lecontinental.net/',
+				},
+				text:
+					"<p>Site vitrine d'un d'un Hôtel ⭐⭐⭐</p><p>Réalisée en trois langues :</p> <ul><li>Fraçais</li><li>Espagnol</li><li>Anglais</li></ul>",
+			},
+			{
+				// Dyma
+				id: 18,
 				tag: ['Dyma', 'HTML', 'CSS', 'Vue.js'],
 				name: 'Le jeu du Simon',
 				school: {
@@ -504,7 +630,7 @@ export const bus = new Vue({
 					'<p>Objectif: Réaliser le "Jeu du Simon" avec Vue.Js, en se servant de ce que j\'ai appris.</p>',
 			},
 			{
-				id: 15,
+				id: 19,
 				tag: ['Dyma', 'HTML', 'CSS', 'Vue.js'],
 				name: 'Faire une simple boutique',
 				school: {
@@ -526,7 +652,7 @@ export const bus = new Vue({
 			},
 			{
 				// FrontEnd Mentor
-				id: 16,
+				id: 20,
 				tag: ['FrontEnd Mentor', 'HTML', 'CSS', 'Sass'],
 				name: 'Profile Card Component',
 				school: {
@@ -547,7 +673,7 @@ export const bus = new Vue({
 					'<p>Objectif: Construire le composant de la carte de profil et le rendre aussi proche que possible de la conception sans utiliser JavaScript</p>',
 			},
 			{
-				id: 17,
+				id: 21,
 				tag: ['FrontEnd Mentor', 'HTML', 'CSS', 'Sass'],
 				name: 'FAQ accordion Card',
 				school: {
@@ -567,22 +693,6 @@ export const bus = new Vue({
 				text:
 					'<p>Objectif: Construire le composant de la "FAQ carte accordéon" et le rendre aussi proche que possible de la conception sans utiliser JavaScript</p>',
 			},
-			{
-				//JNOV
-				id: 18, // la maison de l'ail
-			},
-			{
-				//JNOV
-				id: 19, // les Lacs D'Armagnac
-			},
-			{
-				//JNOV
-				id: 20, // Cabinet d'ortodonthie
-			},
-			{
-				//JNOV
-				id: 21, // Hôtel le Continental
-			},
 		],
 		experience: [
 			{
@@ -590,7 +700,7 @@ export const bus = new Vue({
 				businessName: "J'NOV",
 				businessLink: 'https://www.jnov.fr/',
 				businessLogo: 'JNOV.png',
-				businesscountry: 'Fleurance',
+				businessCountry: 'Fleurance - Gers - France',
 				startDate: '09/03/2020',
 				endDate: '26/06/2020',
 				objective: [
@@ -621,6 +731,36 @@ export const bus = new Vue({
 						image: 'hotelLeContinental.png',
 						type: 'site vitrine',
 					},
+				],
+			},
+			{
+				id: 2,
+				businessName: 'Auto-Entrepreneur - Comerçante ambulante',
+				businessLink: '',
+				businessLogo: 'autoEntrepreneur.png',
+				businessCountry: 'Fleurance - Gers - France',
+				startDate: 'Avrirl 2012',
+				endDate: 'Février 2017',
+				objective: [
+					"Achat de divers lots pour l'été et pour l'hiver",
+					'Revendre sur les marchés et foires de France',
+					'Relation Client/Vendeur',
+					'Boutique dans un camping ⭐⭐⭐⭐',
+				],
+			},
+			{
+				id: 3,
+				businessName: 'STANOR',
+				businessLink: '',
+				businessLogo: 'STANORBlueWhale.png',
+				businessCountry: 'Moissac - Tarn-et-Garonne - France',
+				startDate: '2009',
+				endDate: '2011',
+				objective: [
+					'Gérer une équipe de +/- 10personnes',
+					'Contrôle de qualité du fruit et de son emballage',
+					'étiqueter le fruit',
+					'Travail en équipe',
 				],
 			},
 		],

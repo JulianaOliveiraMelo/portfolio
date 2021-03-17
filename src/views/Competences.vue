@@ -3,7 +3,7 @@
 		<Title msg="Mes Compétences" />
 		<div class="container">
 			<div
-				v-for="skill in skills"
+				v-for="skill in skills.tech"
 				:key="skill.skillName"
 				class="skills-container"
 			>

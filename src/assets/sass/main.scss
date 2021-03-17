@@ -114,10 +114,15 @@ li {
 }
 .outsider {
 	max-width: 960px;
+	
 	padding: 20px;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    text-align: left;
 	margin: auto;
-	text-align: center;
-	padding-bottom: 10%;
+	margin-top: 5%;
+	
 	h5 {
 		text-align: left;
 	}

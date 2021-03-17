@@ -56,6 +56,6 @@ export default {
 }
 
 .right {
-	background-image: url('../../src/assets/femme en travaille.png');
+	background-image: url('../../src/assets/cellphone.png');
 }
 </style>

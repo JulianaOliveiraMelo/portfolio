@@ -3,7 +3,12 @@
 		<Title msg="Experiences" />
 		<div v-for="e in experience" :key="e.id" class="experiences">
 			<div class="top">
-				<div class="logo">
+				<a v-if="e.businessLink" :href="e.businessLink">
+					<ImageBox
+						:backgroundImage="require('../../public/logos/' + e.businessLogo)"
+						:imageDescription="'logo de ' + e.businessName"
+				/></a>
+				<div v-else class="logo">
 					<img
 						:src="require('../../public/logos/' + e.businessLogo)"
 						:alt="e.businessName + ' logo'"
@@ -14,6 +19,9 @@
 						e.businessName
 					}}</a>
 					<ul>
+						<li>
+							Lieux: <span class="white">{{ e.businessCountry }}</span>
+						</li>
 						<li v-for="text in e.objective" :key="text">
 							<img
 								src="../../public/listStyleType/icons8-rocket-48.png"
@@ -24,7 +32,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="sites">
+			<div class="sites" v-if="e.work">
 				<div v-for="w in e.work" :key="w.name">
 					<div class="info-site">
 						<a :href="w.link" target="_blank">
@@ -47,6 +55,7 @@
 </template>
 <script>
 import Title from '@/components/title.vue';
+import ImageBox from '@/components/ImageBox.vue';
 import { bus } from '@/main';
 export default {
 	data() {
@@ -56,6 +65,7 @@ export default {
 	},
 	components: {
 		Title,
+		ImageBox,
 	},
 	created() {
 		this.experience = bus.experience;
@@ -64,6 +74,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .experiences {
+	width: 100%;
 	padding: 20px 20px;
 	margin: 45px auto 25px;
 	align-items: center;
@@ -92,6 +103,9 @@ export default {
 	}
 	ul {
 		margin: auto;
+		.white {
+			opacity: 0.5;
+		}
 		> li {
 			text-align: left;
 			list-style-type: none;
@@ -119,7 +133,7 @@ export default {
 .sites {
 	text-align: center;
 	padding-top: 20px;
-	margin-top: 20px;
+	margin-top: 50px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	column-gap: 20px;
@@ -152,7 +166,6 @@ export default {
 		width: 40%;
 		left: 50%;
 		margin-left: -20%;
-		margin-bottom: 20px;
 		border-top: 5px dashed #5083b619;
 		transform: translateY(-20px);
 	}

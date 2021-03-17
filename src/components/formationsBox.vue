@@ -64,12 +64,15 @@ export default {
 
 <style lang="scss" scoped>
 .formation-box {
+	width: 100%;
 	padding: 20px 0;
 	margin: 45px auto 25px;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	border: 5px dashed #5083b619;
+	min-height: 220px;
 }
 .school-objectives {
 	display: flex;
@@ -78,15 +81,24 @@ export default {
 	column-gap: 40px;
 	width: 100%;
 	padding: 0 20px;
+	@media screen and(max-width: 600px) {
+		flex-direction: column;
+	}
 }
 .logo-box {
-	margin: auto 0;
+	text-align: center;
+	margin: auto;
 	max-height: 70px;
 	padding-left: 20px;
 	display: inline-block;
 	min-width: 30%;
 	& img {
-		max-height: 70px;
+		height: 60px;
+
+		@media screen and (max-width: 900px) {
+			widows: auto;
+			height: 45px;
+		}
 	}
 	a::after {
 		content: none;

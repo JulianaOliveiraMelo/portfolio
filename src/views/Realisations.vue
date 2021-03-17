@@ -22,7 +22,7 @@
 		<div class="container-box" v-for="w in computed_items" :key="w.id">
 			<div class="container" v-if="w.name">
 				<div class="image-box">
-					<a :href="w.image.link" v-if="w.image" target="blank">
+					<a :href="w.image.link" v-if="w.image.source" target="blank">
 						<ImageBox
 							:backgroundImage="require('/public/images/' + w.image.source)"
 							:imageDescription="w.image.description"
@@ -71,23 +71,10 @@ import ImageBox from '../components/ImageBox';
 export default {
 	name: 'realisations',
 	data: () => ({
-		items: [
-			'+ ancien',
-			'+ recent',
-			'O`Clock',
-			'Dyma',
-			'Khan Academy',
-			'freeCodeCamp',
-			'FrontEnd Mentor',
-			'HTML',
-			'CSS',
-			'JavaScript',
-			'Sass',
-			'Vue.js',
-		],
+		items: [],
 		work: null,
 		width: '100%',
-		search: 'tout',
+		search: 'voir tout',
 		school: [],
 		selectItems: false,
 	}),
@@ -95,6 +82,7 @@ export default {
 
 	created() {
 		this.work = bus.work;
+		this.items = bus.tags;
 	},
 	methods: {
 		showHide() {
@@ -107,7 +95,7 @@ export default {
 	},
 	computed: {
 		computed_items: function() {
-			if (this.search === 'tout') {
+			if (this.search === 'voir tout') {
 				return this.work;
 			} else if (this.search === '+ ancien') {
 				let array = this.work;

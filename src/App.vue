@@ -47,6 +47,7 @@ body {
 	min-height: 100%;
 }
 #nav {
+	color: #42b9836b;
 	padding: 30px;
 	@media screen and (max-width: 745px) {
 		display: none;
@@ -54,7 +55,7 @@ body {
 }
 #nav a {
 	font-weight: bold;
-	color: #798fa5;
+	color: #42b983;
 	text-decoration: none;
 	padding-bottom: 5px;
 	display: inline-block;
@@ -71,7 +72,7 @@ body {
 		transform: scaleX(1);
 	}
 	&.router-link-exact-active {
-		color: #42b983;
+		color: orange;
 		&::after {
 			transform: scaleX(0);
 		}
