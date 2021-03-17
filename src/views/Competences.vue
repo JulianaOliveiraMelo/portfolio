@@ -26,44 +26,49 @@
 					<h4>{{ s.languageName }}</h4>
 				</div>
 				<div class="quantity">
-					<div class="percent">
-						<svg>
-							<circle cx="40" cy="40" r="40"></circle>
+					<div class="progress">
+						<div class="percent">
+							<svg>
+								<circle cx="40" cy="40" r="40"></circle>
 
-							<circle
-								cx="40"
-								cy="40"
-								r="40"
-								:style="
-									'stroke-dashoffset: calc(245 - (245 * ' +
-										s.skills.write +
-										') / 100); stroke: #16c79a'
-								"
-							></circle>
-						</svg>
-						<div class="number">
-							<p style="color: #16c79a">{{ s.skills.write }}<span>%</span></p>
+								<circle
+									cx="40"
+									cy="40"
+									r="40"
+									:style="
+										'stroke-dashoffset: calc(245 - (245 * ' +
+											s.skills.write +
+											') / 100); stroke: #16c79a'
+									"
+								></circle>
+							</svg>
+							<div class="number">
+								<p style="color: #16c79a">{{ s.skills.write }}<span>%</span></p>
+							</div>
 						</div>
+						<p>écris</p>
 					</div>
+					<div class="progress">
+						<div class="percent">
+							<svg>
+								<circle cx="40" cy="40" r="40"></circle>
 
-					<div class="percent">
-						<svg>
-							<circle cx="40" cy="40" r="40"></circle>
-
-							<circle
-								cx="40"
-								cy="40"
-								r="40"
-								:style="
-									'stroke-dashoffset: calc(245 - (245 * ' +
-										s.skills.talk +
-										') / 100); stroke:  #ff005c'
-								"
-							></circle>
-						</svg>
-						<div class="number">
-							<p style="color: #ff005c">{{ s.skills.talk }}<span>%</span></p>
+								<circle
+									cx="40"
+									cy="40"
+									r="40"
+									:style="
+										'stroke-dashoffset: calc(245 - (245 * ' +
+											s.skills.talk +
+											') / 100); stroke:  #ff005c'
+									"
+								></circle>
+							</svg>
+							<div class="number">
+								<p style="color: #ff005c">{{ s.skills.talk }}<span>%</span></p>
+							</div>
 						</div>
+						<p>parlé</p>
 					</div>
 				</div>
 			</div>
@@ -170,6 +175,15 @@ export default {
 	align-self: center;
 	justify-self: center;
 	column-gap: 20px;
+}
+.progress {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	p {
+		opacity: 0.5;
+	}
 }
 .percent {
 	position: relative;
