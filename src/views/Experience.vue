@@ -3,15 +3,17 @@
 		<Title msg="Experiences" />
 		<div v-for="e in experience" :key="e.id" class="experiences">
 			<div class="top">
-				<a v-if="e.businessLink" :href="e.businessLink">
+				<div class="logo" v-if="e.businessLink">
+					<a :href="e.businessLink" target="_blank">
+						<ImageBox
+							:backgroundImage="require('../../public/logos/' + e.businessLogo)"
+							:imageDescription="'logo de ' + e.businessName"
+					/></a>
+				</div>
+				<div v-else class="logo">
 					<ImageBox
 						:backgroundImage="require('../../public/logos/' + e.businessLogo)"
 						:imageDescription="'logo de ' + e.businessName"
-				/></a>
-				<div v-else class="logo">
-					<img
-						:src="require('../../public/logos/' + e.businessLogo)"
-						:alt="e.businessName + ' logo'"
 					/>
 				</div>
 				<div class="objectives">
@@ -75,22 +77,28 @@ export default {
 <style lang="scss" scoped>
 .experiences {
 	width: 100%;
+	min-height: 305px;
 	padding: 20px 20px;
 	margin: 45px auto 25px;
 	align-items: center;
+	justify-content: center;
 	border: 5px dashed #5083b619;
+	display: flex;
+	flex-direction: column;
 }
 .top {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
 	column-gap: 20px;
 	align-items: center;
-}
-.logo {
-	img {
-		width: 100%;
+	a::after {
+		display: none;
+	}
+	@media screen and (max-width: 500px) {
+		grid-template-columns: 1fr;
 	}
 }
+
 .objectives {
 	display: flex;
 	flex-direction: column;
@@ -127,6 +135,12 @@ export default {
 			margin-bottom: -5px;
 			max-width: 20px;
 			margin-right: 10px;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		margin-top: 70px;
+		a {
+			text-align: center;
 		}
 	}
 }

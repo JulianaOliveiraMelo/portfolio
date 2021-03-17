@@ -16,6 +16,7 @@ export default {
 <style lang="scss" scoped>
 img {
 	max-width: 100%;
+	margin: auto;
 	display: block;
 	object-fit: fill;
 	-webkit-box-reflect: below 2px
