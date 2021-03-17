@@ -1,6 +1,7 @@
 <template>
 	<div class="outsider">
 		<Title msg="Mes Compétences" />
+		<h4>Ma Stack</h4>
 		<div class="container">
 			<div
 				v-for="skill in skills.tech"
@@ -12,6 +13,59 @@
 					:alt="skill.skillName"
 				/>
 				{{ skill.skillName }}
+			</div>
+		</div>
+		<h4>Langues</h4>
+		<div class="languages">
+			<div
+				class="container lang"
+				v-for="s in skills.langs"
+				:key="s.languageName"
+			>
+				<div class="language">
+					<h4>{{ s.languageName }}</h4>
+				</div>
+				<div class="quantity">
+					<div class="percent">
+						<svg>
+							<circle cx="40" cy="40" r="40"></circle>
+
+							<circle
+								cx="40"
+								cy="40"
+								r="40"
+								:style="
+									'stroke-dashoffset: calc(245 - (245 * ' +
+										s.skills.write +
+										') / 100); stroke: #16c79a'
+								"
+							></circle>
+						</svg>
+						<div class="number">
+							<p style="color: #16c79a">{{ s.skills.write }}<span>%</span></p>
+						</div>
+					</div>
+
+					<div class="percent">
+						<svg>
+							<circle cx="40" cy="40" r="40"></circle>
+
+							<circle
+								cx="40"
+								cy="40"
+								r="40"
+								:style="
+									'stroke-dashoffset: calc(245 - (245 * ' +
+										s.skills.talk +
+										') / 100); stroke:  #ff005c'
+								"
+							></circle>
+						</svg>
+						<div class="number">
+							<p style="color: #ff005c">{{ s.skills.talk }}<span>%</span></p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="buttons-box">
@@ -77,10 +131,8 @@ export default {
 	}
 	@media screen and(max-width: 300px) {
 		img {
-			//width: 100%;
 			min-width: 70px;
 			height: auto;
-			//margin: auto;
 		}
 	}
 }
@@ -91,5 +143,83 @@ export default {
 		flex-direction: column;
 		align-items: center;
 	}
+}
+.languages {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	@media screen and (max-width: 850px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 580px) {
+		grid-template-columns: 1fr;
+	}
+}
+.container.lang {
+	grid-template-columns: 1fr;
+	align-self: center;
+	justify-self: center;
+}
+.language {
+	text-align: center;
+	padding-bottom: 40px;
+}
+.quantity {
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-self: center;
+	column-gap: 20px;
+}
+.percent {
+	position: relative;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 50px #04ff0005;
+	z-index: 1000;
+}
+
+.percent .number {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+}
+
+.percent .number p {
+	font-size: 20px;
+	transition: 0.5s;
+}
+
+.percent .number p span {
+	font-size: 12px;
+	transition: 0.5s;
+}
+
+svg {
+	position: relative;
+	width: 150px;
+	height: 150px;
+	z-index: 1000;
+}
+
+svg circle {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke-width: 3;
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
+}
+
+svg circle {
+	stroke-dasharray: 245;
+	stroke-dashoffset: 245;
 }
 </style>

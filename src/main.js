@@ -104,24 +104,24 @@ export const bus = new Vue({
 					languageName: 'Français',
 					niveaux: '90',
 					skills: {
-						parlé: '90',
-						écris: '80',
+						talk: '95',
+						write: '85',
 					},
 				},
 				{
 					languageName: 'Anglais',
 					niveaux: '80',
 					skills: {
-						parlé: '80',
-						écris: '80',
+						talk: '80',
+						write: '80',
 					},
 				},
 				{
 					languageName: 'Portugais',
 					niveaux: '90',
 					skills: {
-						parlé: '90',
-						écris: '90',
+						talk: '100',
+						write: '90',
 					},
 				},
 			],
@@ -129,6 +129,21 @@ export const bus = new Vue({
 		training: [
 			{
 				id: 1,
+				name: 'Escola de moda du Porto - EMP',
+				src: 'escolaDeModaDuPortoLogo.png',
+				description: [
+					'Modeliser de vêtements',
+					'Analyste de projet et fiches modèles',
+					'Responsable de la construction des moules de base et de leurs transformations et graduations',
+					"Responsable de l'exécution des plans de coupe et des vêtements",
+					'Responsable du suivi de la ligne de couture',
+				],
+				link: 'https://emp.pt/',
+				linkText: '',
+				linkString: '',
+			},
+			{
+				id: 2,
 				name: 'Kahan Academy',
 				src: 'kahanAcademyLogo.png',
 				description: ['Découverte des bases de HTML, CSS, JavaScript'],
@@ -138,7 +153,7 @@ export const bus = new Vue({
 					'https://fr.khanacademy.org/profile/kaid_481308314146479591875582/projects',
 			},
 			{
-				id: 2,
+				id: 3,
 				name: 'freeCodeCamp',
 				src: 'freeCodeCampLogo.png',
 				description: ['Découverte des bases de HTML, CSS, JavaScript'],
@@ -147,7 +162,7 @@ export const bus = new Vue({
 				linkString: 'https://www.freecodecamp.org/julianadeale',
 			},
 			{
-				id: 3,
+				id: 4,
 				name: "O'clock",
 				src: 'o-ClockLogo.png',
 				description: [
@@ -171,7 +186,7 @@ export const bus = new Vue({
 				],
 			},
 			{
-				id: 4,
+				id: 5,
 				name: 'Dyma',
 				src: 'dymaLogo.png',
 				description: [
@@ -193,7 +208,7 @@ export const bus = new Vue({
 				],
 			},
 			{
-				id: 5,
+				id: 6,
 				name: 'Openclassrooms',
 				src: 'openClassRoomsLogo.png',
 				description: [
