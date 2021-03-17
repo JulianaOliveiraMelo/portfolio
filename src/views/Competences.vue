@@ -74,7 +74,7 @@
 			</div>
 		</div>
 		<div class="buttons-box">
-			<StyleButton text="Mes réalizations" link="realisations" />
+			<StyleButton text="Mes réalisations" link="realisations" />
 			<StyleButton text="Contact" link="contact" />
 		</div>
 	</div>
