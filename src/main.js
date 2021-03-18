@@ -132,7 +132,7 @@ export const bus = new Vue({
 				name: 'Escola de moda du Porto - EMP',
 				src: 'escolaDeModaDuPortoLogo.png',
 				description: [
-					'Modeliser de vêtements',
+					'Modéliser de vêtements',
 					'Analyste de projet et fiches modèles',
 					'Responsable de la construction des moules de base et de leurs transformations et graduations',
 					"Responsable de l'exécution des plans de coupe et des vêtements",
@@ -168,7 +168,7 @@ export const bus = new Vue({
 				description: [
 					'Découverte des bases de HTML, CSS, JavaScript',
 					'Apprendre à se servir de Node.js et Express.js',
-					'Apprendere la syntaxe SQL',
+					'Apprendre la syntaxe SQL',
 					'Apprendre les bases de Git',
 					'Faire une API',
 					'Des projets en Solo et en PairPrograming',
@@ -180,7 +180,7 @@ export const bus = new Vue({
 					'https://github.com/JulianaOliveiraMelo/parcours-formation-o-clock',
 				diplomes: [
 					{
-						name: "Attestation de presence O'Clock",
+						name: "Attestation de présence O'Clock",
 						link: 'oclock.pdf',
 					},
 				],
@@ -215,7 +215,7 @@ export const bus = new Vue({
 					'Apprendre a coder avec JavaScript',
 					'Créer des animations CSS modernes',
 					'Apprendre les fondamentaux de Swift',
-					'Approfondir Swift avec la Programation Orientée Objet',
+					'Approfondir Swift avec la Programmation Orientée Objet',
 				],
 				link: 'https://fr.khanacademy.org/',
 				objective: [
@@ -373,7 +373,7 @@ export const bus = new Vue({
 					link: 'https://challenge-recette-pancakes-oclock.vercel.app/',
 				},
 				text:
-					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donnée.</p>",
 			},
 			{
 				id: 6,
@@ -394,7 +394,7 @@ export const bus = new Vue({
 					link: 'https://challenge-box-model.vercel.app/',
 				},
 				text:
-					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donnée.</p>",
 			},
 			{
 				id: 7,
@@ -415,7 +415,7 @@ export const bus = new Vue({
 					link: 'https://challenge-layout.vercel.app/',
 				},
 				text:
-					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donnée.</p>",
 			},
 			{
 				id: 8,
@@ -436,7 +436,7 @@ export const bus = new Vue({
 					link: 'https://challenge-forms.vercel.app/html',
 				},
 				text:
-					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Pair Programming</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Pair Programming</p><p>Rendre la page aussi proche que possible de l'image donnée.</p>",
 			},
 			{
 				id: 9,
@@ -457,7 +457,7 @@ export const bus = new Vue({
 					link: 'https://challenge-solo-html-css.vercel.app/html',
 				},
 				text:
-					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donée.</p>",
+					"<p>Objectif: Utilisation des valeurs acquises dans la journée, en classe.</p><ul><li>HTML</li><li>CSS</li></ul><p>Projet Solo</p><p>Rendre la page aussi proche que possible de l'image donnée.</p>",
 			},
 			{
 				id: 10,
@@ -724,7 +724,7 @@ export const bus = new Vue({
 				startDate: '09/03/2020',
 				endDate: '26/06/2020',
 				objective: [
-					"accompagner l'équipe technique dans la création de sites internet sous wordpress (no-Code)",
+					"Accompagner l'équipe technique dans la création de sites internet sous WordPress (no-Code)",
 				],
 				work: [
 					{
@@ -743,7 +743,7 @@ export const bus = new Vue({
 						name: 'Les Lacs D’armagnac ⭐⭐⭐⭐',
 						link: 'https://www.leslacs-darmagnac.com/',
 						image: 'lesLacDArmagnac-JNOV.png',
-						type: 'sitre vitrine',
+						type: 'site vitrine',
 					},
 					{
 						name: 'Hôtel le Continental ⭐⭐⭐',
@@ -755,7 +755,7 @@ export const bus = new Vue({
 			},
 			{
 				id: 2,
-				businessName: 'Auto-Entrepreneur - Comerçante ambulante',
+				businessName: 'Auto-Entrepreneur - Commerçante ambulante',
 				businessLink: '',
 				businessLogo: 'autoEntrepreneur.png',
 				businessCountry: 'Fleurance - Gers - France',
@@ -809,7 +809,7 @@ export const bus = new Vue({
 				startDate: '2006',
 				endDate: '2008',
 				objective: [
-					'Modeliste',
+					'Modéliste',
 					'Transformations numérique du modèle réalisé',
 					"Organisation et mise en production de l'ordre de fabrication",
 					'Achat de matière première ainsi que gérer les stocks',

@@ -6,9 +6,9 @@
 		<div id="nav">
 			<router-link to="/">Accueil</router-link> |
 			<router-link to="/intro">Intro</router-link> |
-			<router-link to="/realisations">Realisations</router-link> |
+			<router-link to="/realisations">Réalisations</router-link> |
 			<router-link to="/formations">Formations</router-link> |
-			<router-link to="/experience">Experience</router-link> |
+			<router-link to="/experience">Expériences</router-link> |
 			<router-link to="/competences">Compétences</router-link> |
 			<router-link to="/contact">Contact</router-link>
 		</div>

@@ -1,6 +1,6 @@
 <template>
 	<div class="outsider">
-		<Title msg="Experiences" />
+		<Title msg="Expériences" />
 		<div v-for="e in experience" :key="e.id" class="experiences">
 			<div class="top">
 				<div class="logo" v-if="e.businessLink">
