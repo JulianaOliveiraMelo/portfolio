@@ -1,67 +1,72 @@
 <template>
-  <div class="outsider">
-    <Title msg="Mes réalisations" />
-    <div class="optionals" key="optionals">
-      <div class="optional-box" @click="showHide()">
-        <div class="label">Filtrer par :</div>
-        <div class="chosen">{{ search }}</div>
-      </div>
-      <transition-group name="slide-down">
-        <div class="selections" v-show="selectItems" key="selections">
-          <div
-            @click="changeSearchFilter(i)"
-            v-for="i in items"
-            :key="i"
-            class="select"
-          >
-            {{ i }}
-          </div>
-        </div>
-      </transition-group>
-    </div>
-    <div class="container-box" v-for="w in computed_items" :key="w.id">
-      <div class="container" v-if="w.name">
-        <div class="image-box">
-          <a :href="w.image.link" v-if="w.image.source" target="blank">
-            <ImageBox
-              :backgroundImage="require('/public/images/' + w.image.source)"
-              :imageDescription="w.image.description"
-          /></a>
-          <div v-else>
-            <ImageBox
-              :backgroundImage="
-                require('/public/images/pexels-marta-branco-1194713.png')
-              "
-              imageDescription="default image"
-            />
-          </div>
-        </div>
-        <div class="icons-box">
-          <div v-for="(i, key) in w.icons" :key="i">
-            <img
-              @click="changeSearchFilter(key)"
-              class="icons-image"
-              :src="require('/public/icons/' + i)"
-              :alt="key"
-            />
-          </div>
-        </div>
-        <div class="content-box">
-          <div>
-            <a :href="w.image.link" target="blank"
-              ><h3>{{ w.name }}</h3></a
-            >
-            <p v-html="w.text"></p>
-          </div>
-          <aside v-if="w.school">
-            <a class="hoverLink" :href="w.school.link" target="blank">{{
-              w.school.name
-            }}</a>
-          </aside>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="outsider">
+		<Title msg="Mes réalisations" />
+		<div key="optionals" class="optionals">
+			<div class="optional-box" @click="showHide()">
+				<div class="label">
+					Filtrer par :
+				</div>
+				<div class="chosen">
+					{{ search }}
+				</div>
+			</div>
+			<transition-group name="slide-down">
+				<div v-show="selectItems" key="selections" class="selections">
+					<div
+						v-for="i in items"
+						:key="i"
+						class="select"
+						@click="changeSearchFilter(i)"
+					>
+						{{ i }}
+					</div>
+				</div>
+			</transition-group>
+		</div>
+		<div v-for="w in computed_items" :key="w.id" class="container-box">
+			<div v-if="w.name" class="container">
+				<div class="image-box">
+					<a v-if="w.image.source" :href="w.image.link" target="blank">
+						<ImageBox
+							:backgroundImage="require('/public/images/' + w.image.source)"
+							:imageDescription="w.image.description"
+						/></a>
+					<div v-else>
+						<ImageBox
+							:backgroundImage="
+								require('/public/images/pexels-marta-branco-1194713.png')
+							"
+							imageDescription="default image"
+						/>
+					</div>
+				</div>
+				<div class="icons-box">
+					<div v-for="(i, key) in w.icons" :key="i">
+						<img
+							class="icons-image"
+							:src="require('/public/icons/' + i)"
+							:alt="key"
+							@click="changeSearchFilter(key)"
+						/>
+					</div>
+				</div>
+				<div class="content-box">
+					<div>
+						<a
+							:href="w.image.link"
+							target="blank"
+						><h3>{{ w.name }}</h3></a>
+						<p v-html="w.text"></p>
+					</div>
+					<aside v-if="w.school">
+						<a class="hoverLink" :href="w.school.link" target="blank">{{
+							w.school.name
+						}}</a>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -69,49 +74,49 @@ import { bus } from "../main.js";
 import Title from "../components/title";
 import ImageBox from "../components/ImageBox";
 export default {
-  name: "realisations",
-  data: () => ({
-    items: [],
-    work: null,
-    width: "100%",
-    search: "voir tout",
-    school: [],
-    selectItems: false
-  }),
-  components: { Title, ImageBox },
+	name: "Realisations",
+	components: { Title, ImageBox },
+	data: () => ({
+		items: [],
+		work: null,
+		width: "100%",
+		search: "voir tout",
+		school: [],
+		selectItems: false
+	}),
+	computed: {
+		computed_items: function() {
+			if (this.search === "voir tout") {
+				return this.work;
+			} else if (this.search === "+ ancien") {
+				let array = this.work;
+				return array.sort((a, b) => a.id - b.id);
+			} else if (this.search === "+ recent") {
+				let array = this.work;
+				return array.sort((a, b) => b.id - a.id);
+			} else {
+				return this.work.filter(element => {
+					for (let i in element.tag) {
+						if (element.tag[i] == this.search) return true;
+					}
+				});
+			}
+		}
+	},
 
-  created() {
-    this.work = bus.work;
-    this.items = bus.tags;
-  },
-  methods: {
-    showHide() {
-      this.selectItems = !this.selectItems;
-    },
-    changeSearchFilter(searchName) {
-      this.search = searchName;
-      this.selectItems = !this.selectItems;
-    }
-  },
-  computed: {
-    computed_items: function() {
-      if (this.search === "voir tout") {
-        return this.work;
-      } else if (this.search === "+ ancien") {
-        let array = this.work;
-        return array.sort((a, b) => a.id - b.id);
-      } else if (this.search === "+ recent") {
-        let array = this.work;
-        return array.sort((a, b) => b.id - a.id);
-      } else {
-        return this.work.filter(element => {
-          for (let i in element.tag) {
-            if (element.tag[i] == this.search) return true;
-          }
-        });
-      }
-    }
-  }
+	created() {
+		this.work = bus.work;
+		this.items = bus.tags;
+	},
+	methods: {
+		showHide() {
+			this.selectItems = !this.selectItems;
+		},
+		changeSearchFilter(searchName) {
+			this.search = searchName;
+			this.selectItems = !this.selectItems;
+		}
+	}
 };
 </script>
 

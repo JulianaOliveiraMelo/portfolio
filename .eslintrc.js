@@ -1,12 +1,88 @@
 module.exports = {
+	root: true,
+	env: {
+		// this section will be used to determine which APIs are available to us
+		// (i.e are we running in a browser environment or a node.js env)
+		node: true,
+		browser: true,
+	},
+	parserOptions: {
+		parser: 'babel-eslint',
+		// specifying a module sourcetype prevent eslint from marking import statements as errors
+		sourceType: 'module',
+	},
 	extends: [
-		// add more generic rulesets here, such as:
-		// 'eslint:recommended',
-		// 'plugin:vue/vue3-recommended',
-		'plugin:vue/recommended', // Use this if you are using Vue.js 2.x.
+		// use the recommended rule set for both plain javascript and vue
+		'eslint:recommended',
+		'plugin:vue/recommended',
+		// 'plugin:vue/base',
+		'prettier',
 	],
 	rules: {
-		// override/add rules settings here, such as:
-		// 'vue/no-unused-vars': 'error'
+		// we should always disable console logs and debugging in production
+		'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+		'no-tabs': ['error', { allowIndentationTabs: true }],
+		'vue/attribute-hyphenation': [
+			'error',
+			'never',
+			{
+				ignore: [],
+			},
+		],
+		'vue/no-irregular-whitespace': [
+			1,
+			{
+				skipStrings: true,
+				skipComments: true,
+				skipRegExps: true,
+				skipTemplates: true,
+			},
+		],
+		'no-irregular-whitespace': [
+			1,
+			{
+				skipStrings: true,
+				skipComments: true,
+				skipRegExps: true,
+				skipTemplates: true,
+			},
+		],
+		// 	'vue/html-closing-bracket-newline': [
+		// 		'error',
+		// 		{
+		// 			singleline: 'never',
+		// 			multiline: 'always',
+		// 		},
+		// 	],
+		// 	'vue/max-attributes-per-line': [
+		// 		'error',
+		// 		{
+		// 			singleline: 1,
+		// 			multiline: 1,
+		// 			allowFirstLine: true,
+		// 		},
+		// 	],
+		// 	'vue/html-self-closing': [
+		// 		'error',
+		// 		{
+		// 			html: {
+		// 				void: 'never',
+		// 				normal: 'always',
+		// 				component: 'always',
+		// 			},
+		// 			svg: 'always',
+		// 			math: 'always',
+		// 		},
+		// 	],
+		// 	'vue/script-indent': ['error', 2, { baseIndent: 1 }],
+		// },
+		// overrides: [
+		// 	{
+		// 		files: ['*.vue'],
+		// 		rules: {
+		// 			indent: 'off',
+		// 		},
 	},
+	// ],
 };

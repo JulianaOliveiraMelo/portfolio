@@ -1,21 +1,21 @@
 <template>
-  <button class="button-rose" v-on:click="click(link)">
-    {{ text }}
-  </button>
+	<button class="button-rose" @click="click(link)">
+		{{ text }}
+	</button>
 </template>
 
 <script>
 export default {
-  name: "styleButton",
-  props: {
-    text: String,
-    link: String
-  },
-  methods: {
-    click(path) {
-      this.$router.replace("/" + path);
-    }
-  }
+	name: "StyleButton",
+	props: {
+		text: String,
+		link: String
+	},
+	methods: {
+		click(path) {
+			this.$router.replace("/" + path);
+		}
+	}
 };
 </script>
 

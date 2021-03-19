@@ -1,30 +1,44 @@
 <template>
-  <div id="app">
-    <div class="burguerMenu">
-      <Burguer />
-    </div>
-    <div id="nav">
-      <router-link to="/">Accueil</router-link> |
-      <router-link to="/intro">Intro</router-link> |
-      <router-link to="/realisations">Réalisations</router-link> |
-      <router-link to="/formations">Formations</router-link> |
-      <router-link to="/experience">Expériences</router-link> |
-      <router-link to="/competences">Compétences</router-link> |
-      <router-link to="/contact">Contact</router-link>
-    </div>
-    <div class="view-box">
-      <router-view />
-    </div>
+	<div id="app">
+		<div class="burguerMenu">
+			<Burguer />
+		</div>
+		<div id="nav">
+			<router-link to="/">
+				Accueil
+			</router-link> |
+			<router-link to="/intro">
+				Intro
+			</router-link> |
+			<router-link to="/realisations">
+				Réalisations
+			</router-link> |
+			<router-link to="/formations">
+				Formations
+			</router-link> |
+			<router-link to="/experience">
+				Expériences
+			</router-link> |
+			<router-link to="/competences">
+				Compétences
+			</router-link> |
+			<router-link to="/contact">
+				Contact
+			</router-link>
+		</div>
+		<div class="view-box">
+			<router-view />
+		</div>
 
-    <footer>Footer</footer>
-  </div>
+		<footer>Footer</footer>
+	</div>
 </template>
 <script>
 import Burguer from "@/components/burguerMenu.vue";
 export default {
-  components: {
-    Burguer
-  }
+	components: {
+		Burguer
+	}
 };
 </script>
 <style lang="scss">

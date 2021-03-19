@@ -1,66 +1,74 @@
 <template>
-  <div class="formation-box">
-    <div class="school-objectives">
-      <div class="logo-box">
-        <a :href="link" target="_blank"><img :src="source" :alt="name"/></a>
-      </div>
-      <div class="info-box">
-        <div class="title">
-          <h3>
-            <a class="hoverLink" a :href="link" target="blank">{{ name }}</a>
-          </h3>
-        </div>
-        <p v-if="year"><span class="year">année:</span> {{ year }}</p>
-        <ul>
-          <li v-for="tasks in description" :key="tasks">
-            <img
-              src="../../public/listStyleType/icons8-rocket-48.png"
-              alt="rocket-icon"
-            />{{ tasks }}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <template v-if="linkText">
-      <span class="formation-info"
-        ><a :href="linkString" target="blank">{{ linkText }}</a></span
-      >
-    </template>
-    <template v-else>
-      <span class="formation-info" v-for="(o, key) in objective" :key="key"
-        >Objectif: {{ o.text }} :
-        <a :href="o.cours" target="_blank">voir le parcours</a></span
-      >
-    </template>
-    <div v-if="diplomes" class="diplomes">
-      <ul>
-        <li v-for="d in diplomes" :key="d.name" class="overlay">
-          {{ d.name }} :
-          <a
-            :href="require('../../public/diplomes/' + d.link).default"
-            target="_blank"
-            >voir pdf</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
+	<div class="formation-box">
+		<div class="school-objectives">
+			<div class="logo-box">
+				<a :href="link" target="_blank"><img :src="source" :alt="name" /></a>
+			</div>
+			<div class="info-box">
+				<div class="title">
+					<h3>
+						<a
+							class="hoverLink"
+							a
+							:href="link"
+							target="blank"
+						>{{ name }}</a>
+					</h3>
+				</div>
+				<p v-if="year">
+					<span class="year">année:</span> {{ year }}
+				</p>
+				<ul>
+					<li v-for="tasks in description" :key="tasks">
+						<img
+							src="../../public/listStyleType/icons8-rocket-48.png"
+							alt="rocket-icon"
+						/>{{ tasks }}
+					</li>
+				</ul>
+			</div>
+		</div>
+		<template v-if="linkText">
+			<span
+				class="formation-info"
+			><a :href="linkString" target="blank">{{ linkText }}</a></span>
+		</template>
+		<template v-else>
+			<span
+				v-for="(o, key) in objective"
+				:key="key"
+				class="formation-info"
+			>Objectif: {{ o.text }} :
+				<a :href="o.cours" target="_blank">voir le parcours</a></span>
+		</template>
+		<div v-if="diplomes" class="diplomes">
+			<ul>
+				<li v-for="d in diplomes" :key="d.name" class="overlay">
+					{{ d.name }} :
+					<a
+						:href="require('../../public/diplomes/' + d.link).default"
+						target="_blank"
+					>voir pdf</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 </template>
 
 <script>
 export default {
-  name: "formationsBox",
-  props: {
-    source: String,
-    name: String,
-    description: Array,
-    link: String,
-    objective: Array,
-    linkText: String,
-    linkString: String,
-    diplomes: Array,
-    year: String
-  }
+	name: "FormationsBox",
+	props: {
+		source: String,
+		name: String,
+		description: Array,
+		link: String,
+		objective: Array,
+		linkText: String,
+		linkString: String,
+		diplomes: Array,
+		year: String
+	}
 };
 </script>
 

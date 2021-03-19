@@ -1,118 +1,242 @@
 <template>
-  <div class="box">
-    <div class="left">
-      <Title msg="Lorem ipsum, dolor" />
-      <p>
-        Je m'appelle Juliana Melo, j'ai 36 ans et j'habite à Mansonville dans le
-        Tarn-et-Garonne.
-      </p>
-      <p>
-        D'origine portugaise, en étant jeune j'ai eu l'occasion de voyager avec
-        mes parents un peu partout dans le monde et d'habiter dans une colonie
-        portugaise à Macao en Chine, où j'ai fait mes premières années d'école.
-        à mes treize ans, juste avant que Macao soit rendue aux chinois, je n'ai
-        pas eu d'autre choix que de suivre ma famille et de repartir vivre au
-        Portugal. En 2004 j'ai eu mon Bac professionnel en tant que modéliste.
-        J'ai démarré le monde du travail avec deux jobs en même temps, modéliste
-        en stage pendant la semaine dans une usine de confection et caissière
-        les weekends et jours fériés dans un supermarché. Mes deux contrats
-        finis, j'ai trouvé du travail dans une autre usine de confection ou très
-        vite je suis devenue polyvalente. J'étais modéliste, mais je remplaçais
-        mon patron dès qu'il s'absentait. Je gérais les stocks des accessoires,
-        je répondais au téléphone, j'étais en contact direct avec les clients et
-        les fournisseurs et parfois je trouvais même le temps d' aider dans la
-        production pour que les commandes ne prennent pas de retard. J'aimais
-        beaucoup mon travail, mais mon salaire ne parvenait pas à suivre les
-        besoins de ma famille.
-      </p>
-      <p>
-        En 2008 j'ai pris la décision de venir travailler en France. J'ai
-        démarré en tant qu'étiqueteuse l'été, dans une station fruitière. Je ne
-        savais pas parler français, mais en aucun cas cela m'a empêché de bien
-        faire mon travail. L'hiver je travaillais aussi dans une autre station
-        fruitière en tant que trieuse de pommes. Très vite mon français
-        s'est amélioré et je suis devenue cheffe de ligne d'une équipe d'environ
-        10 personnes.
-      </p>
-      <p>
-        En 2011, j'ai arrêté mon contrat pour me mettre à mon propre compte. Je
-        suis devenue commerçante ambulante sur les marchés et foires de France.
-        Je vendais des bijoux et du tatouage temporaire l'été et des gants,
-        bonnets, chaussettes et écharpes en hiver.
-      </p>
-      <p>
-        En 2013 j'ai eu mon premier enfant, qui s'est vite suivi de mon deuxième
-        et troisième petit loup. J'ai arrêté mon activité en 2017, pour me
-        consacrer à eux et savourer les meilleurs moments de tendresse dans leur
-        plus jeune âge.
-      </p>
-      <p>
-        C'est pendant mes congés parentaux que j'ai découvert mon goût pour la
-        programmation. En effet, mon mari avait pris mon affaire et demandé de
-        créer un site e-commerce pour pouvoir vendre les affaires du marché. Je
-        lui ai donc créé un site sur PrestaShop. Comme je ne connaissais rien,
-        j'ai regardé des vidéos sur Youtube, où il expliquait comment modifier
-        certaines fonctionnalités de base et les adapter à nos besoins. C'est là
-        que j'ai touché au code pour la première fois. J'ai tellement  aimé, que
-        je me suis dit que je voulais faire de ça mon métier.
-      </p>
-      <p>
-        En 2019 j'ai donc décidé de me lancer en autodidacte et j'ai démarré mes
-        premières leçons de JavaScript, HTML et CSS sur Khan Academy. J'ai vite
-        pris goût au code et mon rêve de devenir développeuse Web et mobile est
-        apparue. Aujourd'hui je passe des heures et des heures à apprendre sans
-        me lasser.
-      </p>
-      <p>
-        Récemment admise à l'école Openclassrooms, je suis le parcours de
-        développeuse d'application iOS, car pour moi, pour devenir une meilleure
-        développeuse mobile, il faut démarrer par le native. J'ai comme objectif
-        par la suite d'apprendre android native, mais aussi iOS/Android hybride.
-        Je ne compte pas m'arrêter là car je sais que le monde du web est en
-        constante évolution.
-      </p>
-      <p>
-        Alors si vous connaissez quelqu'un qui veut bien m'embaucher en contrat
-        de professionnalisation d'une durée de 24 mois au rythme de 4 jours
-        entreprise 1 jour école, n'hésitez pas à entrer en contact avec moi.
-      </p>
+	<div class="outsider">
+		<Title msg="Je me presente..." />
+		<div class="container">
+			<div class="text-content">
+				<p>
+					<ImageBox
+						class="images floatRight map"
+						:backgroundImage="require('../../public/images/porto-macao.png')"
+					/>Je m'appelle Juliana Melo, j'ai 36 ans et j'habite à
+					<a
+						class="bold"
+						href="https://www.google.com/maps/place/82120+Mansonville/@44.0553462,0.843508,11z/data=!4m13!1m7!3m6!1s0x12abc15f29455c0b:0xfaf032cab7a40d76!2s82120+Mansonville!3b1!8m2!3d44.015309!4d0.840809!3m4!1s0x12abc15f29455c0b:0xfaf032cab7a40d76!8m2!3d44.015309!4d0.840809"
+						target="_blank"
+						>Mansonville</a
+					>
+					dans le Tarn-et-Garonne.<br />
+					D'origine portugaise, j'ai eu l'occasion de voyager avec mes parents
+					un peu partout dans le monde et d'habiter dans une colonie portugaise
+					à Macao en <span class="bold chinaColors">Chine</span>, où j'ai fait
+					mes premières années d'école. à mes treize ans, je n'ai pas eu d'autre
+					choix que de suivre ma famille et de repartir vivre au
+					<span class="bold portugalColors">Portugal</span>. En 2004 j'ai eu mon
+					Bac professionnel en tant que modéliste. J'ai démarré le monde du
+					travail avec deux jobs en même temps, modéliste en stage pendant la
+					semaine dans une usine de confection et caissière les weekends et
+					jours fériés dans un supermarché. Mes deux contrats finis, j'ai trouvé
+					du travail dans une autre usine de confection où très vite je suis
+					devenue polyvalente. J'étais modéliste, mais je remplaçais mon patron
+					dès qu'il s'absentait. Je gérais les stocks des accessoires, je
+					répondais au téléphone, j'étais en contact direct avec les clients et
+					les fournisseurs et parfois je trouvais même le temps d' aider dans la
+					production pour que les commandes ne prennent pas de retard. J'aimais
+					beaucoup mon travail, mais mon salaire ne parvenait pas à suivre les
+					besoins de ma famille.<br />
+					En 2008 j'ai pris la décision de venir travailler en
+					<span class="bold franceColors">France</span>.<ImageBox
+						class="images floatRight eiffel"
+						:backgroundImage="
+							require('../../public/images/hannah-reding-_U9rtz9kQS4-unsplash.png')
+						"
+					/>
+					J'ai démarré en tant qu'étiqueteuse l'été, dans une station
+					fruitière. Je ne savais pas parler français, mais en aucun cas
+					cela m'a empêché de bien faire mon travail. L'hiver je travaillais
+					aussi dans une autre station fruitière en tant que trieuse de pommes.
+					Très vite mon français s'est amélioré et je suis devenue cheffe de
+					ligne d'une équipe d'environ 10 personnes.<br />
+					En 2011, j'ai arrêté mon contrat pour me mettre à mon propre compte.
+					Je suis devenue commerçante ambulante sur les marchés et foires de
+					<span class="bold franceColors">France</span>. Je vendais des bijoux
+					et du tatouage temporaire l'été et des gants, bonnets, chaussettes et
+					écharpes en hiver.<br />
+					En 2013 j'ai eu mon premier enfant, qui s'est vite suivi de mon
+					deuxième et troisième petit loup. J'ai arrêté mon activité en 2017,
+					pour me consacrer à eux et savourer les meilleurs moments de tendresse
+					dans leur plus jeune âge.<br />
+					<ImageBox
+						class="images floatLeft prestashop"
+						:backgroundImage="require('../../public/logos/prestaShop.png')"
+					/>
+					C'est pendant mes congés parentaux que j'ai découvert mon goût pour la
+					programmation. En effet, mon mari avait pris mon affaire et demandé de
+					créer un site e-commerce pour pouvoir vendre les affaires du marché.
+					Je lui ai donc créé un site sur
+					<span class="bold purple">Presta</span
+					><span class="bold pink">Shop</span> Comme je ne connaissais rien,
+					j'ai regardé des vidéos sur Youtube, où il expliquait comment modifier
+					certaines fonctionnalités de base et les adapter à nos besoins. C'est
+					là que j'ai touché au code pour la première fois. J'ai tellement 
+					aimé, que je me suis dit que je voulais faire de ça mon métier.<br />
+					En 2019 j'ai donc décidé de me lancer en autodidacte et j'ai démarré
+					mes premières leçons de
+					<span class="bold javaScriptColor">JavaScript</span>,
+					<span class="bold htmlColors">HTML</span> et
+					<span class="bold cssColors">CSS</span> sur
+					<a
+						href="https://fr.khanacademy.org/profile/kaid_481308314146479591875582/"
+						target="_blank"
+						>Khan Academy</a
+					>. J'ai vite pris goût au code et mon rêve de devenir développeuse Web
+					et mobile est apparue. Aujourd'hui je passe des heures et des heures à
+					apprendre sans me lasser, pour l'instant, j'apprends
+					<span class="bold orange">Swift</span> et les bases de
+					<span class="bold blue">XCode</span>.<br />
+					Récemment admise à l'école Openclassrooms, je veux suivre le parcours
+					de développeuse d'application <span class="bold iosColor">iOS</span>,
+					car pour moi, pour devenir une meilleure développeuse mobile, il faut
+					démarrer par le native. J'ai comme objectif par la suite d'apprendre
+					android native, mais aussi <span class="bold iosColor">iOS</span> /
+					<span class="bold androidColor">Android</span> hybride. Je ne compte
+					pas m'arrêter là car je sais que le monde du web est en constante
+					évolution.<br />Alors si vous connaissez quelqu'un qui veut bien
+					m'embaucher en contrat de professionnalisation d'une durée de 24 mois
+					au rythme de 4 jours entreprise 1 jour école, n'hésitez pas à entrer
+					en contact avec moi.
+				</p>
+			</div>
+		</div>
 
-      <div class="button-box">
-        <StyleButton text="Mes réalizations" link="realisations" />
-        <StyleButton text="Contact" link="contact" />
-      </div>
-    </div>
-    <div class="right"></div>
-  </div>
+		<div class="button-box">
+			<StyleButton text="Mes réalizations" link="realisations" />
+			<StyleButton text="Contact" link="contact" />
+		</div>
+	</div>
 </template>
 
 <script>
-import StyleButton from "@/components/styleButton.vue";
-import Title from "@/components/title.vue";
+import StyleButton from '@/components/styleButton.vue';
+import Title from '@/components/title.vue';
+import ImageBox from '@/components/ImageBox.vue';
 export default {
-  name: "Intro",
-  components: {
-    StyleButton,
-    Title
-  }
+	name: 'Intro',
+	components: {
+		StyleButton,
+		Title,
+		ImageBox,
+	},
 };
 </script>
 
 <style lang="scss" scoped>
+.images {
+	display: inline;
+	transition: all 0.5s linear;
+	cursor: pointer;
+	&.floatRight {
+		max-width: 60%;
+		float: right;
+		&.map {
+			margin: 0 0 30px 20px;
+			&:hover {
+				position: initial;
+
+				max-width: 100%;
+				margin: 20px 50px 60px 50px;
+			}
+		}
+		&.eiffel {
+			max-width: 30%;
+			margin: 30px 0 50px 40px;
+			shape-outside: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
+			&:hover {
+				margin: 40px 0 60px 20px;
+				position: initial;
+
+				max-width: 100%;
+				shape-outside: circle(70%);
+			}
+		}
+	}
+	&.floatLeft {
+		max-width: 20%;
+		float: left;
+		&.prestashop {
+			margin: 20px 30px 40px 0;
+			shape-outside: circle(50%);
+			&:hover {
+				shape-outside: circle(70%);
+				position: initial;
+				max-width: 30%;
+				margin: 20px 20px 30px 0;
+			}
+		}
+	}
+}
+.bold {
+	font-weight: 700;
+	&.purple {
+		color: #29245c;
+	}
+	&.pink {
+		color: #d6016b;
+	}
+	&.orange {
+		color: #fc3c21;
+	}
+	&.blue {
+		color: #8eb6e1;
+	}
+	&.franceColors {
+		background: -webkit-linear-gradient(
+			0deg,
+			rgba(0, 22, 255, 1) 0%,
+			rgba(255, 255, 255, 1) 49%,
+			rgba(255, 0, 0, 1) 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&.portugalColors {
+		background: -webkit-linear-gradient(
+			0deg,
+			rgba(0, 99, 0, 1) 0%,
+			rgba(192, 143, 3, 1) 54%,
+			rgba(247, 0, 0, 1) 100%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&.chinaColors {
+		background: -webkit-linear-gradient(
+			0deg,
+			rgba(222, 41, 16, 1) 39%,
+			rgba(245, 208, 0, 1) 42%,
+			rgba(222, 41, 16, 1) 46%
+		);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&.iosColor {
+		color: #bababa;
+	}
+	&.androidColor {
+		color: green;
+	}
+	&.javaScriptColor {
+		color: #efd81d;
+	}
+	&.htmlColors {
+		color: #fd6a00;
+	}
+	&.cssColors {
+		color: #0277bd;
+	}
+}
+.container {
+	border: 5px dashed #5083b619;
+	padding: 20px;
+	margin: 25px 0;
+}
 p {
-  columns: 3;
+	font-size: 16px;
+	// columns: 2;
+	// column-gap: 25px;
 }
-@media screen and (max-width: 800px) {
-  .box {
-    flex-wrap: wrap;
-  }
-  .right {
-    min-width: 100%;
-    max-height: 600px;
-    background-position: center;
-  }
-}
-.right {
-  background-image: url("../../src/assets/ordinateur-portable.png");
+.button-box {
+	width: 100%;
+	justify-content: space-evenly;
+	margin-top: 0;
 }
 </style>

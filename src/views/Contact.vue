@@ -1,42 +1,47 @@
 <template>
-  <div class="outsider">
-    <Title msg="Me contacter" />
-    <div class="contact">
-      <div class="box" v-for="c in contact" :key="c.text">
-        <a class="content" v-if="c.link" :href="c.link" target="_blank">
-          <img
-            :src="require('../../public/icons/' + c.icon)"
-            :alt="c.text + ' icon'"
-          />
-          <p class="hoverLink">{{ c.text }}</p>
-        </a>
-        <div class="content" v-else>
-          <img
-            :src="require('../../public/icons/' + c.icon)"
-            :alt="c.text + ' icon'"
-          />
-          <p>{{ c.text }}</p>
-        </div>
-      </div>
-    </div>
-  </div>
+	<div class="outsider">
+		<Title msg="Me contacter" />
+		<div class="contact">
+			<div v-for="c in contact" :key="c.text" class="box">
+				<a
+					v-if="c.link"
+					class="content"
+					:href="c.link"
+					target="_blank"
+				>
+					<img
+						:src="require('../../public/icons/' + c.icon)"
+						:alt="c.text + ' icon'"
+					/>
+					<p class="hoverLink">{{ c.text }}</p>
+				</a>
+				<div v-else class="content">
+					<img
+						:src="require('../../public/icons/' + c.icon)"
+						:alt="c.text + ' icon'"
+					/>
+					<p>{{ c.text }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 <script>
 import Title from "@/components/title.vue";
 import { bus } from "../main.js";
 export default {
-  data() {
-    return {
-      contact: {}
-    };
-  },
-  components: {
-    Title
-  },
-  created() {
-    this.contact = bus.contact;
-    console.log(this.contact);
-  }
+	components: {
+		Title
+	},
+	data() {
+		return {
+			contact: {}
+		};
+	},
+	created() {
+		this.contact = bus.contact;
+		console.log(this.contact);
+	}
 };
 </script>
 <style lang="scss" scoped>
