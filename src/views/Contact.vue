@@ -59,6 +59,11 @@ export default {
 	display: flex;
 	flex-direction: column;
 	margin: 20px;
+	justify-content: space-around;
+	align-items: center;
+	a {
+		text-align: center;
+	}
 	a:hover:after {
 		transform: scale(0);
 	}

@@ -1,21 +1,93 @@
 <template>
 	<div class="footerContainer">
-		<div class="columns">Copyright JulianaOliveiraMelo@ 2021</div>
-		<div class="columns">credits</div>
-		<div class="columns">img</div>
+		<div class="credits">
+			<ul>
+				<li>credits</li>
+				<li>cookies</li>
+				<li><a href="/legal">Mentions légales</a></li>
+			</ul>
+		</div>
+		<div class="socialIcons">
+			<div v-for="c in socialIcons" :key="c.text" class="box">
+				<a v-if="c.link" class="content" :href="c.link" target="_blank">
+					<img
+						:src="require('../../public/icons/' + c.icon)"
+						:alt="c.text + ' icon'"
+					/>
+					<p class="hoverLink">{{ c.text }}</p>
+				</a>
+				<div v-else class="content">
+					<img
+						:src="require('../../public/icons/' + c.icon)"
+						:alt="c.text + ' icon'"
+					/>
+					<p>{{ c.text }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<span class="white">©</span> Copyright
+			<span class="white">2021</span> JulianaOliveiraMelo
+		</div>
 	</div>
 </template>
-
+<script>
+import { bus } from '../main.js';
+export default {
+	data() {
+		return {
+			socialIcons: {}, // does not contain phone in contact
+		};
+	},
+	created() {
+		this.socialIcons = [...bus.contact];
+		this.socialIcons.shift();
+	},
+};
+</script>
 <style lang="scss" scoped>
 .footerContainer {
-	background-color: rgba(0, 0, 0, 0.535);
-	opacity: 0.5;
-	min-height: 100px;
-	display: flex;
-	justify-content: space-evenly;
+	width: 100%;
+	min-height: 150px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 2fr 1fr;
+	justify-content: space-between;
 	align-items: center;
+	background-color: #020e18;
+}
+.socialIcons {
+	grid-area: 1/1/2/2;
+	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
-	columns: 3;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	margin: 20px auto;
+	a {
+		filter: brightness(50%);
+
+		&:hover {
+			filter: brightness(1);
+			p {
+				opacity: 1;
+			}
+		}
+		img {
+			max-height: 30px;
+		}
+	}
+}
+.credits {
+	grid-area: 1/2/2/3;
+}
+.copyright {
+	grid-area: 2/1/3/3;
+	font-size: 12px;
+	opacity: 0.5;
+	.white {
+		color: white;
+	}
 }
 </style>

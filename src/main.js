@@ -5,6 +5,7 @@ import './assets/sass/main.scss';
 import vuetify from './plugins/vuetify';
 
 Vue.config.productionTip = false;
+
 export const bus = new Vue({
 	vuetify,
 
@@ -36,28 +37,32 @@ export const bus = new Vue({
 			"J'NOV",
 			'Wordpress',
 		],
-		contact: {
-			phone: {
+		contact: [
+			{
+				name: 'phone',
 				icon: 'icons8-ringing-phone-50.png',
 				text: 'Téléphone',
 				link: 'tel:0679286030',
 			},
-			mail: {
+			{
+				name: 'mail',
 				icon: 'icons8-send-email-50.png',
 				text: 'mail',
 				link: 'mailto:julianameo@gmail.com',
 			},
-			twitter: {
+			{
+				name: 'twitter',
 				icon: 'icons8-twitter-50.png',
 				text: 'Twitter',
 				link: 'https://twitter.com/JuaOlaMeo',
 			},
-			linkedin: {
+			{
+				name: 'linkedin',
 				icon: 'icons8-linkedin-50.png',
 				text: 'Linkedin',
 				link: 'https://www.linkedin.com/in/julianaoliveiramelo/',
 			},
-		},
+		],
 
 		skills: {
 			tech: [
