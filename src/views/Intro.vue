@@ -129,6 +129,11 @@ export default {
 		float: right;
 		&.map {
 			margin: 0 0 30px 20px;
+			@media screen and (max-width: 600px) {
+				min-width: 60%;
+				max-width: 100%;
+				margin: 0 5% 5% 5%;
+			}
 			&:hover {
 				position: initial;
 
@@ -140,10 +145,13 @@ export default {
 			max-width: 30%;
 			margin: 30px 0 50px 40px;
 			shape-outside: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
+			@media screen and (max-width: 600px) {
+				min-width: 60%;
+				margin: 5% 0 5% 15%;
+			}
 			&:hover {
 				margin: 40px 0 60px 20px;
 				position: initial;
-
 				max-width: 100%;
 				shape-outside: circle(70%);
 			}
@@ -155,6 +163,15 @@ export default {
 		&.prestashop {
 			margin: 20px 30px 40px 0;
 			shape-outside: circle(50%);
+			@media screen and(max-width: 600px) {
+				min-width: 35%;
+				shape-outside: circle(45%);
+				margin: 20px 30px 20px 0;
+			}
+			@media screen and(max-width: 450px) {
+				min-width: 40%;
+			}
+
 			&:hover {
 				shape-outside: circle(70%);
 				position: initial;
