@@ -248,6 +248,7 @@ export default {
 	border: 5px dashed #5083b619;
 	padding: 20px;
 	margin: 25px 0;
+	grid-template-columns: none;
 }
 p {
 	font-size: 16px;

@@ -78,7 +78,7 @@ export default {
 	height: 100%;
 	background-color: #031321e5;
 	margin: auto;
-	z-index: 100;
+	z-index: 1000;
 }
 .links {
 	display: flex;
@@ -86,7 +86,9 @@ export default {
 	justify-content: center;
 	align-items: center;
 	margin: auto;
+	z-index: 10000;
 	a {
+		font-size: 18px;
 		font-weight: bold;
 		color: #42b983;
 		text-decoration: none;

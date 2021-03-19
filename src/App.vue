@@ -107,6 +107,7 @@ body {
 }
 .burguerMenu {
 	display: none;
+	z-index: 100;
 	@media screen and (max-width: 745px) {
 		display: block;
 	}

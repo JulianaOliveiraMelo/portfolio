@@ -51,7 +51,7 @@ export default {
 	@media screen and(max-width: 640px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	@media screen and(max-width: 400px) {
+	@media screen and(max-width: 300px) {
 		grid-template-columns: 1fr;
 	}
 }

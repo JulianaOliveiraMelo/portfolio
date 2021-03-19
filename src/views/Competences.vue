@@ -43,9 +43,7 @@
 								/>
 							</svg>
 							<div class="number">
-								<p style="color: #16c79a">
-									{{ s.skills.write }}<span>%</span>
-								</p>
+								<p style="color: #16c79a">{{ s.skills.write }}<span>%</span></p>
 							</div>
 						</div>
 						<p>écris</p>
@@ -67,9 +65,7 @@
 								/>
 							</svg>
 							<div class="number">
-								<p style="color: #ff005c">
-									{{ s.skills.talk }}<span>%</span>
-								</p>
+								<p style="color: #ff005c">{{ s.skills.talk }}<span>%</span></p>
 							</div>
 						</div>
 						<p>parlé</p>
@@ -85,159 +81,159 @@
 </template>
 
 <script>
-import StyleButton from "@/components/styleButton.vue";
-import Title from "@/components/title.vue";
-import { bus } from "../main.js";
+import StyleButton from '@/components/styleButton.vue';
+import Title from '@/components/title.vue';
+import { bus } from '../main.js';
 export default {
-	name: "Intro",
+	name: 'Intro',
 	components: {
 		StyleButton,
-		Title
+		Title,
 	},
 	data() {
 		return {
-			skills: ""
+			skills: '',
 		};
 	},
 	created() {
 		this.skills = bus.skills;
-	}
+	},
 };
 </script>
 <style lang="scss">
 .container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  justify-items: center;
-  row-gap: 20px;
-  margin: 45px auto 25px;
-  border: 5px dashed #5083b619;
-  padding: 20px;
-  @media screen and(max-width: 750px) {
-    grid-template-columns: repeat(4, 1fr);
-    padding: 20px;
-  }
-  @media screen and(max-width: 530px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media screen and(max-width: 400px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and(max-width: 300px) {
-    grid-template-columns: 1fr;
-  }
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	justify-items: center;
+	row-gap: 20px;
+	margin: 45px auto 25px;
+	border: 5px dashed #5083b619;
+	padding: 20px;
+	@media screen and(max-width: 750px) {
+		grid-template-columns: repeat(4, 1fr);
+		padding: 20px;
+	}
+	@media screen and(max-width: 530px) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media screen and(max-width: 400px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and(max-width: 300px) {
+		grid-template-columns: 1fr;
+	}
 }
 .skills-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 45px;
-  height: auto;
-  img {
-    width: 50px;
-    height: 50px;
-  }
-  @media screen and(max-width: 300px) {
-    img {
-      min-width: 70px;
-      height: auto;
-    }
-  }
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 45px;
+	height: auto;
+	img {
+		width: 50px;
+		height: 50px;
+	}
+	@media screen and(max-width: 300px) {
+		img {
+			min-width: 70px;
+			height: auto;
+		}
+	}
 }
 .buttons-box {
-  display: flex;
-  justify-content: space-evenly;
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-    align-items: center;
-  }
+	display: flex;
+	justify-content: space-evenly;
+	@media screen and (max-width: 500px) {
+		flex-direction: column;
+		align-items: center;
+	}
 }
 .languages {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
-  @media screen and (max-width: 850px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 580px) {
-    grid-template-columns: 1fr;
-  }
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	@media screen and (max-width: 850px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 580px) {
+		grid-template-columns: 1fr;
+	}
 }
 .container.lang {
-  grid-template-columns: 1fr;
-  align-self: center;
-  justify-self: center;
+	grid-template-columns: 1fr;
+	align-self: center;
+	justify-self: center;
 }
 .language {
-  text-align: center;
-  padding-bottom: 40px;
+	text-align: center;
+	padding-bottom: 40px;
 }
 .quantity {
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  justify-self: center;
-  column-gap: 20px;
+	display: flex;
+	flex-direction: row;
+	align-self: center;
+	justify-self: center;
+	column-gap: 20px;
 }
 .progress {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  p {
-    opacity: 0.5;
-  }
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	p {
+		opacity: 0.5;
+	}
 }
 .percent {
-  position: relative;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  box-shadow: inset 0 0 50px #04ff0005;
-  z-index: 1000;
+	position: relative;
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+	box-shadow: inset 0 0 50px #04ff0005;
+	z-index: 100;
 }
 
 .percent .number {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
 }
 
 .percent .number p {
-  font-size: 20px;
-  transition: 0.5s;
+	font-size: 20px;
+	transition: 0.5s;
 }
 
 .percent .number p span {
-  font-size: 12px;
-  transition: 0.5s;
+	font-size: 12px;
+	transition: 0.5s;
 }
 
 svg {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  z-index: 1000;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	z-index: 1000;
 }
 
 svg circle {
-  width: 100%;
-  height: 100%;
-  fill: none;
-  stroke-width: 3;
-  stroke-linecap: round;
-  transform: translate(5px, 5px);
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke-width: 3;
+	stroke-linecap: round;
+	transform: translate(5px, 5px);
 }
 
 svg circle {
-  stroke-dasharray: 245;
-  stroke-dashoffset: 245;
+	stroke-dasharray: 245;
+	stroke-dashoffset: 245;
 }
 </style>
