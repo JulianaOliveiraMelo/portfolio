@@ -73,7 +73,7 @@ body {
 #nav {
 	color: #42b9836b;
 	padding: 30px;
-	@media screen and (max-width: 745px) {
+	@media screen and (max-width: 760px) {
 		display: none;
 	}
 }
@@ -108,7 +108,7 @@ body {
 .burguerMenu {
 	display: none;
 	z-index: 100;
-	@media screen and (max-width: 745px) {
+	@media screen and (max-width: 760px) {
 		display: block;
 	}
 }

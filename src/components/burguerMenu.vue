@@ -54,7 +54,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .burguerMenu {
-	@media screen and(min-width:740px) {
+	@media screen and(min-width: 761px) {
 		display: none;
 	}
 }
