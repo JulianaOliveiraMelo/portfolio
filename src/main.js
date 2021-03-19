@@ -9,7 +9,17 @@ export const bus = new Vue({
 	vuetify,
 
 	data: {
-		intro: '',
+		credits: [
+			{
+				id: 0,
+				authorsName: 'Hannah Reding',
+				authorsLink:
+					'https://unsplash.com/@hannahrdg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
+				sourceSite:
+					'https://unsplash.com/s/photos/eiffel-tour?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
+				siteName: 'Unsplash',
+			},
+		],
 		tags: [
 			'+ ancien',
 			'+ recent',
