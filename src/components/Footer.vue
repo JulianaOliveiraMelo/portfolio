@@ -56,6 +56,18 @@ export default {
 	justify-content: space-between;
 	align-items: center;
 	background-color: #020e18;
+	@media screen and (max-width: 680px) {
+		grid-template-columns: 1fr;
+		.socialIcons {
+			grid-area: 1/ 1/ 2/ 4;
+		}
+		.credits {
+			grid-area: 2/1/3/4;
+		}
+		.copyright {
+			grid-area: 3/1/4/4;
+		}
+	}
 }
 .socialIcons {
 	grid-area: 1/1/2/2;
@@ -82,6 +94,15 @@ export default {
 }
 .credits {
 	grid-area: 1/2/2/3;
+	ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		li {
+			list-style-type: none;
+			margin: 10px;
+		}
+	}
 }
 .copyright {
 	grid-area: 2/1/3/3;
