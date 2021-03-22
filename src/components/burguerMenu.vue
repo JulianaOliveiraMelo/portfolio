@@ -37,6 +37,7 @@
 
 <script>
 export default {
+	name: 'BurguerMenu',
 	data() {
 		return {
 			showBurguer: true,

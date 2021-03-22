@@ -70,8 +70,8 @@
 
 <script>
 import { bus } from '../main.js';
-import Title from '../components/PageTitle';
-import ImageBox from '../components/ImageBox';
+import Title from '@/components/PageTitle';
+import ImageBox from '@/components/ImageBox';
 export default {
 	name: 'Realisations',
 	components: { Title, ImageBox },

@@ -65,7 +65,7 @@
 <script>
 import Title from '@/components/PageTitle.vue';
 import ImageBox from '@/components/ImageBox.vue';
-import { bus } from '@/main';
+import { bus } from '../main.js';
 export default {
 	components: {
 		Title,

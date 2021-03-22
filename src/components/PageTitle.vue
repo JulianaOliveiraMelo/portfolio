@@ -6,39 +6,39 @@
 
 <script>
 export default {
-	name: "Information",
+	name: 'PageTitle',
 	props: {
-		msg: String
-	}
+		msg: String,
+	},
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .hello {
-  text-align: left;
+	text-align: left;
 }
 h1 {
-  margin: 0;
-  font-size: 3rem;
+	margin: 0;
+	font-size: 3rem;
 }
 h3 {
-  margin: 0;
-  font-size: 2rem;
+	margin: 0;
+	font-size: 2rem;
 }
 @media screen and (max-width: 500px) {
-  h1 {
-    font-size: 10vw;
-  }
+	h1 {
+		font-size: 10vw;
+	}
 }
 @media screen and (max-width: 350px) {
-  h1 {
-    font-size: 2.06rem;
-  }
+	h1 {
+		font-size: 2.06rem;
+	}
 }
 @media screen and (max-width: 240px) {
-  h1 {
-    font-size: 1.5rem;
-  }
+	h1 {
+		font-size: 1.5rem;
+	}
 }
 </style>

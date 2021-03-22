@@ -23,7 +23,7 @@
 			</div>
 			<div class="image-box">
 				<img
-					:src="require('../../src/assets/ordinateur-portable.png')"
+					:src="require('../../public/images/ordinateur-portable.png')"
 					alt=""
 				/>
 			</div>

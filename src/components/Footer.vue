@@ -34,6 +34,7 @@
 <script>
 import { bus } from '../main.js';
 export default {
+	name: 'Footer',
 	data() {
 		return {
 			socialIcons: {}, // does not contain phone in contact
