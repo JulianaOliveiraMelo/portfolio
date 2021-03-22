@@ -18,7 +18,7 @@
 		</p>
 		<div class="buttons-box">
 			<button class="button ok" @click="changeVisibility">OK</button>
-			<button class="button goTo" @click="$router.replace('/legal')">
+			<button class="button goTo" @click="$router.push('/legal')">
 				Mentions Légales
 			</button>
 		</div>

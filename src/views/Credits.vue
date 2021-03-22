@@ -14,6 +14,18 @@
 						:src="require('../../public/icons/icons8-google-images-48.png')"
 					/>
 					Photo de
+					<a href="https://www.pexels.com/fr-fr/@chuck"
+						>Photo de Wallace Chuck</a
+					>
+					provenant de
+					<a href="https://www.pexels.com/">Pexels</a>
+				</li>
+				<li>
+					<img
+						class="photo-icon"
+						:src="require('../../public/icons/icons8-google-images-48.png')"
+					/>
+					Photo de
 					<a href="https://www.pexels.com/fr-fr/@markusspiske"
 						>Photo de Markus Spiske</a
 					>

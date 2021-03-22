@@ -2,8 +2,8 @@
 	<div class="footerContainer">
 		<div class="credits">
 			<ul>
-				<li><a href="/credits">Credits</a></li>
-				<li><a href="/legal">Mentions légales</a></li>
+				<li @click="$router.push('/credits')">Crédits</li>
+				<li @click="$router.push('/legal')">Mentions légales</li>
 			</ul>
 		</div>
 		<div class="socialIcons">
@@ -101,9 +101,30 @@ export default {
 	li {
 		list-style-type: none;
 		margin: 10px;
+		color: #42b983;
+		text-decoration: none;
+		padding-bottom: 5px;
+		display: inline-block;
 		opacity: 0.5;
 		&:hover {
 			opacity: 1;
+		}
+		&::after {
+			content: '';
+			display: block;
+			padding-bottom: 5px;
+			border-bottom: solid 3px #42b983;
+			transform: scaleX(0);
+			transition: transform 250ms ease-in-out;
+		}
+		&:hover:after {
+			transform: scaleX(1);
+		}
+		&.router-link-exact-active {
+			color: orange;
+			&::after {
+				transform: scaleX(0);
+			}
 		}
 	}
 }
