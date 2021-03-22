@@ -33,8 +33,8 @@
 
 <script>
 // @ is an alias to /src
-import Title from '@/components/title.vue';
-import StyleButton from '@/components/styleButton.vue';
+import Title from '@/components/PageTitle.vue';
+import StyleButton from '@/components/StyleButton.vue';
 
 export default {
 	name: 'Accueil',

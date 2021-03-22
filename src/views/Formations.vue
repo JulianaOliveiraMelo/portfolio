@@ -20,8 +20,8 @@
 </template>
 
 <script>
-import FormationsBox from '../components/formationsBox.vue';
-import Title from '../components/title.vue';
+import FormationsBox from '@/components/FormationsBox.vue';
+import Title from '@/components/PageTitle.vue';
 import { bus } from '../main.js';
 export default {
 	components: {

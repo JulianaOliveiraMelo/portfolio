@@ -81,8 +81,8 @@
 </template>
 
 <script>
-import StyleButton from '@/components/styleButton.vue';
-import Title from '@/components/title.vue';
+import StyleButton from '@/components/StyleButton.vue';
+import Title from '@/components/PageTitle.vue';
 import { bus } from '../main.js';
 export default {
 	name: 'Intro',

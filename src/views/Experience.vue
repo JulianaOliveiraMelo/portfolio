@@ -8,7 +8,7 @@
 						<ImageBox
 							:backgroundImage="require('../../public/logos/' + e.businessLogo)"
 							:imageDescription="'logo de ' + e.businessName"
-						/></a>
+					/></a>
 				</div>
 				<div v-else class="logo">
 					<ImageBox
@@ -63,146 +63,146 @@
 	</div>
 </template>
 <script>
-import Title from "@/components/title.vue";
-import ImageBox from "@/components/ImageBox.vue";
-import { bus } from "@/main";
+import Title from '@/components/PageTitle.vue';
+import ImageBox from '@/components/ImageBox.vue';
+import { bus } from '@/main';
 export default {
 	components: {
 		Title,
-		ImageBox
+		ImageBox,
 	},
 	data() {
 		return {
-			experience: {}
+			experience: {},
 		};
 	},
 	created() {
 		this.experience = bus.experience;
-	}
+	},
 };
 </script>
 <style lang="scss" scoped>
 .experiences {
-  width: 100%;
-  min-height: 305px;
-  padding: 20px 20px;
-  margin: 45px auto 25px;
-  align-items: center;
-  justify-content: center;
-  border: 5px dashed #5083b619;
-  display: flex;
-  flex-direction: column;
+	width: 100%;
+	min-height: 305px;
+	padding: 20px 20px;
+	margin: 45px auto 25px;
+	align-items: center;
+	justify-content: center;
+	border: 5px dashed #5083b619;
+	display: flex;
+	flex-direction: column;
 }
 .top {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 20px;
-  align-items: center;
-  a::after {
-    display: none;
-  }
-  @media screen and (max-width: 500px) {
-    grid-template-columns: 1fr;
-  }
-  .logo {
-    width: 100%;
-    text-align: center;
-  }
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	column-gap: 20px;
+	align-items: center;
+	a::after {
+		display: none;
+	}
+	@media screen and (max-width: 500px) {
+		grid-template-columns: 1fr;
+	}
+	.logo {
+		width: 100%;
+		text-align: center;
+	}
 }
 
 .objectives {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  height: 100%;
-  justify-content: flex-start;
-  align-items: flex-end;
-  a {
-    text-align: right;
-  }
-  ul {
-    margin: auto;
-    .white {
-      opacity: 0.5;
-    }
-    > li {
-      text-align: left;
-      list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	height: 100%;
+	justify-content: flex-start;
+	align-items: flex-end;
+	a {
+		text-align: right;
+	}
+	ul {
+		margin: auto;
+		.white {
+			opacity: 0.5;
+		}
+		> li {
+			text-align: left;
+			list-style-type: none;
 
-      &:nth-child(2n) img {
-        transform: rotate(200 + deg);
-      }
-      &:nth-child(3n) img {
-        transform: rotate(260 + deg);
-      }
-      &:nth-child(5n) img {
-        transform: rotate(300 + deg);
-      }
-      &:nth-child(7n) img {
-        transform: rotate(30 + deg);
-      }
-    }
-    img {
-      margin-bottom: -5px;
-      max-width: 20px;
-      margin-right: 10px;
-    }
-  }
-  @media screen and (max-width: 500px) {
-    margin-top: 70px;
-    a {
-      text-align: center;
-    }
-  }
+			&:nth-child(2n) img {
+				transform: rotate(200 + deg);
+			}
+			&:nth-child(3n) img {
+				transform: rotate(260 + deg);
+			}
+			&:nth-child(5n) img {
+				transform: rotate(300 + deg);
+			}
+			&:nth-child(7n) img {
+				transform: rotate(30 + deg);
+			}
+		}
+		img {
+			margin-bottom: -5px;
+			max-width: 20px;
+			margin-right: 10px;
+		}
+	}
+	@media screen and (max-width: 500px) {
+		margin-top: 70px;
+		a {
+			text-align: center;
+		}
+	}
 }
 .sites {
-  text-align: center;
-  padding-top: 20px;
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
-  div > div {
-    margin-top: 20px;
-    max-height: 350px;
-    overflow: auto;
-  }
-  @media screen and (max-width: 780px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (max-width: 530px) {
-    grid-template-columns: 1fr;
-  }
-  .info-site {
-    display: flex;
-    flex-direction: column;
-    min-height: 80px;
-    justify-content: space-between;
-    display: inline-block;
-    span {
-      text-align: right;
-      display: block;
-      font-size: 14px;
-    }
-    a {
-      display: inline;
-      p {
-        display: inline;
-      }
-    }
-  }
+	text-align: center;
+	padding-top: 20px;
+	margin-top: 50px;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+	div > div {
+		margin-top: 20px;
+		max-height: 350px;
+		overflow: auto;
+	}
+	@media screen and (max-width: 780px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	@media screen and (max-width: 530px) {
+		grid-template-columns: 1fr;
+	}
+	.info-site {
+		display: flex;
+		flex-direction: column;
+		min-height: 80px;
+		justify-content: space-between;
+		display: inline-block;
+		span {
+			text-align: right;
+			display: block;
+			font-size: 14px;
+		}
+		a {
+			display: inline;
+			p {
+				display: inline;
+			}
+		}
+	}
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 40%;
-    left: 50%;
-    margin-left: -20%;
-    border-top: 5px dashed #5083b619;
-    transform: translateY(-20px);
-  }
+	&::before {
+		content: '';
+		position: absolute;
+		width: 40%;
+		left: 50%;
+		margin-left: -20%;
+		border-top: 5px dashed #5083b619;
+		transform: translateY(-20px);
+	}
 }
 .siteImage {
-  max-width: 100%;
+	max-width: 100%;
 }
 </style>

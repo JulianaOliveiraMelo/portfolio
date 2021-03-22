@@ -42,7 +42,7 @@
 	</div>
 </template>
 <script>
-import Burguer from '@/components/burguerMenu.vue';
+import Burguer from '@/components/BurguerMenu.vue';
 import Footer from '@/components/Footer.vue';
 export default {
 	components: {

@@ -106,8 +106,8 @@
 </template>
 
 <script>
-import StyleButton from '@/components/styleButton.vue';
-import Title from '@/components/title.vue';
+import StyleButton from '@/components/StyleButton.vue';
+import Title from '@/components/PageTitle.vue';
 import ImageBox from '@/components/ImageBox.vue';
 export default {
 	name: 'Intro',

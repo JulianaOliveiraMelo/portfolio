@@ -40,6 +40,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .contact {
+	width: 100%;
 	padding: 20px 0;
 	margin: 45px auto 25px;
 	align-items: center;
