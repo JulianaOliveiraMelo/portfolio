@@ -17,7 +17,7 @@
 					/>
 				</div>
 				<div class="objectives">
-					<a class="hoverLink" :href="e.businessLink" _target="_blank">{{
+					<a class="hoverLink" :href="e.businessLink" target="_blank">{{
 						e.businessName
 					}}</a>
 					<ul>

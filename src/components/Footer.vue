@@ -2,7 +2,7 @@
 	<div class="footerContainer">
 		<div class="credits">
 			<ul>
-				<li>credits</li>
+				<li><a href="/credits">Credits</a></li>
 				<li>cookies</li>
 				<li><a href="/legal">Mentions légales</a></li>
 			</ul>

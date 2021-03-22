@@ -22,7 +22,7 @@
 	</div>
 </template>
 <script>
-import Title from '@/components/title.vue';
+import Title from '@/components/PageTitle.vue';
 import { bus } from '../main.js';
 export default {
 	components: {

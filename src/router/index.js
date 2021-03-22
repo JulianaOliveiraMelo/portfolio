@@ -75,6 +75,15 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "legales" */ '../views/MentionsLegales.vue'),
 	},
+	{
+		path: '/credits',
+		name: 'Crédits',
+		// route level code-splitting
+		// this generates a separate chunk (credits.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () =>
+			import(/* webpackChunkName: "credits" */ '../views/Credits.vue'),
+	},
 ];
 
 const router = new VueRouter({
