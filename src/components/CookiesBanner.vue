@@ -1,8 +1,15 @@
 <template>
 	<div v-show="visible" class="cookies">
 		<img
+			class="close-icon"
+			:src="require('../../public/icons/icons8-macos-close-32.png')"
+			alt="close"
+			@click="changeVisibility"
+		/>
+		<img
+			class="cookies-image"
 			:src="require('../../public/images/pexels-wallace-chuck-2126268.png')"
-			alt=""
+			alt="coffee and cookies"
 		/>
 		<p>
 			Ce site web utilise des cookies vous garantir une meilleure expérience de
@@ -37,19 +44,71 @@ export default {
 	background-color: black;
 	box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.603);
 	position: fixed;
-	width: 300px;
+	max-width: 300px;
 	bottom: 25px;
 	left: 50%;
 	margin-left: -45%;
-	padding: 20px;
+	padding: 40px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	border-radius: 20px;
-	img {
+	@media screen and (max-width: 700px) {
+		max-width: 50%;
+		max-height: 60%;
+		top: 50%;
+		left: 50%;
+		margin-top: -30%;
+		margin-left: -25%;
+	}
+	@media screen and (max-width: 600px) {
+		max-width: 50%;
+		min-height: 55%;
+		top: 50%;
+		left: 50%;
+		margin-top: -35.5%;
+		margin-left: -25%;
+	}
+	@media screen and (max-width: 560px) {
+		max-width: 60%;
+		min-height: 55%;
+		top: 50%;
+		left: 50%;
+		margin-top: -35.5%;
+		margin-left: -30%;
+	}
+	@media screen and (max-width: 480px) {
+		max-width: 70%;
+		min-height: 60%;
+		top: 50%;
+		left: 50%;
+		margin-top: -60%;
+		margin-left: -35%;
+	}
+	@media screen and (max-width: 410px) {
+		max-width: 80%;
+		min-height: 60%;
+		top: 50%;
+		left: 50%;
+		margin-top: -60%;
+		margin-left: -40%;
+	}
+	@media screen and (max-width: 360px) {
+		max-width: 90%;
+		min-height: 70%;
+		top: 50%;
+		left: 50%;
+		margin-top: -80%;
+		margin-left: -45%;
+	}
+
+	.cookies-image {
 		max-width: 70%;
 		padding: 20px;
+		@media screen and (max-width: 330px) {
+			min-width: 150px;
+		}
 	}
 	p {
 		font-size: 15px;
@@ -59,13 +118,30 @@ export default {
 	font-size: 12px;
 	z-index: 10000000000;
 }
-
+.buttons-box {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	@media screen and (max-width: 580px) {
+		flex-direction: column;
+	}
+}
 .button {
-	color: #201f1f9e;
+	color: #201f1fed;
 	background-color: orange;
 	border-radius: 8px;
-	padding: 3px 10px;
+	padding: 5px 15px;
 	margin: 3px;
+}
+.close-icon {
 	display: inline;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	margin: 20px;
 }
 </style>
