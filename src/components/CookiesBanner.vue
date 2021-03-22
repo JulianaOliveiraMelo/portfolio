@@ -56,50 +56,50 @@ export default {
 	border-radius: 20px;
 	@media screen and (max-width: 700px) {
 		max-width: 50%;
-		max-height: 60%;
+		max-height: 60vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -30%;
+		margin-top: -30vh;
 		margin-left: -25%;
 	}
 	@media screen and (max-width: 600px) {
 		max-width: 50%;
-		min-height: 55%;
+		min-height: 55vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -35.5%;
+		margin-top: -35.5vh;
 		margin-left: -25%;
 	}
 	@media screen and (max-width: 560px) {
 		max-width: 60%;
-		min-height: 55%;
+		min-height: 55vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -35.5%;
+		margin-top: -35.5vh;
 		margin-left: -30%;
 	}
 	@media screen and (max-width: 480px) {
 		max-width: 70%;
-		min-height: 60%;
+		min-height: 60vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -60%;
+		margin-top: -30vh;
 		margin-left: -35%;
 	}
 	@media screen and (max-width: 410px) {
 		max-width: 80%;
-		min-height: 60%;
+		min-height: 60vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -60%;
+		margin-top: -30vh;
 		margin-left: -40%;
 	}
 	@media screen and (max-width: 360px) {
 		max-width: 90%;
-		min-height: 70%;
+		min-height: 70vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -80%;
+		margin-top: -35vh;
 		margin-left: -45%;
 	}
 

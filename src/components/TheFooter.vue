@@ -3,7 +3,6 @@
 		<div class="credits">
 			<ul>
 				<li><a href="/credits">Credits</a></li>
-				<li>cookies</li>
 				<li><a href="/legal">Mentions légales</a></li>
 			</ul>
 		</div>
@@ -52,12 +51,13 @@ export default {
 	min-height: 150px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 2fr 1fr;
+	grid-template-rows: 3fr 1fr;
 	justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 	background-color: #020e18;
 	@media screen and (max-width: 680px) {
 		grid-template-columns: 1fr;
+		grid-template-rows: 2fr 1fr;
 		.socialIcons {
 			grid-area: 1/ 1/ 2/ 4;
 		}
@@ -75,9 +75,8 @@ export default {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	width: 100%;
-	margin: 20px auto;
 	a {
 		filter: brightness(50%);
 
@@ -97,10 +96,14 @@ export default {
 	ul {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-around;
-		li {
-			list-style-type: none;
-			margin: 10px;
+		justify-content: center;
+	}
+	li {
+		list-style-type: none;
+		margin: 10px;
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
 		}
 	}
 }
