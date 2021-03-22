@@ -38,19 +38,19 @@
 		</div>
 
 		<footer>
-			<Footer />
+			<TheFooter />
 		</footer>
 	</div>
 </template>
 <script>
 import CookiesBanner from '@/components/CookiesBanner.vue';
 import BurguerMenu from '@/components/BurguerMenu.vue';
-import Footer from '@/components/Footer.vue';
+import TheFooter from '@/components/TheFooter.vue';
 export default {
 	components: {
 		CookiesBanner,
 		BurguerMenu,
-		Footer,
+		TheFooter,
 	},
 };
 </script>

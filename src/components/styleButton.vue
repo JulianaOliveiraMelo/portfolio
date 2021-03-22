@@ -8,8 +8,8 @@
 export default {
 	name: 'StyleButton',
 	props: {
-		text: String,
-		link: String,
+		text: { type: String, default: '' },
+		link: { type: String, default: '' },
 	},
 	methods: {
 		click(path) {

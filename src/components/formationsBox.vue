@@ -51,15 +51,48 @@
 export default {
 	name: 'FormationsBox',
 	props: {
-		source: String,
-		name: String,
-		description: Array,
-		link: String,
-		objective: Array,
-		linkText: String,
-		linkString: String,
-		diplomes: Array,
-		year: String,
+		source: {
+			type: String,
+			require: true,
+			default: '',
+		},
+		name: {
+			type: String,
+			require: true,
+			default: '',
+		},
+		description: {
+			type: Array,
+			require: true,
+		},
+		link: {
+			type: String,
+			require: true,
+			default: '',
+		},
+		objective: {
+			type: Array,
+			require: true,
+		},
+		linkText: {
+			type: String,
+			require: true,
+			default: '',
+		},
+		linkString: {
+			type: String,
+			require: true,
+			default: '',
+		},
+		diplomes: {
+			type: Array,
+			require: true,
+		},
+		year: {
+			type: String,
+			require: true,
+			default: '',
+		},
 	},
 };
 </script>
