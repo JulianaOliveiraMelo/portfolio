@@ -1,7 +1,8 @@
 <template>
 	<div id="app">
+		<CookiesBanner />
 		<div class="burguerMenu">
-			<Burguer />
+			<BurguerMenu />
 		</div>
 		<div id="nav">
 			<router-link to="/">
@@ -42,11 +43,13 @@
 	</div>
 </template>
 <script>
-import Burguer from '@/components/BurguerMenu.vue';
+import CookiesBanner from '@/components/CookiesBanner.vue';
+import BurguerMenu from '@/components/BurguerMenu.vue';
 import Footer from '@/components/Footer.vue';
 export default {
 	components: {
-		Burguer,
+		CookiesBanner,
+		BurguerMenu,
 		Footer,
 	},
 };

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name: 'StyleButtons',
+	name: 'StyleButton',
 	props: {
 		text: String,
 		link: String,
