@@ -1,32 +1,34 @@
-<template>
-	<div class="footerContainer">
-		<div class="credits">
-			<ul>
-				<li @click="$router.push('/credits')">Crédits</li>
-				<li @click="$router.push('/legal')">Mentions légales</li>
-			</ul>
-		</div>
-		<div class="socialIcons">
-			<div v-for="c in socialIcons" :key="c.text" class="box">
-				<a v-if="c.link" class="content" :href="c.link" target="_blank">
-					<img
-						:src="require('../../public/icons/' + c.icon)"
-						:alt="c.text + ' icon'"
-					/>
-					<p class="hoverLink">{{ c.text }}</p>
-				</a>
-				<div v-else class="content">
-					<img
-						:src="require('../../public/icons/' + c.icon)"
-						:alt="c.text + ' icon'"
-					/>
-					<p>{{ c.text }}</p>
+<template
+	><div>
+		<div class="footerContainer">
+			<div class="credits">
+				<ul>
+					<li @click="$router.push('/credits')">Crédits</li>
+					<li @click="$router.push('/legal')">Mentions légales</li>
+				</ul>
+			</div>
+			<div class="socialIcons">
+				<div v-for="c in socialIcons" :key="c.text" class="box">
+					<a v-if="c.link" class="content" :href="c.link" target="_blank">
+						<img
+							:src="require('../../public/icons/' + c.icon)"
+							:alt="c.text + ' icon'"
+						/>
+						<p class="hoverLink">{{ c.text }}</p>
+					</a>
+					<div v-else class="content">
+						<img
+							:src="require('../../public/icons/' + c.icon)"
+							:alt="c.text + ' icon'"
+						/>
+						<p>{{ c.text }}</p>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="copyright">
-			<span class="white">©</span> Copyright
-			<span class="white">2021</span> JulianaOliveiraMelo
+			<div class="copyright">
+				<span class="white">©</span> Copyright
+				<span class="white">2021</span> JulianaOliveiraMelo
+			</div>
 		</div>
 	</div>
 </template>
@@ -34,6 +36,7 @@
 import { bus } from '../main.js';
 export default {
 	name: 'TheFooter',
+	components: {},
 	data() {
 		return {
 			socialIcons: {}, // does not contain phone in contact
@@ -49,6 +52,7 @@ export default {
 .footerContainer {
 	width: 100%;
 	min-height: 150px;
+
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 3fr 1fr;
@@ -106,6 +110,7 @@ export default {
 		padding-bottom: 5px;
 		display: inline-block;
 		opacity: 0.5;
+		cursor: pointer;
 		&:hover {
 			opacity: 1;
 		}

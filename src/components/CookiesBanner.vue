@@ -56,10 +56,10 @@ export default {
 	border-radius: 20px;
 	@media screen and (max-width: 700px) {
 		max-width: 50%;
-		max-height: 60vh;
+		max-height: 70vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -30vh;
+		margin-top: -35vh;
 		margin-left: -25%;
 	}
 	@media screen and (max-width: 600px) {
@@ -72,34 +72,43 @@ export default {
 	}
 	@media screen and (max-width: 560px) {
 		max-width: 60%;
-		min-height: 55vh;
+		min-height: 67vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -35.5vh;
+		margin-top: -33.5vh;
 		margin-left: -30%;
 	}
 	@media screen and (max-width: 480px) {
+		padding: 20px;
 		max-width: 70%;
-		min-height: 60vh;
+		min-height: 65vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -30vh;
+		margin-top: -32.5vh;
 		margin-left: -35%;
 	}
 	@media screen and (max-width: 410px) {
 		max-width: 80%;
-		min-height: 60vh;
+		min-height: 75vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -30vh;
+		margin-top: -32.5vh;
 		margin-left: -40%;
 	}
 	@media screen and (max-width: 360px) {
 		max-width: 90%;
-		min-height: 70vh;
+		min-height: 85vh;
 		top: 50%;
 		left: 50%;
-		margin-top: -35vh;
+		margin-top: -42.5vh;
+		margin-left: -45%;
+	}
+	@media screen and (max-width: 320px) {
+		max-width: 90%;
+		min-height: 90vh;
+		top: 50%;
+		left: 50%;
+		margin-top: -45vh;
 		margin-left: -45%;
 	}
 
@@ -108,6 +117,7 @@ export default {
 		padding: 20px;
 		@media screen and (max-width: 330px) {
 			min-width: 150px;
+			padding: 10px;
 		}
 	}
 	p {

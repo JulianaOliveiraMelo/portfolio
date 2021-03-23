@@ -84,6 +84,14 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "credits" */ '../views/Credits.vue'),
 	},
+	{
+		path: '*',
+		name: '404',
+		// route level code-splitting
+		// this generates a separate chunk (404.[hash].js) for this route
+		// which is lazy-loaded when the route is visited.
+		component: () => import(/* webpackChunkName: "404" */ '../views/404.vue'),
+	},
 ];
 
 const router = new VueRouter({

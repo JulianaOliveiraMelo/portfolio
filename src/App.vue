@@ -61,6 +61,9 @@ body {
 	padding: 0;
 	background-color: #031321;
 }
+body {
+	position: relative;
+}
 #app {
 	font-family: 'RocknRoll One', Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
@@ -114,5 +117,13 @@ body {
 	@media screen and (max-width: 760px) {
 		display: block;
 	}
+}
+
+footer {
+	z-index: 200;
+	width: 100%;
+	position: relative;
+	bottom: 0;
+	left: 0;
 }
 </style>
