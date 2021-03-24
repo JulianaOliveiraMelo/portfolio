@@ -51,12 +51,10 @@ export default {
 		$route(to) {
 			// Update the data type when the route changes.
 			this.routeName = to.name;
-			console.log(this.routeName);
 			if (this.routeName === '404') {
 				this.backgroundStyle = `background-color: #020e18cc`;
 			} else {
 				this.backgroundStyle = `background-color: #020e18`;
-				console.log('no');
 			}
 		},
 	},
