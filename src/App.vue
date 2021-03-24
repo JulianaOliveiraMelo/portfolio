@@ -63,7 +63,7 @@ export default {
 			// Update the data type when the route changes.
 			this.routeName = to.name;
 			if (this.routeName === '404') {
-				this.backgroundStyle = `background-image : url(${require('../public/images/nasa-Q1p7bh3SHj8-unsplash.png')})`;
+				this.backgroundStyle = `background-image : url(${require('../public/images/nasa-Q1p7bh3SHj8-unsplash.png')}); background-size: cover`;
 			} else {
 				this.backgroundStyle = '';
 			}
