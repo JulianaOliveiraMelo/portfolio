@@ -1,36 +1,22 @@
 <template>
-	<div class="outsider" :style="{ backgroundImage: 'url(\'' + image + '\')' }">
+	<div class="outside404">
 		<div class="container">
 			<div>Erreur 404</div>
 			<div class="image-box">
-				<ImageBox
-					class="imageContent"
-					:backgroundImage="require('../../public/images/astronaute.png')"
-					:imageDescription="'Astronaul for 404 page'"
+				<img
+					:src="require('../../public/images/astronaute.gif')"
+					alt="Astronaul for 404 page"
 				/>
 			</div>
 		</div>
 	</div>
 </template>
 <script>
-import ImageBox from '@/components/ImageBox.vue';
-export default {
-	components: {
-		ImageBox,
-	},
-	data() {
-		return {
-			image: '../../public/images/nasa-Q1p7bh3SHj8-unsplash.png',
-		};
-	},
-};
+export default {};
 </script>
 <style lang="scss" scoped>
-.outsider {
-	background-image: url('../../public/images/nasa-Q1p7bh3SHj8-unsplash.png');
-}
 .container {
-	border: 5px dashed #5083b619;
+	height: 400px;
 	width: 100%;
 	display: grid;
 	justify-content: center;
@@ -41,7 +27,39 @@ export default {
 }
 .image-box {
 	display: block;
-	padding: 10px;
-	max-width: 50%;
+	max-width: 40%;
+	max-height: 200px;
+	img {
+		position: absolute;
+		right: 45%;
+		bottom: 20px;
+		padding: 10px;
+		height: 80%;
+		animation: waveEffect 15s ease-in-out infinite alternate,
+			around 15s ease-in-out 2s infinite alternate;
+	}
+}
+@keyframes around {
+	0% {
+		bottom: 20px;
+	}
+	50% {
+		bottom: 100px;
+		transform: scale(1.05);
+	}
+	100% {
+		bottom: 20px;
+	}
+}
+@keyframes waveEffect {
+	0% {
+		right: 15%;
+	}
+	50% {
+		right: 35%;
+	}
+	100% {
+		right: 15%;
+	}
 }
 </style>

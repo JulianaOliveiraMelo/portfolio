@@ -1,6 +1,6 @@
 <template
 	><div>
-		<div class="footerContainer">
+		<div class="footerContainer" :style="backgroundStyle">
 			<div class="credits">
 				<ul>
 					<li @click="$router.push('/credits')">Crédits</li>
@@ -40,15 +40,29 @@ export default {
 	data() {
 		return {
 			socialIcons: {}, // does not contain phone in contact
+			backgroundStyle: '',
 		};
 	},
 	created() {
 		this.socialIcons = [...bus.contact];
 		this.socialIcons.shift();
 	},
+	watch: {
+		$route(to) {
+			// Update the data type when the route changes.
+			this.routeName = to.name;
+			console.log(this.routeName);
+			if (this.routeName === '404') {
+				this.backgroundStyle = `background-color: #020e18cc`;
+			} else {
+				this.backgroundStyle = `background-color: #020e18`;
+				console.log('no');
+			}
+		},
+	},
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .footerContainer {
 	width: 100%;
 	min-height: 150px;
