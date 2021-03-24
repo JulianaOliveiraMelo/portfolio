@@ -7,7 +7,7 @@
 				<p class="textStyle404">
 					Pas de panique, vous pouvez
 					<span class="goBackButton" @click="goBack">revenir en arrière</span>
-					ou naviguer sur un autre page
+					ou naviguer sur une autre page
 				</p>
 			</div>
 			<div class="image-box">
