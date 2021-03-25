@@ -34,19 +34,8 @@ export default {
 	},
 	methods: {
 		changeVisibility() {
-			if (!this.$cookie.get('visible')) {
-				this.$cookie.set('visible', false, 30);
-
-				this.visible = false;
-				console.log(
-					typeof this.$cookie.get('visible'),
-					'cookie value',
-					this.visible,
-					'this.visible value'
-				);
-			} else {
-				console.log(',op');
-			}
+			this.$cookie.set('visible', false, 30);
+			this.visible = false;
 		},
 	},
 	created() {
