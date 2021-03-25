@@ -30,6 +30,9 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Train+One&display=swap');
+.outside404 {
+	height: auto;
+}
 .container {
 	height: 400px;
 	width: 100%;
@@ -37,7 +40,6 @@ export default {
 	justify-content: center;
 	align-items: center;
 	grid-template-columns: 1fr 1fr;
-	overflow: hidden;
 	text-align: center;
 }
 p {
@@ -64,10 +66,10 @@ p {
 	max-height: 200px;
 	img {
 		position: absolute;
-		right: 45%;
-		top: 200px;
+		right: 5%;
+		top: 5%;
 		padding: 10px;
-		height: 80%;
+		height: 75%;
 		animation: waveEffect 15s ease-in-out infinite alternate,
 			around 15s ease-in-out 2s infinite alternate;
 	}
@@ -77,7 +79,6 @@ p {
 	.container {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 2fr;
-		overflow: visible;
 		padding: 5% 10% 0;
 		height: 100%;
 		p {
@@ -89,61 +90,82 @@ p {
 		padding: 0;
 		margin: auto;
 		img {
-			position: relative;
-			top: 0;
-			bottom: 30px;
-			max-width: 100%;
+			position: static;
+			max-width: 90%;
 			height: auto;
-			right: 50%;
+			margin-top: -25%;
 			animation: waveEffectSmallScreens 15s ease-in-out infinite alternate,
 				aroundSmallScreens 15s ease-in-out 2s infinite alternate;
 		}
 	}
 }
+@media screen and (max-width: 650px) {
+	.image-box > img {
+		max-width: 130%;
+	}
+}
+@media screen and (max-width: 525px) {
+	.container {
+		grid-template-rows: 1fr 1fr;
+	}
+	.image-box > img {
+		max-width: 150%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.image-box > img {
+		max-width: 190%;
+	}
+}
+
 @keyframes around {
 	0% {
-		top: 150px;
+		top: 5%;
+		transform: scale(1);
 	}
 	50% {
-		top: 200px;
-		transform: scale(1.05);
+		top: 20%;
+		transform: scale(1.15);
 	}
 	100% {
-		top: 100px;
+		transform: scale(1);
+		top: 5%;
 	}
 }
 @keyframes waveEffect {
 	0% {
-		right: 15%;
+		right: 5%;
 	}
 	50% {
-		right: 35%;
+		right: 25%;
 	}
 	100% {
-		right: 15%;
+		right: 5%;
 	}
 }
 @keyframes aroundSmallScreens {
 	0% {
-		bottom: 20px;
+		margin-top: -25%;
+		transform: scale(1);
 	}
 	50% {
-		bottom: 100px;
-		transform: scale(1.05);
+		margin-top: -20%;
+		transform: scale(1.15);
 	}
 	100% {
-		bottom: 20px;
+		margin-top: -25%;
+		transform: scale(1);
 	}
 }
 @keyframes waveEffectSmallScreens {
 	0% {
-		left: 15%;
+		margin-left: 15%;
 	}
 	50% {
-		left: 35%;
+		margin-left: 35%;
 	}
 	100% {
-		left: 15%;
+		margin-left: 15%;
 	}
 }
 </style>
