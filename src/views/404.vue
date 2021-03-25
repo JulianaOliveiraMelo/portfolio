@@ -114,7 +114,7 @@ p {
 }
 @media screen and (max-width: 450px) {
 	.image-box > img {
-		max-width: 190%;
+		max-width: 150%;
 	}
 }
 
@@ -159,13 +159,13 @@ p {
 }
 @keyframes waveEffectSmallScreens {
 	0% {
-		margin-left: 15%;
+		margin-left: -15%;
 	}
 	50% {
-		margin-left: 35%;
+		margin-left: -35%;
 	}
 	100% {
-		margin-left: 15%;
+		margin-left: -15%;
 	}
 }
 </style>
