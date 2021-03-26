@@ -48,7 +48,7 @@ export default {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 20px;
-	row-gap: 20px;
+	row-gap: 19px;
 	@media screen and(max-width: 640px) {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -59,7 +59,7 @@ export default {
 .box {
 	display: flex;
 	flex-direction: column;
-	margin: 20px;
+	margin: 20px 20px 10px;
 	justify-content: space-around;
 	align-items: center;
 	a {

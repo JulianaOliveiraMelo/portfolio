@@ -1,7 +1,5 @@
 <template>
 	<div id="app" :style="backgroundStyle">
-		<div class="underneeth"></div>
-
 		<CookiesBanner />
 		<div class="burguerMenu">
 			<BurguerMenu />

@@ -54,6 +54,8 @@ footer {
 }
 
 #app {
+	background-color: #031321;
+
 	font-family: 'RocknRoll One', Avenir, Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -224,10 +226,18 @@ body::-webkit-scrollbar {
 	border-radius: 10px;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.8s;
+.fade-enter-active {
+	transition: opacity 2s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter {
+	opacity: 0;
+}
+.fade-leave-active {
+	transition: opacity 1s, filter 0.8s;
+}
+
+.fade-leave-to {
+	filter: blur(30px);
 	opacity: 0;
 }
