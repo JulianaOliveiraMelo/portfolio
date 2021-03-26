@@ -82,7 +82,6 @@ export default {
 		this.arrowIsVisible = false;
 		addEventListener('scroll', this.changeClass);
 		this.scrollStop(this.removeClass);
-		console.log(window.scrollTop);
 	},
 	methods: {
 		changeClass() {
