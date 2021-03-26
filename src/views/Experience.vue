@@ -167,6 +167,9 @@ export default {
 		max-height: 350px;
 		overflow: auto;
 	}
+	::-webkit-scrollbar {
+		display: none;
+	}
 	@media screen and (max-width: 780px) {
 		grid-template-columns: repeat(2, 1fr);
 	}

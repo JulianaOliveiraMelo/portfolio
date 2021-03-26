@@ -1,5 +1,7 @@
 <template>
 	<div id="app" :style="backgroundStyle">
+		<div class="underneeth"></div>
+
 		<CookiesBanner />
 		<div class="burguerMenu">
 			<BurguerMenu />
@@ -46,6 +48,7 @@
 import CookiesBanner from '@/components/CookiesBanner.vue';
 import BurguerMenu from '@/components/BurguerMenu.vue';
 import TheFooter from '@/components/TheFooter.vue';
+
 export default {
 	components: {
 		CookiesBanner,
@@ -56,6 +59,7 @@ export default {
 		return {
 			backgroundStyle: 'none',
 			routeName: '',
+			scrollActive: false,
 		};
 	},
 	watch: {
@@ -68,6 +72,47 @@ export default {
 				this.backgroundStyle = '';
 			}
 		},
+	},
+	methods: {
+		changeClass() {
+			this.scrollActive = true;
+			let html = document.querySelector('body');
+			html.classList.add('scroll');
+		},
+		removeClass: function() {
+			this.scrollActive = false;
+			let html = document.querySelector('body');
+			html.classList.remove('scroll');
+		},
+		scrollStop: function(callback) {
+			// Make sure a valid callback was provided
+			if (!callback || typeof callback !== 'function') return;
+
+			// Setup scrolling variable
+			var isScrolling;
+
+			// Listen for scroll events
+			window.addEventListener(
+				'scroll',
+				function() {
+					// Clear our timeout throughout the scroll
+					window.clearTimeout(isScrolling);
+
+					// Set a timeout to run after scrolling ends
+					isScrolling = setTimeout(function() {
+						// Run the callback
+						callback();
+					}, 1000);
+				},
+				false
+			);
+		},
+	},
+
+	mounted() {
+		this.scrollActive = false;
+		addEventListener('scroll', this.changeClass);
+		this.scrollStop(this.removeClass);
 	},
 };
 </script>

@@ -64,13 +64,13 @@ export default {
 .footerContainer {
 	width: 100%;
 	min-height: 150px;
-
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 3fr 1fr;
 	justify-content: space-between;
 	align-items: flex-end;
 	background-color: #020e18;
+	box-shadow: inset 0px 16px 19px -19px #ffffff61;
 	@media screen and (max-width: 680px) {
 		grid-template-columns: 1fr;
 		grid-template-rows: 2fr 1fr;

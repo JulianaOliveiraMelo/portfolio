@@ -7,6 +7,7 @@ body {
 	padding: 0;
 	background-color: #031321;
 }
+
 h1,
 h2,
 h3,
@@ -48,6 +49,7 @@ footer {
 	position: relative;
 	bottom: 0;
 	left: 0;
+	right: -10px;
 	margin-top: auto;
 }
 
@@ -100,7 +102,7 @@ footer {
 }
 .burguerMenu {
 	display: none;
-	z-index: 100;
+	z-index: 300;
 	@media screen and (max-width: 760px) {
 		display: block;
 	}
@@ -179,18 +181,45 @@ footer {
 .outsider {
 	max-width: 1000px;
 
-	padding: 20px;
+	padding: 20px 20px 0;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: left;
 	margin: auto;
 	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-bottom: 100px;
 	@media screen and (max-width: 760px) {
 		margin-top: 10vh;
 	}
 	h5 {
 		text-align: left;
 	}
+}
+html {
+	overflow: auto;
+}
+html::-webkit-scrollbar {
+	width: 0;
+}
+body::-webkit-scrollbar {
+	width: 5px;
+}
+.scroll {
+	transition: 1s;
+}
+.scroll::-webkit-scrollbar {
+	width: 5px;
+	background-color: #031321;
+}
+.scroll::-webkit-scrollbar-thumb {
+	border: 1px solid rgb(36, 151, 252);
+	box-shadow: inset 0 0 6px #08f;
+	border-radius: 10px;
+	height: 22%;
+	opacity: 0.5;
+}
+
+.scroll::-webkit-scrollbar-track {
+	border-radius: 10px;
 }

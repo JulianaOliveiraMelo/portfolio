@@ -14,8 +14,40 @@
 						:src="require('../../public/icons/icons8-google-images-48.png')"
 					/>
 					Photo de
+					<a
+						target="_blank"
+						href="https://unsplash.com/@historyhd?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						>History en HD</a
+					>
+					provenant de
+					<a target="_blank" href="https://unsplash.com/photos/Q1p7bh3SHj8"
+						>Unsplash</a
+					>
+				</li>
+				<li>
+					<img
+						class="photo-icon"
+						:src="require('../../public/icons/icons8-google-images-48.png')"
+					/>
+					Photo de
+					<a
+						target="_blank"
+						href="https://unsplash.com/@nasa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+						>NASA</a
+					>
+					provenant de
+					<a target="_blank" href="https://unsplash.com/photos/Q1p7bh3SHj8"
+						>Unsplash</a
+					>
+				</li>
+				<li>
+					<img
+						class="photo-icon"
+						:src="require('../../public/icons/icons8-google-images-48.png')"
+					/>
+					Photo de
 					<a target="_blank" href="https://www.pexels.com/fr-fr/@chuck"
-						>Photo de Wallace Chuck</a
+						>Wallace Chuck</a
 					>
 					provenant de
 					<a target="_blank" href="https://www.pexels.com/">Pexels</a>
@@ -27,7 +59,7 @@
 					/>
 					Photo de
 					<a target="_blank" href="https://www.pexels.com/fr-fr/@markusspiske"
-						>Photo de Markus Spiske</a
+						>Markus Spiske</a
 					>
 					provenant de
 					<a target="_blank" href="https://www.pexels.com/">Pexels</a>
