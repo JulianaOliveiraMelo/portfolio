@@ -136,9 +136,9 @@ export default {
 			}
 			&:hover {
 				position: initial;
-
 				max-width: 100%;
-				margin: 20px 50px 60px 50px;
+				transform: scale(1.1);
+				margin: 20px 70px 60px 70px;
 			}
 		}
 		&.eiffel {

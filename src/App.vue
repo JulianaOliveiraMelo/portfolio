@@ -1,6 +1,9 @@
 <template>
 	<div id="app" :style="backgroundStyle">
 		<CookiesBanner />
+		<div class="arrow-box">
+			<GoUpArrow :visibility="arrowIsVisible" />
+		</div>
 		<div class="burguerMenu">
 			<BurguerMenu />
 		</div>
@@ -47,18 +50,20 @@
 import CookiesBanner from '@/components/CookiesBanner.vue';
 import BurguerMenu from '@/components/BurguerMenu.vue';
 import TheFooter from '@/components/TheFooter.vue';
-
+import GoUpArrow from '@/components/ArrowUp.vue';
 export default {
 	components: {
 		CookiesBanner,
 		BurguerMenu,
 		TheFooter,
+		GoUpArrow,
 	},
 	data() {
 		return {
 			backgroundStyle: 'none',
 			routeName: '',
 			scrollActive: false,
+			arrowIsVisible: false,
 		};
 	},
 	watch: {
@@ -74,17 +79,21 @@ export default {
 	},
 	mounted() {
 		this.scrollActive = false;
+		this.arrowIsVisible = false;
 		addEventListener('scroll', this.changeClass);
 		this.scrollStop(this.removeClass);
+		console.log(window.scrollTop);
 	},
 	methods: {
 		changeClass() {
 			this.scrollActive = true;
+			if (window.scrollY > 500) this.arrowIsVisible = true;
 			let html = document.querySelector('body');
 			html.classList.add('scroll');
 		},
 		removeClass: function() {
 			this.scrollActive = false;
+			this.arrowIsVisible = false;
 			let html = document.querySelector('body');
 			html.classList.remove('scroll');
 		},
@@ -114,4 +123,12 @@ export default {
 	},
 };
 </script>
-<style lang="scss"></style>
+<style lang="scss">
+.arrow-box {
+	position: fixed;
+	bottom: 50px;
+	right: 20px;
+	z-index: 201;
+	min-width: 50px;
+}
+</style>

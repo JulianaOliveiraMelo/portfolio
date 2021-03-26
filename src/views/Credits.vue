@@ -200,6 +200,26 @@
 						:src="require('../../public/icons/icons8-google-images-48.png')"
 					/>
 					Logo
+					<a target="_blank" href="https://coolsymbol.com/">Feuille</a>
+				</li>
+				<li>
+					<img
+						class="photo-icon"
+						:src="require('../../public/icons/icons8-google-images-48.png')"
+					/>
+					Logo
+					<a
+						target="_blank"
+						href="https://icons8.com/illustrations/style--cyborg"
+						>Cyborg</a
+					>
+				</li>
+				<li>
+					<img
+						class="photo-icon"
+						:src="require('../../public/icons/icons8-google-images-48.png')"
+					/>
+					Logo
 					<a target="_blank" href="https://github.com/logos">GitHub</a>
 				</li>
 				<li>
@@ -207,7 +227,7 @@
 						class="photo-icon"
 						:src="require('../../public/icons/icons8-google-images-48.png')"
 					/>
-					Logos
+					Logos and icons provenant de
 					<a target="_blank" href="https://icons8.com/">icons8.com</a>
 				</li>
 			</ul>
