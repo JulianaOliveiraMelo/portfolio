@@ -234,7 +234,7 @@ body::-webkit-scrollbar {
 	opacity: 0;
 }
 .fade-leave-active {
-	transition: opacity 1s, filter 0.8s;
+	transition: opacity 1s, filter 1s;
 }
 
 .fade-leave-to {
