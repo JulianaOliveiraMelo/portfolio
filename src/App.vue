@@ -36,9 +36,10 @@
 			</router-link>
 		</div>
 		<div class="view-box">
-			<router-view />
+			<transition name="fade" mode="out-in" appear>
+				<router-view />
+			</transition>
 		</div>
-
 		<footer>
 			<TheFooter />
 		</footer>
@@ -72,6 +73,11 @@ export default {
 				this.backgroundStyle = '';
 			}
 		},
+	},
+	mounted() {
+		this.scrollActive = false;
+		addEventListener('scroll', this.changeClass);
+		this.scrollStop(this.removeClass);
 	},
 	methods: {
 		changeClass() {
@@ -107,12 +113,6 @@ export default {
 				false
 			);
 		},
-	},
-
-	mounted() {
-		this.scrollActive = false;
-		addEventListener('scroll', this.changeClass);
-		this.scrollStop(this.removeClass);
 	},
 };
 </script>
