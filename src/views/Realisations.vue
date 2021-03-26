@@ -12,14 +12,16 @@
 			</div>
 			<transition-group name="slide-down">
 				<div v-show="selectItems" key="selections" class="selections">
-					<div
-						v-for="i in items"
-						:key="i"
-						class="select"
-						@click="changeSearchFilter(i)"
-					>
-						{{ i }}
-					</div>
+					<ul>
+						<li
+							v-for="i in items"
+							:key="i"
+							class="select"
+							@click="changeSearchFilter(i)"
+						>
+							{{ i }}
+						</li>
+					</ul>
 				</div>
 			</transition-group>
 		</div>
@@ -226,13 +228,47 @@ export default {
 	.selections {
 		text-align: center;
 		color: orange;
-		padding: 30px;
+		padding: 30px 0;
 		width: 100%;
 		cursor: pointer;
+		ul {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			justify-content: space-evenly;
+			width: 100%;
+			text-align: left;
+			margin-left: 5%;
+			li {
+				list-style: none;
+				display: inline-block;
+				margin-left: 100px;
+				&:before {
+					content: '〄 '; /* use any character you fancy~! */
+					position: absolute;
+					margin-left: -20px;
+					color: #3eb984;
+					font-size: 13px;
+					margin-top: 4px;
+				}
+			}
+			@media screen and (max-width: 790px) {
+				grid-template-columns: repeat(3, 1fr);
+			}
+			@media screen and (max-width: 640px) {
+				grid-template-columns: repeat(2, 1fr);
+				margin-left: 12%;
+			}
+			@media screen and (max-width: 470px) {
+				grid-template-columns: 1fr;
+				justify-content: center;
+				text-align: center;
+				margin-left: 0;
+			}
+		}
 		.select {
-			padding: 2px 0 0;
+			width: 100%;
+			padding: 10px 0 0 20px;
 			opacity: 0.5;
-			max-width: 300px;
 			margin: auto;
 			&:hover {
 				background-color: #00000019;
