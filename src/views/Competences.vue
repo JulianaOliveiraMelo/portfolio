@@ -170,8 +170,10 @@ export default {
 	padding-bottom: 40px;
 }
 .quantity {
-	display: flex;
-	flex-direction: row;
+	width: 100%;
+	max-width: 300px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	align-self: center;
 	justify-self: center;
 	column-gap: 20px;
