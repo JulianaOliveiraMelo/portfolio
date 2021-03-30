@@ -127,7 +127,7 @@ export default {
 <style lang="scss">
 .arrow-box {
 	position: fixed;
-	bottom: 50px;
+	bottom: 45px;
 	right: 20px;
 	z-index: 201;
 	min-width: 50px;
