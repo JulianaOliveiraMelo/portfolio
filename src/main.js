@@ -7,8 +7,7 @@ var VueCookie = require('vue-cookie');
 import Axios from 'axios';
 Vue.use(VueCookie);
 
-Axios.defaults.baseURL =
-	'https://portfoliojulianamelo-default-rtdb.firebaseio.com/';
+Axios.defaults.baseURL = process.env.VUE_APP_FIRE_BASE_ROUTE;
 Vue.prototype.$http = Axios;
 Vue.config.productionTip = false;
 
