@@ -15,12 +15,16 @@ module.exports = {
 	},
 	configureWebpack: {
 		optimization: {
+			minimize: true,
 			minimizer: isProd
 				? [
 						new TerserPlugin({
 							terserOptions: {
 								compress: {
 									drop_console: true,
+								},
+								output: {
+									comments: false,
 								},
 							},
 						}),
