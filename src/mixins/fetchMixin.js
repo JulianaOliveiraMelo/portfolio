@@ -6,7 +6,7 @@ export default {
 				let data = response.data;
 				this.[demande] = data
 			} catch (error) {
-				console.error(error);
+				 throw new Error(error);
 			}
 		},
     }
