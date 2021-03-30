@@ -1,13 +1,23 @@
 module.exports = {
-	transpileDependencies: ["vuetify"],
+	transpileDependencies: ['vuetify'],
 	chainWebpack: config => {
 		config.module
-			.rule("pdf")
+			.rule('pdf')
 			.test(/\.(pdf)(\?.*)?$/)
-			.use("file-loader")
-			.loader("file-loader")
+			.use('file-loader')
+			.loader('file-loader')
 			.options({
-				name: "public/diplomes/[name].[hash:8].[ext]"
+				name: 'public/diplomes/[name].[hash:8].[ext]',
 			});
-	}
+	},
+	build: {
+		terser: {
+			terserOptions: {
+				compress: {
+					//this removes console.log from production environment
+					drop_console: true,
+				},
+			},
+		},
+	},
 };
