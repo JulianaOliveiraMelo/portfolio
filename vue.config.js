@@ -1,3 +1,6 @@
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
 	transpileDependencies: ['vuetify'],
 	chainWebpack: config => {
@@ -10,14 +13,19 @@ module.exports = {
 				name: 'public/diplomes/[name].[hash:8].[ext]',
 			});
 	},
-	build: {
-		terser: {
-			terserOptions: {
-				compress: {
-					//this removes console.log from production environment
-					drop_console: true,
-				},
-			},
+	configureWebpack: {
+		optimization: {
+			minimizer: isProd
+				? [
+						new UglifyJsPlugin({
+							uglifyOptions: {
+								compress: {
+									drop_console: true,
+								},
+							},
+						}),
+				  ]
+				: [],
 		},
 	},
 };
