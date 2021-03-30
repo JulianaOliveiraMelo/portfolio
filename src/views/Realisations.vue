@@ -17,7 +17,7 @@
 							v-for="i in tags"
 							:key="i.name"
 							class="select"
-							@click="changeSearchFilter(i)"
+							@click="changeSearchFilter(i.name)"
 						>
 							{{ i.name }}
 						</li>
@@ -25,53 +25,54 @@
 				</div>
 			</transition-group>
 		</div>
-		<div v-for="w in computed_items" :key="w.id" class="container-box">
-			<div v-if="w.name" class="container">
-				<div class="image-box">
-					<a v-if="w.image.source" :href="w.image.link" target="blank">
-						<ImageBox
-							:backgroundImage="require('/public/images/' + w.image.source)"
-							:imageDescription="w.image.description"
-					/></a>
-					<div v-else>
-						<ImageBox
-							:backgroundImage="
-								require('/public/images/pexels-marta-branco-1194713.png')
-							"
-							imageDescription="default image"
-						/>
+		<transition-group name="shrink" mode="out-in" appear>
+			<div v-for="w in work" :key="w.id" class="container-box">
+				<div v-if="w.name" class="container">
+					<div class="image-box">
+						<a v-if="w.image.source" :href="w.image.link" target="blank">
+							<ImageBox
+								:backgroundImage="require('/public/images/' + w.image.source)"
+								:imageDescription="w.image.description"
+						/></a>
+						<div v-else>
+							<ImageBox
+								:backgroundImage="
+									require('/public/images/pexels-marta-branco-1194713.png')
+								"
+								imageDescription="default image"
+							/>
+						</div>
 					</div>
-				</div>
-				<div class="icons-box">
-					<div v-for="(i, key) in w.icons" :key="i">
-						<img
-							class="icons-image"
-							:src="require('/public/icons/' + i)"
-							:alt="key"
-							@click="changeSearchFilter(key)"
-						/>
+					<div class="icons-box">
+						<div v-for="(i, key) in w.icons" :key="i">
+							<img
+								class="icons-image"
+								:src="require('/public/icons/' + i)"
+								:alt="key"
+								@click="changeSearchFilter(key)"
+							/>
+						</div>
 					</div>
-				</div>
-				<div class="content-box">
-					<div>
-						<a :href="w.image.link" target="blank"
-							><h3>{{ w.name }}</h3></a
-						>
-						<p v-html="w.text"></p>
+					<div class="content-box">
+						<div>
+							<a :href="w.image.link" target="blank"
+								><h3>{{ w.name }}</h3></a
+							>
+							<p v-html="w.text"></p>
+						</div>
+						<aside v-if="w.school">
+							<a class="hoverLink" :href="w.school.link" target="blank">{{
+								w.school.name
+							}}</a>
+						</aside>
 					</div>
-					<aside v-if="w.school">
-						<a class="hoverLink" :href="w.school.link" target="blank">{{
-							w.school.name
-						}}</a>
-					</aside>
 				</div>
 			</div>
-		</div>
+		</transition-group>
 	</div>
 </template>
 
 <script>
-import { bus } from '../main.js';
 import Title from '@/components/PageTitle.vue';
 import ImageBox from '@/components/ImageBox.vue';
 import fetchMixin from '@/mixins/fetchMixin.js';
@@ -82,53 +83,14 @@ export default {
 	data: () => ({
 		tags: [],
 		work: null,
-		width: '100%',
 		search: 'voir tout',
-		school: [],
 		selectItems: false,
 	}),
-	computed: {
-		computed_items: function() {
-			if (this.search === 'voir tout') {
-				return this.work;
-			} else if (this.search === '+ ancien') {
-				let array = this.work;
-				return array.sort((a, b) => a.id - b.id);
-			} else if (this.search === '+ recent') {
-				let array = this.work;
-				return array.sort((a, b) => b.id - a.id);
-			} else {
-				return this.work.filter(element => {
-					for (let i in element.tag) {
-						if (element.tag[i] == this.search) return true;
-					}
-				});
-			}
-		},
-	},
 	created() {
-		this.work = bus.work;
-		this.fetchInfo('tags');
-
-		//fetch tags info from API;
-		//this.sortMethod();
+		this.work = this.fetchInfoFilter('work', this.search); //fetch all work
+		this.fetchInfo('tags'); //fetch all tags
 	},
-
 	methods: {
-		sortMethod() {
-			const entries = Object.values(this.tags);
-			this.compare(Object.values(...this.tags));
-			console.log(entries);
-		},
-		compare: function(a, b) {
-			if (a.name < b.name) {
-				return -1;
-			}
-			if (a.name > b.name) {
-				return 1;
-			}
-			return 0;
-		},
 		//"filter par:"
 		showHide() {
 			this.selectItems = !this.selectItems;
@@ -136,7 +98,8 @@ export default {
 		//chose option from list
 		changeSearchFilter(searchName) {
 			this.search = searchName;
-			this.selectItems = !this.selectItems;
+			this.work = this.fetchInfoFilter('work', this.search); //fetch selected tags in work
+			this.selectItems = false;
 		},
 	},
 };
@@ -210,6 +173,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-content: flex-start;
+	transition: all 2s ease-in-out;
 	div {
 		text-align: left;
 	}
@@ -304,7 +268,7 @@ export default {
 
 .slide-down-enter-active,
 .slide-down-leave-active {
-	transition: max-height 1s linear;
+	transition: max-height 0.5s ease-in-out;
 }
 
 .slide-down-enter-to,

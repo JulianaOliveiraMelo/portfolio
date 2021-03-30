@@ -65,19 +65,20 @@
 <script>
 import Title from '@/components/PageTitle.vue';
 import ImageBox from '@/components/ImageBox.vue';
-import { bus } from '../main.js';
+import fetchMixins from '@/mixins/fetchMixin.js';
 export default {
 	components: {
 		Title,
 		ImageBox,
 	},
+	mixins: [fetchMixins],
 	data() {
 		return {
 			experience: {},
 		};
 	},
 	created() {
-		this.experience = bus.experience;
+		this.experience = this.fetchInfo('experience');
 	},
 };
 </script>

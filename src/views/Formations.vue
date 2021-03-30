@@ -4,7 +4,7 @@
 		<h5>De la plus récente à la plus ancienne</h5>
 
 		<FormationsBox
-			v-for="f in training.slice().reverse()"
+			v-for="f in training"
 			:key="f.id"
 			:name="f.name"
 			:source="require('../../public/logos/' + f.src)"
@@ -22,19 +22,20 @@
 <script>
 import FormationsBox from '@/components/FormationsBox.vue';
 import Title from '@/components/PageTitle.vue';
-import { bus } from '../main.js';
+import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	components: {
 		Title,
 		FormationsBox,
 	},
+	mixins: [fetchMixin],
 	data() {
 		return {
-			training: {},
+			training: [],
 		};
 	},
 	created() {
-		this.training = bus.training;
+		this.fetchInfoReversed('training');
 	},
 };
 </script>

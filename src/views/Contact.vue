@@ -23,18 +23,19 @@
 </template>
 <script>
 import Title from '@/components/PageTitle.vue';
-import { bus } from '../main.js';
+import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	components: {
 		Title,
 	},
+	mixins: [fetchMixin],
 	data() {
 		return {
 			contact: {},
 		};
 	},
 	created() {
-		this.contact = bus.contact;
+		this.fetchInfo('contact');
 	},
 };
 </script>

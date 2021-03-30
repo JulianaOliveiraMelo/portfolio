@@ -27,7 +27,12 @@ module.exports = {
 			'error',
 			'never',
 			{
-				ignore: ['enter-active-class', 'leave-active-class', 'enter-to-class'],
+				ignore: [
+					'enter-active-class',
+					'leave-active-class',
+					'enter-to-class',
+					'before-enter',
+				],
 			},
 		],
 		'vue/no-irregular-whitespace': [

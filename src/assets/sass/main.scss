@@ -227,17 +227,27 @@ body::-webkit-scrollbar {
 }
 
 .fade-enter-active {
-	transition: opacity 2s;
+	transition: opacity 1s;
 }
-
 .fade-enter {
-	opacity: 0;
+	opacity: 0 !important;
 }
 .fade-leave-active {
 	transition: opacity 1s, filter 1s;
 }
-
 .fade-leave-to {
 	filter: blur(30px);
 	opacity: 0;
+}
+.shrink-enter-active {
+	transition: opacity 2s !important;
+}
+.shrink-enter {
+	opacity: 0 !important;
+}
+.shrink-leave-active {
+	transition: opacity 2s !important;
+}
+.shrink-leave-to {
+	opacity: 1 !important;
 }
