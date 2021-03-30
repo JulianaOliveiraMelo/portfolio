@@ -3,8 +3,8 @@
 		<div class="footerContainer" :style="backgroundStyle">
 			<div class="credits">
 				<ul>
-					<li @click="$router.push('/credits')">Crédits</li>
-					<li @click="$router.push('/legal')">Mentions légales</li>
+					<li @click="pushPath('/credits')">Crédits</li>
+					<li @click="pushPath('/legal')">Mentions légales</li>
 				</ul>
 			</div>
 			<div class="socialIcons">
@@ -46,6 +46,13 @@ export default {
 	created() {
 		this.socialIcons = [...bus.contact];
 		this.socialIcons.shift();
+	},
+	methods: {
+		pushPath(path) {
+			if (this.$route.path !== path) {
+				this.$router.push(path);
+			}
+		},
 	},
 	watch: {
 		$route(to) {

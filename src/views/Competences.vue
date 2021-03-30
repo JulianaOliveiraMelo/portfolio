@@ -37,13 +37,13 @@
 									r="40"
 									:style="
 										'stroke-dashoffset: calc(245 - (245 * ' +
-											s.skills.write +
+											s.skills.talk +
 											') / 100); stroke: #16c79a'
 									"
 								/>
 							</svg>
 							<div class="number">
-								<p style="color: #16c79a">{{ s.skills.write }}<span>%</span></p>
+								<p style="color: #16c79a">{{ s.skills.talk }}<span>%</span></p>
 							</div>
 						</div>
 						<p>écris</p>
@@ -59,13 +59,13 @@
 									r="40"
 									:style="
 										'stroke-dashoffset: calc(245 - (245 * ' +
-											s.skills.talk +
+											s.skills.write +
 											') / 100); stroke:  #ff005c'
 									"
 								/>
 							</svg>
 							<div class="number">
-								<p style="color: #ff005c">{{ s.skills.talk }}<span>%</span></p>
+								<p style="color: #ff005c">{{ s.skills.write }}<span>%</span></p>
 							</div>
 						</div>
 						<p>parlé</p>
@@ -84,19 +84,21 @@
 import StyleButton from '@/components/StyleButton.vue';
 import Title from '@/components/PageTitle.vue';
 import { bus } from '../main.js';
+import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	name: 'Intro',
 	components: {
 		StyleButton,
 		Title,
 	},
-	data() {
-		return {
-			skills: '',
-		};
-	},
+	mixins: [fetchMixin],
+	data: () => ({
+		skills: [],
+		test: 'empty',
+	}),
 	created() {
 		this.skills = bus.skills;
+		this.fetchInfo('skills');
 	},
 };
 </script>

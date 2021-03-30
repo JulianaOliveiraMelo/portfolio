@@ -14,12 +14,12 @@
 				<div v-show="selectItems" key="selections" class="selections">
 					<ul>
 						<li
-							v-for="i in items"
-							:key="i"
+							v-for="i in tags"
+							:key="i.name"
 							class="select"
 							@click="changeSearchFilter(i)"
 						>
-							{{ i }}
+							{{ i.name }}
 						</li>
 					</ul>
 				</div>
@@ -74,11 +74,13 @@
 import { bus } from '../main.js';
 import Title from '@/components/PageTitle.vue';
 import ImageBox from '@/components/ImageBox.vue';
+import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	name: 'Realisations',
 	components: { Title, ImageBox },
+	mixins: [fetchMixin],
 	data: () => ({
-		items: [],
+		tags: [],
 		work: null,
 		width: '100%',
 		search: 'voir tout',
@@ -104,15 +106,34 @@ export default {
 			}
 		},
 	},
-
 	created() {
 		this.work = bus.work;
-		this.items = bus.tags;
+		this.fetchInfo('tags');
+
+		//fetch tags info from API;
+		//this.sortMethod();
 	},
+
 	methods: {
+		sortMethod() {
+			const entries = Object.values(this.tags);
+			this.compare(Object.values(...this.tags));
+			console.log(entries);
+		},
+		compare: function(a, b) {
+			if (a.name < b.name) {
+				return -1;
+			}
+			if (a.name > b.name) {
+				return 1;
+			}
+			return 0;
+		},
+		//"filter par:"
 		showHide() {
 			this.selectItems = !this.selectItems;
 		},
+		//chose option from list
 		changeSearchFilter(searchName) {
 			this.search = searchName;
 			this.selectItems = !this.selectItems;

@@ -4,8 +4,12 @@ import router from './router';
 import './assets/sass/main.scss';
 import vuetify from './plugins/vuetify';
 var VueCookie = require('vue-cookie');
+import Axios from 'axios';
 Vue.use(VueCookie);
 
+Axios.defaults.baseURL =
+	'https://portfoliojulianamelo-default-rtdb.firebaseio.com/';
+Vue.prototype.$http = Axios;
 Vue.config.productionTip = false;
 
 export const bus = new Vue({
@@ -21,22 +25,7 @@ export const bus = new Vue({
 				siteName: 'Unsplash',
 			},
 		],
-		tags: [
-			'+ ancien',
-			'+ recent',
-			'O`Clock',
-			'Dyma',
-			'Khan Academy',
-			'freeCodeCamp',
-			'FrontEnd Mentor',
-			'HTML',
-			'CSS',
-			'JavaScript',
-			'Sass',
-			'Vue.js',
-			"J'NOV",
-			'Wordpress',
-		],
+		tags: {},
 		contact: [
 			{
 				name: 'phone',
@@ -65,82 +54,8 @@ export const bus = new Vue({
 		],
 
 		skills: {
-			tech: [
-				{
-					skillName: 'Html',
-					skillIcon: 'icons8-html-5-50.png',
-				},
-				{
-					skillName: 'Css',
-					skillIcon: 'icons8-css3-50.png',
-				},
-				{
-					skillName: 'JavaScript',
-					skillIcon: 'icons8-javascript-v2-50.png',
-				},
-				{
-					skillName: 'Vue.js',
-					skillIcon: 'icons8-vue-js-48.png',
-				},
-				{
-					skillName: 'Sass',
-					skillIcon: 'icons8-sass-48.png',
-				},
-				{
-					skillName: 'Swift',
-					skillIcon: 'icons8-swift-50.png',
-				},
-				{
-					skillName: 'iOS',
-					skillIcon: 'icons8-ios-logo-50.png',
-				},
-				{
-					skillName: 'Wordpress',
-					skillIcon: 'icons8-wordpress-50.png',
-				},
-				{
-					skillName: 'gitHub',
-					skillIcon: 'octocat.png',
-				},
-				{
-					skillName: 'npm',
-					skillIcon: 'icons8-npm-50.png',
-				},
-				{
-					skillName: 'Node.js',
-					skillIcon: 'icons8-nodejs-50.png',
-				},
-				{
-					skillName: 'Gimp',
-					skillIcon: 'icons8-gimp-50.png',
-				},
-			],
-			langs: [
-				{
-					languageName: 'Français',
-					niveaux: '90',
-					skills: {
-						talk: '95',
-						write: '85',
-					},
-				},
-				{
-					languageName: 'Anglais',
-					niveaux: '80',
-					skills: {
-						talk: '80',
-						write: '80',
-					},
-				},
-				{
-					languageName: 'Portugais',
-					niveaux: '90',
-					skills: {
-						talk: '100',
-						write: '90',
-					},
-				},
-			],
+			tech: [],
+			langs: [],
 		},
 		training: [
 			{
@@ -687,7 +602,8 @@ export const bus = new Vue({
 				image: {
 					source: 'buildASimpleStore-Dyma.png',
 					description: 'Build a Technical Documentation Page screenshot',
-					link: 'https://simon-game-two.vercel.app/',
+					link:
+						'https://learn-with-dyma-project-boutique-ipzyoj73y-julianaoliveiramelo.vercel.app/shop',
 				},
 				text:
 					"<p>Objectif: Réaliser une simple boutique avec Vue.Js, en se servant de ce que j'ai appris.</p><p>Utilisation de FireBase</p>",

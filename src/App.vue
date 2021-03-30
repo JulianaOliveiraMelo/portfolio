@@ -38,7 +38,9 @@
 		</div>
 		<div class="view-box">
 			<transition name="fade" mode="out-in" appear>
-				<router-view />
+				<keep-alive>
+					<router-view />
+				</keep-alive>
 			</transition>
 		</div>
 		<footer>
