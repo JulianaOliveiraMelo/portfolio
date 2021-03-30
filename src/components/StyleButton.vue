@@ -30,7 +30,7 @@ export default {
 	outline: none;
 	font-size: 18px;
 	margin: 1em 0;
-	color: hotpink;
+	color: orange;
 	margin-bottom: 50px;
 
 	&::after,
@@ -40,7 +40,7 @@ export default {
 		position: absolute;
 		width: 20%;
 		height: 20%;
-		border: 5px dashed rgb(255, 105, 180);
+		border: 5px dashed rgba(255, 166, 0, 0.623);
 		transition: all 0.6s ease;
 		border-radius: 2px;
 		opacity: 0.3;

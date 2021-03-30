@@ -73,7 +73,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="buttons-box">
+		<div class="button-box centered">
 			<StyleButton text="Mes réalisations" link="realisations" />
 			<StyleButton text="Contact" link="contact" />
 		</div>
@@ -94,7 +94,6 @@ export default {
 	mixins: [fetchMixin],
 	data: () => ({
 		skills: [],
-		test: 'empty',
 	}),
 	created() {
 		this.skills = bus.skills;
@@ -143,14 +142,7 @@ export default {
 		}
 	}
 }
-.buttons-box {
-	display: flex;
-	justify-content: space-evenly;
-	@media screen and (max-width: 500px) {
-		flex-direction: column;
-		align-items: center;
-	}
-}
+
 .languages {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);

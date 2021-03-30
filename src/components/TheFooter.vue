@@ -8,7 +8,7 @@
 				</ul>
 			</div>
 			<div class="socialIcons">
-				<div v-for="c in socialIcons" :key="c.text" class="box">
+				<div v-for="c in contact" :key="c.text" class="box">
 					<a v-if="c.link" class="content" :href="c.link" target="_blank">
 						<img
 							:src="require('../../public/icons/' + c.icon)"
@@ -33,19 +33,20 @@
 	</div>
 </template>
 <script>
-import { bus } from '../main.js';
+import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	name: 'TheFooter',
 	components: {},
+	mixins: [fetchMixin],
 	data() {
 		return {
+			contact: [],
 			socialIcons: {}, // does not contain phone in contact
 			backgroundStyle: '',
 		};
 	},
 	created() {
-		this.socialIcons = [...bus.contact];
-		this.socialIcons.shift();
+		this.fetchContactInfo('contact');
 	},
 	methods: {
 		pushPath(path) {
