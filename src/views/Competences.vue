@@ -83,7 +83,6 @@
 <script>
 import StyleButton from '@/components/StyleButton.vue';
 import Title from '@/components/PageTitle.vue';
-import { bus } from '../main.js';
 import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	name: 'Intro',
@@ -96,7 +95,6 @@ export default {
 		skills: [],
 	}),
 	created() {
-		this.skills = bus.skills;
 		this.fetchInfo('skills');
 	},
 };
