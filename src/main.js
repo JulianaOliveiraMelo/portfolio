@@ -5,6 +5,7 @@ import './assets/sass/main.scss';
 import vuetify from './plugins/vuetify';
 var VueCookie = require('vue-cookie');
 import Axios from 'axios';
+
 Vue.use(VueCookie);
 
 Axios.defaults.baseURL = process.env.VUE_APP_FIRE_BASE_ROUTE;

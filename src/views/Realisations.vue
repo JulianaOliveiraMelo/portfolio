@@ -91,7 +91,7 @@ export default {
 		this.fetchInfo('tags'); //fetch all tags
 	},
 	methods: {
-		//"filter par:"
+		//"filter open/close"
 		showHide() {
 			this.selectItems = !this.selectItems;
 		},

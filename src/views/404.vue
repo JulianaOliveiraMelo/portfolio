@@ -124,7 +124,7 @@ p {
 		transform: scale(1);
 	}
 	50% {
-		top: 20%;
+		top: 18%;
 		transform: scale(1.15);
 	}
 	100% {

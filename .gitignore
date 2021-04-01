@@ -25,3 +25,12 @@ pnpm-debug.log*
 # Info file in case the bd is lost
 
 firebaseInformation.json
+
+# ignore firebase files for geithub push
+
+.firebase
+.firebaserc
+database.rules.json
+firebase.json
+storage.rules
+dist
