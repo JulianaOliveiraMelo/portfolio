@@ -1,5 +1,5 @@
 <template>
-	<div class="credits-page">
+	<div>
 		<h1 class="hello">Crédits</h1>
 		<div class="container">
 			<h3>Conception et Réalisation</h3>
@@ -229,6 +229,16 @@
 					/>
 					Logos and icons provenant de
 					<a target="_blank" href="https://icons8.com/">icons8.com</a>
+				</li>
+				<li>
+					<img
+						class="photo-icon"
+						:src="require('../../public/icons/icons8-google-images-48.png')"
+					/>
+					fonts & icons provenant de
+					<a target="_blank" href="https://fonts.google.com/icons?icon.query=up"
+						>google</a
+					>
 				</li>
 			</ul>
 		</div>

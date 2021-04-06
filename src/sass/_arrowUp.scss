@@ -13,6 +13,10 @@
 	-webkit-text-stroke: 4px $app-background;
 	opacity: 0.8;
 	filter: blur(0.5px);
+	@media screen and(max-width: 905px) {
+		font-size: 60px;
+		-webkit-text-stroke: 0px;
+	}
 }
 .hide {
 	opacity: 0;

@@ -8,7 +8,6 @@
 @import './mixins';
 
 //import banners
-@import './burguerMenu';
 @import './cookieBanner';
 @import './navBar';
 
@@ -148,7 +147,6 @@ footer {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin: 10% 0;
 	&.centered {
 		width: 100%;
 		justify-content: space-evenly;
@@ -211,4 +209,8 @@ footer {
 }
 .keepOnTop {
 	margin: 0 0 auto;
+}
+
+.outsider {
+	padding-bottom: 10%;
 }

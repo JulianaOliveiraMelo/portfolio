@@ -1,5 +1,5 @@
 <template>
-	<div class="competences-page keepOnTop">
+	<div class="keepOnTop">
 		<h1 class="hello">Mes Compétences</h1>
 		<div class="container">
 			<div

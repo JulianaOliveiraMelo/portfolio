@@ -9,15 +9,7 @@
 				<BurguerMenu />
 			</div>
 		</div>
-		<div id="nav">
-			<ul>
-				<li class="navLinks" v-for="name in menuNames" :key="name.name">
-					<router-link :to="name.link">
-						{{ name.name }}
-					</router-link>
-				</li>
-			</ul>
-		</div>
+
 		<div class="outsider">
 			<transition name="fade" mode="out-in" appear>
 				<keep-alive>
