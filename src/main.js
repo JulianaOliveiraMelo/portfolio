@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import './assets/sass/main.scss';
+import './sass/main.scss';
 import vuetify from './plugins/vuetify';
-var VueCookie = require('vue-cookie');
 import Axios from 'axios';
+var VueCookie = require('vue-cookie');
 
 Vue.use(VueCookie);
 

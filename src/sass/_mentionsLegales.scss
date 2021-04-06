@@ -1,0 +1,25 @@
+.mentionsLegales-page {
+	.container {
+		width: 100%;
+		padding: 20px;
+		margin: 45px auto 25px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		border: 5px dashed #5083b619;
+		min-height: 220px;
+	.orange {
+		color: orange;
+	}
+	.bold-600 {
+		font-weight: 600;
+		letter-spacing: 3px;
+	}
+	.hotpink {
+		color: hotpink;
+	}
+	.lightOpacity {
+		opacity: 0.8;
+	}
+	}
+}

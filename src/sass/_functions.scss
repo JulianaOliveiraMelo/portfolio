@@ -1,0 +1,6 @@
+@import './variables';
+@function weightSize($font-size-name) {
+	@return map-get($app-font-weights, $font-size-name);
+}
+
+

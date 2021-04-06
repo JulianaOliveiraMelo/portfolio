@@ -1,6 +1,6 @@
 <template>
-	<div class="outsider">
-		<Title msg="Je me presente..." />
+	<div class="intro-page">
+		<h2 class="hello">Je me presente...</h2>
 		<div class="container">
 			<div class="text-content">
 				<p>
@@ -107,157 +107,14 @@
 
 <script>
 import StyleButton from '@/components/StyleButton.vue';
-import Title from '@/components/PageTitle.vue';
 import ImageBox from '@/components/ImageBox.vue';
 export default {
-	name: 'Intro',
 	components: {
 		StyleButton,
-		Title,
 		ImageBox,
 	},
 };
 </script>
-
 <style lang="scss" scoped>
-.images {
-	display: inline;
-	transition: all 0.5s linear;
-	cursor: pointer;
-	&.floatRight {
-		max-width: 60%;
-		float: right;
-		&.map {
-			margin: 0 0 30px 20px;
-			@media screen and (max-width: 600px) {
-				min-width: 60%;
-				max-width: 100%;
-				margin: 0 5% 5% 5%;
-			}
-			&:hover {
-				position: initial;
-				max-width: 100%;
-				transform: scale(1.1);
-				margin: 20px 70px 60px 70px;
-			}
-		}
-		&.eiffel {
-			max-width: 30%;
-			margin: 30px 0 50px 40px;
-			shape-outside: polygon(51% 0, 100% 0, 100% 100%, 0% 100%);
-			@media screen and (max-width: 600px) {
-				min-width: 60%;
-				margin: 5% 0 5% 15%;
-			}
-			&:hover {
-				margin: 40px 0 60px 20px;
-				position: initial;
-				max-width: 100%;
-				shape-outside: circle(70%);
-			}
-		}
-	}
-	&.floatLeft {
-		max-width: 20%;
-		float: left;
-		&.prestashop {
-			margin: 20px 30px 40px 0;
-			shape-outside: circle(50%);
-			@media screen and(max-width: 600px) {
-				min-width: 35%;
-				shape-outside: circle(45%);
-				margin: 20px 30px 20px 0;
-			}
-			@media screen and(max-width: 450px) {
-				min-width: 40%;
-			}
-
-			&:hover {
-				shape-outside: circle(70%);
-				position: initial;
-				max-width: 30%;
-				margin: 20px 20px 30px 0;
-			}
-		}
-	}
-}
-.bold {
-	font-weight: 700;
-	&.purple {
-		color: #29245c;
-	}
-	&.pink {
-		color: #d6016b;
-	}
-	&.orange {
-		color: #fc3c21;
-	}
-	&.blue {
-		color: #8eb6e1;
-	}
-	&.franceColors {
-		background: -webkit-linear-gradient(
-			0deg,
-			rgba(0, 22, 255, 1) 0%,
-			rgba(255, 255, 255, 1) 49%,
-			rgba(255, 0, 0, 1) 100%
-		);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	&.portugalColors {
-		background: -webkit-linear-gradient(
-			0deg,
-			rgba(0, 99, 0, 1) 0%,
-			rgba(192, 143, 3, 1) 54%,
-			rgba(247, 0, 0, 1) 100%
-		);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	&.chinaColors {
-		background: -webkit-linear-gradient(
-			0deg,
-			rgba(222, 41, 16, 1) 39%,
-			rgba(245, 208, 0, 1) 42%,
-			rgba(222, 41, 16, 1) 46%
-		);
-		background-clip: text;
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-	}
-	&.iosColor {
-		color: #bababa;
-	}
-	&.androidColor {
-		color: green;
-	}
-	&.javaScriptColor {
-		color: #efd81d;
-	}
-	&.htmlColors {
-		color: #fd6a00;
-	}
-	&.cssColors {
-		color: #0277bd;
-	}
-}
-.container {
-	border: 5px dashed #5083b619;
-	padding: 20px;
-	margin: 25px 0;
-	grid-template-columns: none;
-}
-p {
-	font-size: 16px;
-	// columns: 2;
-	// column-gap: 25px;
-}
-.button-box {
-	width: 100%;
-	justify-content: space-evenly;
-	margin-top: 0;
-}
+@import '../../src/sass/intro';
 </style>

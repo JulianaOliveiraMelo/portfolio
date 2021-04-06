@@ -1,51 +1,35 @@
 <template>
-	<div id="app" :style="backgroundStyle">
-		<CookiesBanner />
-		<div class="arrow-box">
-			<GoUpArrow :visibility="arrowIsVisible" />
-		</div>
-		<div class="burguerMenu">
-			<BurguerMenu />
+	<div id="app" class="light" :style="backgroundStyle">
+		<div class="absoluteContents">
+			<CookiesBanner />
+			<div class="arrow-box">
+				<GoUpArrow :visibility="arrowIsVisible" />
+			</div>
+			<div class="burguerMenu">
+				<BurguerMenu />
+			</div>
 		</div>
 		<div id="nav">
-			<router-link to="/">
-				Accueil
-			</router-link>
-			|
-			<router-link to="/intro">
-				Intro
-			</router-link>
-			|
-			<router-link to="/realisations">
-				Réalisations
-			</router-link>
-			|
-			<router-link to="/formations">
-				Formations
-			</router-link>
-			|
-			<router-link to="/experience">
-				Expériences
-			</router-link>
-			|
-			<router-link to="/competences">
-				Compétences
-			</router-link>
-			|
-			<router-link to="/contact">
-				Contact
-			</router-link>
+			<ul>
+				<li class="navLinks" v-for="name in menuNames" :key="name.name">
+					<router-link :to="name.link">
+						{{ name.name }}
+					</router-link>
+				</li>
+			</ul>
 		</div>
-		<div class="view-box">
+		<div class="outsider">
 			<transition name="fade" mode="out-in" appear>
 				<keep-alive>
 					<router-view />
 				</keep-alive>
 			</transition>
 		</div>
-		<footer>
-			<TheFooter />
-		</footer>
+		<div class="footerContent">
+			<footer>
+				<TheFooter />
+			</footer>
+		</div>
 	</div>
 </template>
 <script>
@@ -53,6 +37,7 @@ import CookiesBanner from '@/components/CookiesBanner.vue';
 import BurguerMenu from '@/components/BurguerMenu.vue';
 import TheFooter from '@/components/TheFooter.vue';
 import GoUpArrow from '@/components/ArrowUp.vue';
+import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	components: {
 		CookiesBanner,
@@ -60,13 +45,18 @@ export default {
 		TheFooter,
 		GoUpArrow,
 	},
+	mixins: [fetchMixin],
 	data() {
 		return {
 			backgroundStyle: 'none',
 			routeName: '',
 			scrollActive: false,
 			arrowIsVisible: false,
+			menuNames: [],
 		};
+	},
+	created() {
+		this.fetchInfo('menuNames');
 	},
 	watch: {
 		$route(to) {
@@ -124,12 +114,6 @@ export default {
 	},
 };
 </script>
-<style lang="scss">
-.arrow-box {
-	position: fixed;
-	bottom: 50px;
-	right: 20px;
-	z-index: 201;
-	min-width: 50px;
-}
+<style lang="scss" scoped>
+@import '../src/sass/app';
 </style>

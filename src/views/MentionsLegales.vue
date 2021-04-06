@@ -1,6 +1,6 @@
 <template>
-	<div class="outsider">
-		<h1>Mentions légales</h1>
+	<div class="mentionsLegales-page">
+		<h1 class="hello">Mentions légales</h1>
 		<div class="container">
 			<p>
 				Merci de lire avec attention les différentes modalités d’utilisation du
@@ -259,29 +259,6 @@
 		</div>
 	</div>
 </template>
-
 <style lang="scss" scoped>
-.container {
-	width: 100%;
-	padding: 20px;
-	margin: 45px auto 25px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	border: 5px dashed #5083b619;
-	min-height: 220px;
-}
-.orange {
-	color: orange;
-}
-.bold-600 {
-	font-weight: 600;
-	letter-spacing: 3px;
-}
-.hotpink {
-	color: hotpink;
-}
-.lightOpacity {
-	opacity: 0.8;
-}
+@import '../../src/sass/mentionsLegales';
 </style>

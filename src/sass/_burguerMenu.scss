@@ -1,0 +1,60 @@
+.burguerMenu {
+	@media screen and(min-width: 905px) {
+		display: none;
+	}
+}
+.burguer {
+	position: fixed;
+	right: 0;
+	top: 0;
+	margin: 10px;
+	img {
+		max-width: 40px;
+	}
+}
+.menu {
+	position: fixed;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-end;
+	width: 100%;
+	height: 100%;
+	background-color: #031321e5;
+	margin: auto;
+	z-index: 1000;
+}
+.links {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	z-index: 10000;
+	a {
+		font-size: 18px;
+		font-weight: bold;
+		color: #42b983;
+		text-decoration: none;
+		padding-bottom: 5px;
+		display: inline-block;
+		margin: 0;
+		&.router-link-exact-active {
+			color: orange;
+			&::after {
+				transform: scaleX(0);
+			}
+		}
+	}
+}
+.icon {
+	margin: 10px;
+}
+.burguerMenu {
+	display: none;
+	z-index: 300;
+	@media screen and (max-width: 904px) {
+		display: block;
+	}
+}

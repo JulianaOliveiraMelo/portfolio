@@ -1,11 +1,7 @@
 <template>
-	<img
-		@click="goUp"
-		:class="[visibility ? 'show' : 'hide']"
-		class="icon"
-		:src="require('../../public/icons/icons8-double-up.png')"
-		alt=""
-	/>
+	<div @click="goUp" :class="[visibility ? 'show' : 'hide']">
+		<span class="material-icons material-icons-sharp">expand_less</span>
+	</div>
 </template>
 
 <script>
@@ -22,21 +18,5 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.icon {
-	padding: 10px;
-	width: 50px;
-	opacity: 1;
-	transition: all 2s;
-	filter: drop-shadow(1px 1px 2px #2195f3ad);
-	cursor: pointer;
-}
-.hide {
-	opacity: 0;
-	&:hover {
-		opacity: 1;
-	}
-}
-.show {
-	opacity: 1;
-}
+@import '../../src/sass/arrowUp';
 </style>

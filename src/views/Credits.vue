@@ -1,6 +1,6 @@
 <template>
-	<div class="outsider">
-		<Title msg="Crédits" />
+	<div class="credits-page">
+		<h1 class="hello">Crédits</h1>
 		<div class="container">
 			<h3>Conception et Réalisation</h3>
 			<p class="margin-top">Juliana Oliveira Melo</p>
@@ -234,29 +234,7 @@
 		</div>
 	</div>
 </template>
-<script>
-import Title from '@/components/PageTitle.vue';
-export default {
-	components: {
-		Title,
-	},
-};
-</script>
+<script></script>
 <style lang="scss" scoped>
-.container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	padding: 20px;
-	margin-top: 20px;
-	border: 5px dashed #5083b619;
-}
-.margin-top {
-	margin-top: 10px;
-}
-.photo-icon {
-	max-height: 30px;
-	margin-bottom: -10px;
-}
+@import '../../src/sass/credits';
 </style>

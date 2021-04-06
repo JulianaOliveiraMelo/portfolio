@@ -1,0 +1,27 @@
+@import './variables';
+.arrowUp {
+	display: block;
+	padding: 10px;
+}
+.material-icons-sharp {
+	cursor: pointer;
+	display: block;
+	font-size: 90px;
+	color: $link-color;
+	line-height: 15px;
+	font-weight: 100;
+	-webkit-text-stroke: 4px $app-background;
+	opacity: 0.8;
+	filter: blur(0.5px);
+}
+.hide {
+	opacity: 0;
+	transition: all 1.5s;
+	&:hover {
+		opacity: 1;
+	}
+}
+.show {
+	opacity: 1;
+	transition: all 1.5s;
+}

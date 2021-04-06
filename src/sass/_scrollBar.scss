@@ -1,0 +1,19 @@
+@import './variables';
+.scroll {
+	transition: 1s;
+}
+.scroll::-webkit-scrollbar {
+	width: 5px;
+	background-color: $app-background;
+}
+.scroll::-webkit-scrollbar-thumb {
+	border: 1px solid $link-color;
+	box-shadow: inset 0 0 6px darken($link-color, 10%);
+	border-radius: 10px;
+	height: 20%;
+	opacity: 0.5;
+}
+
+.scroll::-webkit-scrollbar-track {
+	border-radius: 10px;
+}

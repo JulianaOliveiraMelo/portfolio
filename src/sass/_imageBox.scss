@@ -1,0 +1,10 @@
+.image-box-component {
+	img {
+		max-width: 100%;
+		margin: auto;
+		display: block;
+		object-fit: fill;
+		-webkit-box-reflect: below 2px
+			linear-gradient(transparent 80%, rgb(255, 255, 255) 200%);
+	}
+}

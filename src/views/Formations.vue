@@ -1,6 +1,6 @@
 <template>
-	<div class="outsider">
-		<Title msg="Formations" />
+	<div class="keepOnTop">
+		<h1 class="hello">Formations</h1>
 		<h5>De la plus récente à la plus ancienne</h5>
 
 		<FormationsBox
@@ -21,11 +21,9 @@
 
 <script>
 import FormationsBox from '@/components/FormationsBox.vue';
-import Title from '@/components/PageTitle.vue';
 import fetchMixin from '@/mixins/fetchMixin.js';
 export default {
 	components: {
-		Title,
 		FormationsBox,
 	},
 	mixins: [fetchMixin],
@@ -39,5 +37,3 @@ export default {
 	},
 };
 </script>
-
-<style lang="scss" scoped></style>

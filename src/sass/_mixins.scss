@@ -1,0 +1,23 @@
+@import './variables';
+@import './functions';
+@mixin flexCenter($direction) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: center;
+}
+
+@mixin appTheme($light-theme: true) {
+	@if $light-theme {
+		background: rgb(218, 218, 218);
+		color: rgb(41, 37, 37);
+		a {
+			color: rebeccapurple;
+		}
+	}
+}
+
+@mixin gridTemplate1FR($columnNum) {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat($columnNum, 1fr);
+}
