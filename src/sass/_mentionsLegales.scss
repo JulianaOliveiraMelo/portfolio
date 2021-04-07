@@ -1,13 +1,11 @@
-.mentionsLegales-page {
-	.container {
-		width: 100%;
-		padding: 20px;
-		margin: 45px auto 25px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		border: 5px dashed #5083b619;
-		min-height: 220px;
+@import '../../src/sass/variables';
+@import '../../src/sass/mixins';
+.container {
+	width: 100%;
+	padding: 20px;
+	margin: 45px auto 25px;
+	@include containerFlexWidthBorder(column);
+	min-height: 220px;
 	.orange {
 		color: orange;
 	}
@@ -20,6 +18,5 @@
 	}
 	.lightOpacity {
 		opacity: 0.8;
-	}
 	}
 }

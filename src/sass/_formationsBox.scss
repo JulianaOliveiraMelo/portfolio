@@ -1,3 +1,5 @@
+@import '../../src/sass/variables';
+@import '../../src/sass/mixins';
 .formation-box {
 	width: 100%;
 	padding: 20px 0;
@@ -6,7 +8,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	border: 5px dashed #5083b619;
+	border: $border;
 	min-height: 220px;
 	.school-objectives {
 		display: flex;
@@ -97,7 +99,7 @@
 		max-width: 80%;
 		margin-top: 20px;
 		padding: 20px 20px 0;
-		border-top: 5px dashed #5083b619;
+		border-top: $border;
 	}
 	.overlay {
 		width: 100%;
@@ -106,7 +108,7 @@
 	}
 	@media screen and (max-width: 700px) {
 		.container {
-			flex-direction: column;
+			@include containerFlexWidthBorder(column);
 			padding-bottom: 0;
 		}
 		.info-box {

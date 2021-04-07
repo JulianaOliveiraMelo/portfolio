@@ -1,5 +1,5 @@
 <template>
-	<div class="mentionsLegales-page">
+	<div>
 		<h1 class="hello">Mentions légales</h1>
 		<div class="container">
 			<p>

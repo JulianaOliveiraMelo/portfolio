@@ -21,3 +21,11 @@
 	display: grid;
 	grid-template-columns: repeat($columnNum, 1fr);
 }
+
+@mixin containerFlexWidthBorder($flexDirection) {
+	width: 100%;
+	display: flex;
+	flex-direction: $flexDirection;
+	justify-content: center;
+	border: $border;
+}

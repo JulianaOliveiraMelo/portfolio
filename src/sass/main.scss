@@ -179,7 +179,7 @@ footer {
 	width: 100%;
 	max-width: 1000px;
 	min-height: 90vh;
-	padding: 20px 20px 0;
+	padding: 20px 20px 10%;
 	margin: 0 auto;
 
 	@media screen and (max-width: 700px) {
@@ -202,15 +202,7 @@ footer {
 		}
 	}
 }
-.insider {
-	height: 100%;
-	width: 100%;
-	margin: 30px 0;
-}
+
 .keepOnTop {
 	margin: 0 0 auto;
-}
-
-.outsider {
-	padding-bottom: 10%;
 }

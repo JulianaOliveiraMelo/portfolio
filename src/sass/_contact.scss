@@ -1,9 +1,10 @@
+@import '../../src/sass/variables';
 .contact {
 	width: 100%;
 	padding: 20px 0;
 	margin: 45px auto 25px;
 	align-items: center;
-	border: 5px dashed #5083b619;
+	border: $border;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	column-gap: 20px;

@@ -24,18 +24,16 @@
 	opacity: 1 !important;
 }
 
-.light {
-	@include appTheme(false);
-}
-
 .slide-down-enter-active,
 .slide-down-leave-active {
+	overflow: hidden;
 	opacity: 0;
-	transition: all 0.8s ease-in-out;
+	transition: all 0.8s linear;
 }
 
 .slide-down-enter-to,
 .slide-down-leave {
+	opacity: 1;
 	overflow: hidden;
 	max-height: 1000px;
 }
@@ -44,4 +42,36 @@
 .slide-down-leave-to {
 	overflow: hidden;
 	max-height: 0;
+}
+.loading-enter-active,
+.loading-leave-active {
+	transition: all 3s linear;
+}
+
+.loading-enter-to,
+.loading-leave {
+	opacity: 1;
+	overflow: hidden;
+	max-height: 1000px;
+	transition: all 3s linear;
+}
+
+.loading-enter,
+.loading-leave-to {
+	overflow: hidden;
+	max-height: 0;
+	transition: all 3s linear;
+}
+.work-enter-active {
+	transition: opacity 1s;
+}
+.work-enter {
+	opacity: 0 !important;
+}
+.work-leave-active {
+	transition: opacity 1s, filter 1s;
+}
+.work-leave-to {
+	filter: blur(18px);
+	opacity: 0;
 }
