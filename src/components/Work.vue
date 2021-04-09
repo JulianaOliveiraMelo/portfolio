@@ -109,6 +109,10 @@ export default {
 				throw new Error(error);
 			}
 		},
+		changeSearchFilter(newSearchName) {
+			this.$store.commit('changeSearchName', newSearchName);
+			this.selectItems = false;
+		},
 	},
 };
 </script>

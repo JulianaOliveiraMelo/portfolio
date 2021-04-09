@@ -4,7 +4,7 @@
 .container {
 	display: grid;
 	grid-template-columns: 2.5fr 0.5fr 5fr;
-	min-height: 200px;
+	min-height: 240px;
 	margin: 45px auto 25px;
 	width: 100%;
 	grid-auto-columns: minmax(100px, auto);
