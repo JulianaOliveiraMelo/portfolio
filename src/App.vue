@@ -47,9 +47,6 @@ export default {
 			menuNames: [],
 		};
 	},
-	created() {
-		this.fetchInfo('menuNames');
-	},
 	watch: {
 		$route(to) {
 			// Update the data type when the route changes.
@@ -61,6 +58,11 @@ export default {
 			}
 		},
 	},
+	created() {
+		this.fetchInfo('menuNames');
+		this.checkForBrowser();
+	},
+
 	mounted() {
 		this.scrollActive = false;
 		this.arrowIsVisible = false;
@@ -68,6 +70,13 @@ export default {
 		this.scrollStop(this.removeClass);
 	},
 	methods: {
+		changeBorderStyle() {
+			let container = document.querySelectorAll('.container');
+			container.forEach(element => {
+				element.style = 'border-width: 2px !important';
+				console.log(element);
+			});
+		},
 		changeClass() {
 			this.scrollActive = true;
 			if (window.scrollY > 500) this.arrowIsVisible = true;

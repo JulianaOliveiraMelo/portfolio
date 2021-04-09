@@ -1,5 +1,9 @@
 <template>
-	<div key="optionals" class="optionals">
+	<div
+		key="optionals"
+		class="optionals"
+		:class="{ browserChangeBorderfilter: fireFox }"
+	>
 		<div class="optional-box" @click="showHide()">
 			<div class="label">
 				Filtrer par :

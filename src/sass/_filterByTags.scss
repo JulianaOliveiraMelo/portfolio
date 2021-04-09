@@ -2,7 +2,7 @@
 @import '../../src/sass/transitions';
 .optionals {
 	margin-top: 20px;
-	border: 5px dashed rgba(255, 166, 0, 0.164);
+	border: $borderFilter;
 	padding: 0 30px;
 	.optional-box {
 		cursor: pointer;

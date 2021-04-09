@@ -1,7 +1,7 @@
 <template>
 	<div class="keepOnTop">
 		<h1 class="hello">Me contacter</h1>
-		<div class="contact">
+		<div class="contact" :class="{ browserChangeContainer: fireFox }">
 			<div v-for="c in contact" :key="c.text" class="box">
 				<a v-if="c.link" class="content" :href="c.link" target="_blank">
 					<img

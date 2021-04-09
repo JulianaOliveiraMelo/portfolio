@@ -7,6 +7,7 @@ const store = new Vuex.Store({
 	state: {
 		search: 'voir tout',
 		loading: true,
+		fireFox: false,
 	},
 	getters: {},
 	mutations: {
@@ -15,6 +16,9 @@ const store = new Vuex.Store({
 		},
 		loadingState(state, value) {
 			state.loading = value;
+		},
+		changeContainerStyle(state, value) {
+			state.fireFox = value;
 		},
 	},
 	actions: {},

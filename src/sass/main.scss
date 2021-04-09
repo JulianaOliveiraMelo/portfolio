@@ -55,6 +55,7 @@ h2 {
 	margin: 0;
 	font-size: 4rem;
 	background: -webkit-linear-gradient(#febd5c 10%, #ee9902 90%);
+	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
@@ -163,7 +164,7 @@ footer {
 		justify-content: space-evenly;
 	}
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
 	.button-box {
 		flex-direction: column;
 		align-items: center;
@@ -205,4 +206,27 @@ footer {
 
 .keepOnTop {
 	margin: 0 0 auto;
+}
+
+.browserChangeContainer {
+	border: $browserBorder;
+}
+
+.browserchangeTopBorder {
+	&::before {
+		content: '';
+		position: absolute;
+		width: 40%;
+		left: 50%;
+		margin-left: -20%;
+		border-top: $browserBorder;
+		transform: translateY(-20px);
+	}
+}
+.browserChangeTopBorderTraining {
+	border-top: $browserBorder;
+}
+
+.browserChangeBorderfilter {
+	border: $browserBorderFilter;
 }

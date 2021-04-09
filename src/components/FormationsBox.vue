@@ -1,5 +1,5 @@
 <template>
-	<div class="formation-box">
+	<div class="formation-box" :class="{ browserChangeContainer: fireFox }">
 		<div class="school-objectives">
 			<div class="logo-box">
 				<a :href="link" target="_blank"><img :src="source" :alt="name"/></a>

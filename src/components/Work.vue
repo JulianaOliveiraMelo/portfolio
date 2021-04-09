@@ -2,7 +2,11 @@
 	<transition name="work" appear>
 		<div v-if="showWork">
 			<div v-for="w in computed_items" :key="w.id" class="container-box">
-				<div v-if="w.name" class="container">
+				<div
+					v-if="w.name"
+					class="container"
+					:class="{ browserChangeBorderfilter: fireFox }"
+				>
 					<div class="image-box">
 						<a v-if="w.image.source" :href="w.image.link" target="blank">
 							<ImageBox

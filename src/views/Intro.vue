@@ -1,7 +1,7 @@
 <template>
 	<div class="intro-page">
 		<h2 class="hello">Je me presente...</h2>
-		<div class="container">
+		<div class="container" :class="{ browserChangeContainer: fireFox }">
 			<div class="text-content">
 				<p>
 					<ImageBox

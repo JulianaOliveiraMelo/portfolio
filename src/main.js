@@ -8,7 +8,13 @@ import store from './store';
 var VueCookie = require('vue-cookie');
 
 Vue.use(VueCookie);
-
+Vue.mixin({
+	computed: {
+		fireFox: function() {
+			return this.$store.state.fireFox;
+		},
+	},
+});
 Axios.defaults.baseURL = process.env.VUE_APP_FIRE_BASE_ROUTE;
 Vue.prototype.$http = Axios;
 Vue.config.productionTip = false;

@@ -1,7 +1,12 @@
 <template>
 	<div class="keepOnTop">
 		<h1 class="hello">Expériences</h1>
-		<div v-for="e in experience" :key="e.id" class="experiences">
+		<div
+			v-for="e in experience"
+			:class="{ browserChangeContainer: fireFox }"
+			:key="e.id"
+			class="experiences"
+		>
 			<div class="top">
 				<div v-if="e.businessLink" class="logo">
 					<a :href="e.businessLink" target="_blank">
@@ -41,7 +46,11 @@
 					</ul>
 				</div>
 			</div>
-			<div v-if="e.work" class="sites">
+			<div
+				v-if="e.work"
+				class="sites"
+				:class="{ browserchangeTopBorder: fireFox }"
+			>
 				<div v-for="w in e.work" :key="w.name">
 					<div class="info-site">
 						<a :href="w.link" target="_blank">
@@ -77,6 +86,11 @@ export default {
 	},
 	created() {
 		this.experience = this.fetchInfo('experience');
+	},
+	computed: {
+		fireFox: function() {
+			return this.$store.state.fireFox;
+		},
 	},
 };
 </script>

@@ -1,6 +1,6 @@
 @import './mixins';
 .accueil-page {
-	@include flexCenter(column);
+	//@include flexCenter(column);
 	display: grid;
 	grid-template-columns: 3fr 2fr;
 	justify-content: center;
@@ -11,12 +11,20 @@
 		.text-margin {
 			margin-top: 10px;
 		}
+		@media screen and (max-width: 750px) {
+			margin-right: 0;
+		}
 	}
+
 	.image-box {
 		img {
 			max-width: 100%;
+			// @media screen and(max-width: 250px) {
+			// 	max-width: 60%;
+			// }
 		}
 	}
+
 	@media screen and (max-width: 760px) {
 		margin-top: 3vh;
 	}
@@ -27,7 +35,7 @@
 			max-width: 60%;
 			margin: auto;
 			@media screen and(max-width: 400px) {
-				max-width: 100%;
+				max-width: 1000%;
 			}
 		}
 	}
