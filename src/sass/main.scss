@@ -54,7 +54,7 @@ h2 {
 	font-family: 'Cinzel', serif;
 	margin: 0;
 	font-size: 4rem;
-	background: -webkit-linear-gradient(#febd5c 10%, #ee9902 90%);
+	background: $titleGradientColor;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
