@@ -5,8 +5,10 @@ import './sass/main.scss';
 import vuetify from './plugins/vuetify';
 import Axios from 'axios';
 import store from './store';
+import firebaseApp from './firebase';
 var VueCookie = require('vue-cookie');
 
+firebaseApp.analytics();
 Vue.use(VueCookie);
 Vue.mixin({
 	computed: {

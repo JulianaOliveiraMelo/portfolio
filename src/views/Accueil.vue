@@ -16,7 +16,7 @@
 		<div class="image-box">
 			<img
 				:src="require('../../public/images/ordinateur-portable.png')"
-				alt=""
+				alt="ordinateur apple"
 			/>
 		</div>
 	</div>

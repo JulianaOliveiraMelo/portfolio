@@ -12,6 +12,10 @@ module.exports = {
 			.options({
 				name: 'public/diplomes/[name].[hash:8].[ext]',
 			});
+		config.plugin('html').tap(args => {
+			args[0].title = 'Juliana Oliveira Melo - Portfolio'; // Replace your title here
+			return args;
+		});
 	},
 	configureWebpack: {
 		optimization: {

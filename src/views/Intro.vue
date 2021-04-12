@@ -7,6 +7,7 @@
 					<ImageBox
 						class="images floatRight map"
 						:backgroundImage="require('../../public/images/porto-macao.png')"
+						imageDescription="google map du temps de trajet entre Portugal et Macau"
 					/>Je m'appelle Juliana Melo, j'ai 36 ans et j'habite à
 					<a
 						class="bold"

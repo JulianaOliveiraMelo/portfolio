@@ -17,30 +17,68 @@ const routes = [
 					content: 'index,follow',
 				},
 				{
-					property: 'og:title',
-					content:
-						"Page d'accueil - Portfolio - Juliana Oliveira Melo développeuse d'applications iOS en recherche d'alternance de 24 mois 4 jours entreprise, 1 jour école.",
-					key: 'ogtitle',
+					name: 'language',
+					content: 'French',
 				},
 				{
-					property: 'og:description',
+					name: 'description',
 					content:
-						"Page d'accueil - Portfolio - Juliana Oliveira Melo développeuse d'applications iOS en recherche d'alternance de 24 mois 4 jours entreprise, 1 jour école.",
-					hid: 'og:description',
-					key: 'ogdescription',
+						"Accueil - Portfolio Juliana Oliveira Melo développeuse d'applications iOS en recherche d'alternance de 24 mois 4 jours entreprise, 1 jour école.",
+					key: 'description',
+				},
+				{
+					keywords:
+						'développeuse,application,iOS,web,développeur,swift,apple,javascript,vue.js,vuex,vuerouter',
+				},
+				{
+					name: 'title',
+					content: 'Portfolio Juliana Oliveira Melo',
+					key: 'title',
 				},
 				// add images to thubnail when sharing link from site
 				{
-					property: 'og:image',
-					content: `../../public/logos/JulianaMeloLogo.png`,
-					hid: 'og:image',
-					key: 'ogimage',
+					name: 'image',
+					content: `https://portfoliojulianamelo.web.app/JulianaMeloLogo.png`,
+					key: 'image',
 				},
 				{
-					property: 'og:type',
+					name: 'type',
 					content: 'website',
-					hid: 'og:website',
-					key: 'ogwebsite',
+					key: 'website',
+				},
+				// twitter meta tags
+				{
+					name: 'twitter:card',
+					content: `summary_large_image`,
+					key: 'siteimage',
+				},
+				{
+					property: 'twitter:image',
+					content: `https://portfoliojulianamelo.web.app/JulianaMeloLogo.png`,
+					key: 'twitterimage',
+				},
+				{
+					property: 'twitter:domain',
+					content: 'portfoliojulianamelo.web.app',
+				},
+				{
+					property: 'twitter:url',
+					content: 'https://portfoliojulianamelo.web.app/',
+				},
+				{
+					name: 'twitter:title',
+					content: 'Juliana Oliveira Melo - Portfolio',
+				},
+				{
+					name: 'twitter:description',
+					content:
+						"Portfolio Juliana Oliveira Melo développeuse d'applications iOS en recherche d'alternance de 24 mois 4 jours entreprise, 1 jour école.",
+				},
+				// facebook meta tags
+				{
+					property: 'og:image',
+					content: `https://portfoliojulianamelo.web.app/JulianaMelogo.png`,
+					key: 'facebookimage',
 				},
 			],
 		},
@@ -53,6 +91,15 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(/* webpackChunkName: "intro" */ '../views/Intro.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Introduction',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'index,follow',
+				},
+			],
+		},
 	},
 	{
 		path: '/contact',
@@ -63,7 +110,7 @@ const routes = [
 		component: () =>
 			import(/* webpackChunkName: "contact" */ '../views/Contact.vue'),
 		meta: {
-			title: 'Juliana Oliveira Melo',
+			title: 'Juliana Oliveira Melo - Contact',
 			metaTags: [
 				{
 					name: 'robots',
@@ -80,6 +127,15 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(/* webpackChunkName: "formations" */ '../views/Formations.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Formations',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'index,follow',
+				},
+			],
+		},
 	},
 	{
 		path: '/experience',
@@ -89,6 +145,15 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(/* webpackChunkName: "experience" */ '../views/Experience.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Expériences',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'index,follow',
+				},
+			],
+		},
 	},
 	{
 		path: '/competences',
@@ -98,6 +163,15 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(/* webpackChunkName: "competences" */ '../views/Competences.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Competences',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'index,follow',
+				},
+			],
+		},
 	},
 	{
 		path: '/realisations',
@@ -109,6 +183,15 @@ const routes = [
 			import(
 				/* webpackChunkName: "realisations" */ '../views/Realisations.vue'
 			),
+		meta: {
+			title: 'Juliana Oliveira Melo - Réalisations',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'index,follow',
+				},
+			],
+		},
 	},
 	{
 		path: '/legal',
@@ -118,6 +201,15 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(/* webpackChunkName: "legales" */ '../views/MentionsLegales.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Mentions Légales',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'noindex,nofollow',
+				},
+			],
+		},
 	},
 	{
 		path: '/credits',
@@ -127,6 +219,15 @@ const routes = [
 		// which is lazy-loaded when the route is visited.
 		component: () =>
 			import(/* webpackChunkName: "credits" */ '../views/Credits.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Crédits',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'noindex,nofollow',
+				},
+			],
+		},
 	},
 	{
 		path: '*',
@@ -135,6 +236,15 @@ const routes = [
 		// this generates a separate chunk (404.[hash].js) for this route
 		// which is lazy-loaded when the route is visited.
 		component: () => import(/* webpackChunkName: "404" */ '../views/404.vue'),
+		meta: {
+			title: 'Juliana Oliveira Melo - Page Inexistante',
+			metaTags: [
+				{
+					name: 'robots',
+					content: 'noindex,nofollow',
+				},
+			],
+		},
 	},
 ];
 
