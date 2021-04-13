@@ -39,10 +39,15 @@
 							>
 							<p v-html="w.text"></p>
 						</div>
-						<aside v-if="w.school">
-							<a class="hoverLink" :href="w.school.link" target="blank">{{
-								w.school.name
-							}}</a>
+						<aside v-if="w.school || w.github">
+							<h6 v-if="w.github">
+								<a :href="w.github" target="blank">GitHub Link</a>
+							</h6>
+							<h5 v-if="w.school">
+								<a class="hoverLink" :href="w.school.link" target="blank">{{
+									w.school.name
+								}}</a>
+							</h5>
 						</aside>
 					</div>
 				</div>
