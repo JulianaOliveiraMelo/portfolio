@@ -1,9 +1,13 @@
 <template>
 	<button
+		v-if="link"
 		class="button-app"
 		:class="{ browserChangeButtons: fireFox }"
 		@click="click(link)"
 	>
+		{{ text }}
+	</button>
+	<button v-else class="button-app" :class="{ browserChangeButtons: fireFox }">
 		{{ text }}
 	</button>
 </template>

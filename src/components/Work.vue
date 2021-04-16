@@ -1,9 +1,13 @@
 <template>
 	<transition name="work" appear>
 		<div v-if="showWork">
-			<div v-for="w in computed_items" :key="w.id" class="container-box">
+			<div
+				v-for="(w, index) in computed_items"
+				:key="w.id"
+				class="container-box"
+			>
 				<div
-					v-if="w.name"
+					v-if="w.name && index < lengthToShow"
 					class="container"
 					:class="{ browserChangeBorderfilter: fireFox }"
 				>
@@ -52,19 +56,30 @@
 					</div>
 				</div>
 			</div>
+			<div
+				class="showWorkLength"
+				v-if="lengthToShow < computed_items.length"
+				@click="lengthToShow += desireLengthToShow"
+			>
+				<StyleButton text="Voir plus" />
+			</div>
 		</div>
 	</transition>
 </template>
 
 <script>
 import ImageBox from '@/components/ImageBox.vue';
+import StyleButton from '@/components/StyleButton.vue';
 
 export default {
 	name: 'work',
-	components: { ImageBox },
+	components: { ImageBox, StyleButton },
 	data() {
 		return {
 			showWork: false,
+			lengthToShow: this.desireLengthToShow,
+			workLength: 0,
+			desireLengthToShow: 3,
 		};
 	},
 	mounted() {
@@ -73,6 +88,7 @@ export default {
 	},
 	computed: {
 		computed_items: function() {
+			this.changeLengthToShow();
 			this.loadingTimer();
 			if (this.$store.state.search === 'voir tout') {
 				return this.work;
@@ -93,6 +109,9 @@ export default {
 		},
 	},
 	methods: {
+		changeLengthToShow: function() {
+			this.lengthToShow = this.desireLengthToShow;
+		},
 		loadingTimer: function() {
 			this.$store.commit('loadingState', true);
 			this.showWork = false;
@@ -100,9 +119,10 @@ export default {
 			setTimeout(
 				function() {
 					this.$store.commit('loadingState', false);
+
 					this.showWork = true;
 				}.bind(this),
-				1500
+				500
 			);
 		},
 		async getWork() {
@@ -110,6 +130,7 @@ export default {
 				const response = await this.$http.get(`work.json`);
 				let data = response.data;
 				this.work = data;
+				this.workLength = this.work.length;
 			} catch (error) {
 				throw new Error(error);
 			}
