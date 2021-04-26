@@ -59,15 +59,17 @@
 									:style="
 										'stroke-dashoffset: calc(245px - (245px * ' +
 											s.skills.write +
-											') / 100); stroke:  #ff005c'
+											') / 100); stroke:  rgb(0,177,255,0.65)'
 									"
 								/>
 							</svg>
 							<div class="number">
-								<p style="color: #ff005c">{{ s.skills.write }}<span>%</span></p>
+								<p style="color: rgb(0,177,255,0.65)">
+									{{ s.skills.write }}<span>%</span>
+								</p>
 							</div>
 						</div>
-						<p>écris</p>
+						<p>écrit</p>
 					</div>
 				</div>
 			</div>
