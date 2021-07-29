@@ -23,12 +23,12 @@ const routes = [
 				{
 					name: 'description',
 					content:
-						"Accueil - Portfolio Juliana Oliveira Melo développeuse d'applications iOS en recherche d'alternance de 24 mois 4 jours entreprise, 1 jour école.",
+						"Accueil - Portfolio Juliana Oliveira Melo développeuse d'applications en recherche d'alternance de 16 mois au rythme de 3 jours entreprise, 2 jour école.",
 					key: 'description',
 				},
 				{
 					keywords:
-						'développeuse,application,iOS,web,développeur,swift,apple,javascript,vue.js,vuex,vuerouter',
+						'développeuse,application,iOS,android,web,développeur,apple,javascript,vue.js,vuex,vuerouter,php,java,desktop,web,mobile,firebase,serverless,AWS,Cloud,computing,React,native',
 				},
 				{
 					name: 'title',
@@ -72,7 +72,7 @@ const routes = [
 				{
 					name: 'twitter:description',
 					content:
-						"Portfolio Juliana Oliveira Melo développeuse d'applications iOS en recherche d'alternance de 24 mois 4 jours entreprise, 1 jour école.",
+						"Portfolio Juliana Oliveira Melo développeuse d'applications en recherche d'alternance 16 mois au rythme de 3 jours entreprise, 2 jour école.",
 				},
 				// facebook meta tags
 				{
