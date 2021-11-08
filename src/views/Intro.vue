@@ -81,28 +81,31 @@
 					>. J'ai vite pris goût au code et mon rêve de devenir développeuse Web
 					et mobile est apparue. J'ai suivi une formation Full Stack JavaScript
 					de trois mois intensives avec l'école
-					<span class="bold">O'clock</span> - labellisée GEN et un stage de
-					trois mois ou j'ai appris le Wordpress (no code). Aujourd'hui je passe
-					des heures et des heures à apprendre sans me lasser.
+					<span class="bold black">O'clock</span> - labellisée
+					<span class="bold white">GEN</span> et un stage de trois mois ou j'ai
+					appris le <span class="bold wordpressColors">Wordpress</span> (no
+					code). Aujourd'hui je passe des heures et des heures à apprendre sans
+					me lasser.
 				</p>
 				<p>
 					<ImageBox
 						class="images floatLeft apple-android"
 						:backgroundImage="require('../../public/images/apple-android.png')"
 					/>
-					Aujourd'hui récemment re-admise à l'école
-					<span class="bold">O'clock</span>, cette fois si je veux suivre le
-					parcours de développeuse d'application en contrat de
-					professionnalisation, car pour moi la meilleur façon d'apprendre,
-					c'est de le faire au sein d'une entreprise, pour bien connaître les
-					besoins des clients et mettre en pratique ce que j'ai appris à
-					l'école.
+					Aujourd'hui je suis vivement intéressé par tout offre proposant un
+					poste en tant que
+					<span class="bold">Développeuse Web JavaScript Front-End</span>. J'ai
+					des connaissances en <span class="bold vueColors">vue.js</span> que
+					j'ai eu l'occasion d'apprendre en autodidacte, mais je peux m' adapter
+					sur <span class="bold reactColors">react.js</span> ou
+					<span class="bold angularColors">angular.js</span> si vous me donniez
+					la chance.
 				</p>
 				<p>
 					Alors si vous connaissez quelqu'un qui veut bien m'embaucher en
-					contrat de professionnalisation d'une durée de 16 mois au rythme de 3
-					jours entreprise 2 jour école, n'hésitez pas à entrer en contact avec
-					moi.
+					<span class="bold darkShadow">CDD</span> ou
+					<span class="bold darkShadow">CDI</span>, n'hésitez pas à entrer en
+					contact avec moi.
 				</p>
 			</div>
 		</div>

@@ -2,14 +2,8 @@
 	<div class="accueil-page">
 		<div class="info">
 			<h1 class="hello">Juliana Oliveira Melo</h1>
-			<h3>Développeuse d'applications</h3>
-			<p class="text-margin">
-				En recherche de contrat de professionnalisation pour l'obtention d'un
-				diplôme de niveau 6 (Bac+3/4).
-			</p>
-			<p>
-				Durée de 16 mois : 3 jours entreprise / 2 jour école.
-			</p>
+			<h3>Développeuse Web - Front End</h3>
+
 			<div class="button-box">
 				<StyleButton text="Mes réalisations" link="realisations" />
 				<StyleButton text="Contact" link="contact" />
